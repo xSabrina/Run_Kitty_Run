@@ -9,12 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 39adf5ac2b6badd45865456862e8ef97, type: 3}
+  m_Script: {fileID: 11500000, guid: aea6d2e4d78e06849a049012e473e626, type: 3}
   m_Name: Destroy
   m_EditorClassIdentifier: 
-  aName: New Ability
-  aBaseCoolDown: 5
-  projectileForce: 500
-  projectileRange: 5
-  projectilePrefab: {fileID: 6265724735968440382, guid: bbff008473649fd48ba426b43f6485e0,
+  aName: Destroy
+  aBaseCoolDown: 3
+  projectileForce: 250
+  projectileRange: 10
+  projectilePrefab: {fileID: 6265724735968440382, guid: 8af59f2695e90dc41aa97d90616bb68c,
     type: 3}
