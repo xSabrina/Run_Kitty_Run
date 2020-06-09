@@ -1,0 +1,68 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class GameManagerScript : MonoBehaviour
+{
+    public string timer;
+    private float seconds;
+    private int minutes;
+    public bool countTime;
+    public static GameManagerScript instance = null;
+    public List<Level> Levels = new List<Level>();
+    public Level currentLevel;
+    // Use this for initialization
+    void Awake()
+    {
+        //PlayerPrefs.DeleteAll();
+        //um spiel auf ungespeichert zu setzen
+        if (instance)
+        {
+            DestroyImmediate(gameObject);
+        }
+        else
+        {
+            DontDestroyOnLoad(gameObject);
+            instance = this;
+        }
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (countTime)
+        {
+            CountTime();
+        }
+
+
+    }
+
+    private void CountTime()
+    {
+        seconds += Time.deltaTime;
+        if (seconds >= 60f)
+        {
+            minutes += 1;
+            seconds -= 60f;
+        }
+        timer = minutes.ToString("00") + ":" + seconds.ToString("00.00");
+
+    }
+    public void EndLevel()
+    {
+        currentLevel = Levels[currentLevel.levelNr];
+
+    }
+
+    public void StartLevel()
+    {
+        minutes = 0;
+        seconds = 0;
+        SceneManager.LoadScene(currentLevel.name);
+    }
+ 
+}
+
+
