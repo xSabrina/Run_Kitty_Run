@@ -4,12 +4,10 @@ using UnityEngine;
 public class PlayerCollision : MonoBehaviour
 {
     private Animator animator;
-    private Vector3 startPosition;
 
     private void Start()
     {
         animator = GetComponent<Animator>();
-        startPosition = transform.position;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -27,7 +25,7 @@ public class PlayerCollision : MonoBehaviour
     {
         yield return new WaitForSeconds(Float);
         animator.SetBool("isDead", false);
-        transform.position = startPosition;
+        GameManagerScript.instance.StartLevel();
     }
 
 }
