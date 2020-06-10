@@ -16,8 +16,8 @@ GameObject:
   - component: {fileID: 6594927343154006801}
   - component: {fileID: 6594927343154006804}
   m_Layer: 0
-  m_Name: Enemy1
-  m_TagString: Untagged
+  m_Name: Enemy
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -117,13 +117,13 @@ MonoBehaviour:
   rb: {fileID: 6594927343154006811}
   x: 6
   y: -2
-  speed: 1
+  speed: 1.5
   movementStartTimeInterval:
   - 2
   - 4
   movementTimeInterval:
-  - 4
-  - 7
+  - 3
+  - 6
 --- !u!50 &6594927343154006811
 Rigidbody2D:
   serializedVersion: 4
@@ -177,6 +177,6 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.02}
-  m_Size: {x: 0.22, y: 0.33}
+  m_Offset: {x: 0.0035076148, y: -0.03572355}
+  m_Size: {x: 0.12305532, y: 0.24459395}
   m_Direction: 0
