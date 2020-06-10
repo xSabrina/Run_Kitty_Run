@@ -56,14 +56,7 @@ public class GameUI : MonoBehaviour {
 
     //Update the timer
     private void UpdateTimer() {
-        if (Playing) {
-            CurTime += Time.deltaTime;
-            if (CurTime < 9) {
-                TimeText.text = "00,0" + CurTime.ToString("#.00");
-            } else {
-                TimeText.text = "00," + CurTime.ToString("#.00");
-            }
-        }
+        TimeText.text = GameManagerScript.instance.timer;
     }
 
     //Make cooldown for actions visible
