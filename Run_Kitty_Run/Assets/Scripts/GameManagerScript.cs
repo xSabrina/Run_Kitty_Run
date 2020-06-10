@@ -8,10 +8,11 @@ public class GameManagerScript : MonoBehaviour
     public string timer;
     private float seconds;
     private int minutes;
-    public bool countTime;
+    public bool countTime = true;
     public static GameManagerScript instance = null;
     public List<Level> Levels = new List<Level>();
     public Level currentLevel;
+
     // Use this for initialization
     void Awake()
     {
@@ -40,7 +41,6 @@ public class GameManagerScript : MonoBehaviour
 
 
     //counts Time in minutes, second and milliseconds, should be called inj Update function
-
     private void CountTime()
     {
         seconds += Time.deltaTime;
@@ -54,10 +54,10 @@ public class GameManagerScript : MonoBehaviour
     }
 
     //should be triggered through EndLevelPrefab
-
     public void EndLevel()
     {
         currentLevel = Levels[currentLevel.levelNr];
+        StartLevel();
 
     }
 
@@ -67,7 +67,7 @@ public class GameManagerScript : MonoBehaviour
     {
         minutes = 0;
         seconds = 0;
-        SceneManager.LoadScene(currentLevel.name);
+        SceneManager.LoadScene(currentLevel.levelName);
     }
  
 }

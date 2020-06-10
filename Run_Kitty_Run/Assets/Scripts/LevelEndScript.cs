@@ -4,19 +4,16 @@ using UnityEngine;
 
 public class LevelEndScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    
 
-
-    void Update()
+    void OnTriggerEnter2D(Collider2D other)
     {
-        
-    private void OnTriggerEnter(Collider other)
-    {
-        GameManagerScript.instance.EndLevel();
+        Debug.Log(other.name);
+        if (other.tag == "Player")
+        {
+            
+            GameManagerScript.instance.EndLevel();
+        }
 
     }
 }
