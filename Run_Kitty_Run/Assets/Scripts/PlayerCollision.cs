@@ -9,8 +9,7 @@ public class PlayerCollision : MonoBehaviour
     private void Start()
     {
         animator = GetComponent<Animator>();
-        //Need to adjust startPosition to actual map
-        startPosition = Vector3.zero;
+        startPosition = transform.position;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -27,7 +26,6 @@ public class PlayerCollision : MonoBehaviour
     IEnumerator WaitingTime(float Float)
     {
         yield return new WaitForSeconds(Float);
-        //Insert events on player death
         animator.SetBool("isDead", false);
         transform.position = startPosition;
     }
