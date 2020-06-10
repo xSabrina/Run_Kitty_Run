@@ -15,8 +15,7 @@ public class GameManagerScript : MonoBehaviour
     // Use this for initialization
     void Awake()
     {
-        //PlayerPrefs.DeleteAll();
-        //um spiel auf ungespeichert zu setzen
+       
         if (instance)
         {
             DestroyImmediate(gameObject);
@@ -39,6 +38,9 @@ public class GameManagerScript : MonoBehaviour
 
     }
 
+
+    //counts Time in minutes, second and milliseconds, should be called inj Update function
+
     private void CountTime()
     {
         seconds += Time.deltaTime;
@@ -50,11 +52,16 @@ public class GameManagerScript : MonoBehaviour
         timer = minutes.ToString("00") + ":" + seconds.ToString("00.00");
 
     }
+
+    //should be triggered through EndLevelPrefab
+
     public void EndLevel()
     {
         currentLevel = Levels[currentLevel.levelNr];
 
     }
+
+    //for restarting Level or loading anew one
 
     public void StartLevel()
     {

@@ -10,9 +10,13 @@ public class LevelEndScript : MonoBehaviour
         
     }
 
-    // Update is called once per frame
+
     void Update()
     {
         
+    private void OnTriggerEnter(Collider other)
+    {
+        GameManagerScript.instance.EndLevel();
+
     }
 }
