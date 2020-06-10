@@ -18,12 +18,14 @@ public class PlayerCollision : MonoBehaviour
             animator.SetBool("isDead", true);
             float animTime = animator.GetCurrentAnimatorClipInfo(0).Length;
             StartCoroutine(WaitingTime(animTime));
+            GetComponent<PlayerMovement>().enabled = false;
         }
     }
 
     IEnumerator WaitingTime(float Float)
     {
         yield return new WaitForSeconds(Float);
+        GetComponent<PlayerMovement>().enabled = true;
         animator.SetBool("isDead", false);
         GameManagerScript.instance.StartLevel();
     }
