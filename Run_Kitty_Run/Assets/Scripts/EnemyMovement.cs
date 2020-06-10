@@ -27,12 +27,15 @@ public class EnemyMovement : MonoBehaviour
 
     private bool isVisible;
 
+    Animator animator;
+
     // Start is called before the first frame update
     void Start()
     {
         PlaceEnemy();
         InitValues();
-}
+        animator = GetComponent<Animator>();
+    }
 
     // Update is called once per frame
     void Update()
@@ -77,6 +80,7 @@ public class EnemyMovement : MonoBehaviour
         if (deltaTime <= 0 && isMoving) 
         {
             rb.velocity = new Vector3(0, 0, 0);
+            ClearMovementAnimations();
             System.Random r = new System.Random();
             deltaTime = movementStartTimeInterval[0] + ((movementStartTimeInterval[1] - movementStartTimeInterval[0]) * (float)r.NextDouble());
             isMoving = false;
@@ -135,40 +139,56 @@ public class EnemyMovement : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.name.Contains("Enemy"))
-        {
-            // enemy collision
 
-            //collision.attachedRigidbody.velocity = speed * directionalVector;
-        }
-        else
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        float contactX = 0;
+        float contactY = 0;
+
+        if (collision.contacts.Length > 1)
         {
-            CatchCoordinateInvert(collision.gameObject.name);
+            contactX = (collision.contacts[0].point.x + collision.contacts[1].point.x) / 2;
+            contactY = (collision.contacts[0].point.y + collision.contacts[1].point.y) / 2;
+        } else
+        {
+            contactX = collision.contacts[0].point.x;
+            contactY = collision.contacts[0].point.y;
         }
+
+
+        
+        CatchCoordinateInvert(contactX, contactY);
     }
 
-    void CatchCoordinateInvert(string wall)
+    private void ClearMovementAnimations()
     {
-        rb.velocity = new Vector3(0, 0, 0);
-        deltaTime = 0;
-        if (wall.Equals("LeftWall"))
-        {
-            invertXNeg = true;
-        }
-        else if (wall.Equals("RightWall"))
+        animator.SetBool("isWalkingSide", false);
+        animator.SetBool("isWalkingUp", false);
+        animator.SetBool("isWalkingDown", false);
+    }
+
+
+    void CatchCoordinateInvert(float contactX, float contactY)
+    {
+        if (contactX > this.transform.position.x)
         {
             invertXPos = true;
         }
-        else if (wall.Equals("UpperWall"))
+        else if (contactX < this.transform.position.x)
+        {
+            invertXNeg = true;
+        }
+
+        if (contactY > this.transform.position.y)
         {
             invertYPos = true;
         }
-        else if (wall.Equals("LowerWall"))
+        else if (contactY < this.transform.position.y)
         {
             invertYNeg = true;
         }
+        rb.velocity = new Vector3(0, 0, 0);
+        deltaTime = 0;
     }
 
     void OnBecameInvisible()
