@@ -7,10 +7,10 @@ public class AbilityCoolDown : MonoBehaviour
 
     public string abilityButtonAxisName = "Fire1";
     //public Image darkMask;
-    //public Text coolDownTextDisplay;
+    public Text coolDownTextDisplay;
 
     [SerializeField] private Ability ability;
-    // [SerializeField] private GameObject weaponHolder;
+    private GameObject player;
     private Image myButtonImage;
     private AudioSource abilitySource;
     private float coolDownDuration;
@@ -20,10 +20,11 @@ public class AbilityCoolDown : MonoBehaviour
 
     void Start()
     {
-        Initialize(ability, gameObject);
+        player = GameObject.Find("Player");
+        Initialize(ability, player);
     }
 
-    public void Initialize(Ability selectedAbility, GameObject player)
+    public void Initialize(Ability selectedAbility, GameObject firePointHolder)
     {
         ability = selectedAbility;
         //myButtonImage = GetComponent<Image>();
@@ -31,7 +32,7 @@ public class AbilityCoolDown : MonoBehaviour
         //myButtonImage.sprite = ability.aSprite;
         //darkMask.sprite = ability.aSprite;
         coolDownDuration = ability.aBaseCoolDown;
-        ability.Initialize(player);
+        ability.Initialize(firePointHolder);
         AbilityReady();
     }
 
@@ -60,7 +61,7 @@ public class AbilityCoolDown : MonoBehaviour
 
     private void AbilityReady()
     {
-        //coolDownTextDisplay.enabled = false;
+        coolDownTextDisplay.enabled = false;
         //darkMask.enabled = false;
     }
 
@@ -68,7 +69,7 @@ public class AbilityCoolDown : MonoBehaviour
     {
         coolDownTimeLeft -= Time.deltaTime;
         float roundedCd = Mathf.Round(coolDownTimeLeft);
-        //coolDownTextDisplay.text = roundedCd.ToString();
+        coolDownTextDisplay.text = coolDownTimeLeft.ToString("F1");
         //darkMask.fillAmount = (coolDownTimeLeft / coolDownDuration);
 
     }
@@ -78,7 +79,7 @@ public class AbilityCoolDown : MonoBehaviour
         nextReadyTime = coolDownDuration + Time.time;
         coolDownTimeLeft = coolDownDuration;
         //darkMask.enabled = true;
-        //coolDownTextDisplay.enabled = true;
+        coolDownTextDisplay.enabled = true;
 
         //abilitySource.clip = ability.aSound;
         //abilitySource.Play();
