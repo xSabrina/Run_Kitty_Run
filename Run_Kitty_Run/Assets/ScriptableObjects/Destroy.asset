@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   aName: Destroy
   aBaseCoolDown: 3
-  projectileForce: 250
+  projectileForce: 650
   projectileRange: 10
   projectilePrefab: {fileID: 6265724735968440382, guid: 8af59f2695e90dc41aa97d90616bb68c,
     type: 3}
