@@ -4,17 +4,18 @@ using UnityEngine;
 
 public class DestroyEnemy : MonoBehaviour
 {
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        string collisionName = collision.gameObject.name;
-        if (!(collisionName == "Player" || collisionName == "LevelStartTrigger" || collisionName == "LevelEndTrigger"))
+        Debug.Log(collision.transform.name);
+        if (!(collision.transform.tag == "Player"))
         {
             Destroy(gameObject);
         }
 
-        if (collision.gameObject.name == "Enemy")
+        if (collision.transform.tag == "Enemy")
         {
             Destroy(collision.gameObject);
+            
         }
     }
 }
