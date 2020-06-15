@@ -27,7 +27,7 @@ public class PlayerCollision : MonoBehaviour
         yield return new WaitForSeconds(Float);
         GetComponent<PlayerMovement>().enabled = true;
         animator.SetBool("isDead", false);
-        GameManagerScript.instance.StartLevel();
+        GameManagerScript.instance.RestartLevel();
     }
 
 }

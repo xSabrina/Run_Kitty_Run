@@ -58,13 +58,18 @@ public class GameManagerScript : MonoBehaviour
     {
         currentLevel = Levels[currentLevel.levelNr];
         StartLevel();
-        minutes = 0;
-        seconds = 0;
+        
     }
 
     //for restarting Level or loading anew one
 
     public void StartLevel()
+    {
+        minutes = 0;
+        seconds = 0;
+        SceneManager.LoadScene(currentLevel.levelName);
+    }
+    public void RestartLevel()
     {
         SceneManager.LoadScene(currentLevel.levelName);
     }

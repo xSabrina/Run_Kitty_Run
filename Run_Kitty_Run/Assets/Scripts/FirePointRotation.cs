@@ -4,23 +4,29 @@ using UnityEngine;
 
 public class FirePointRotation : MonoBehaviour
 {
-    public Rigidbody2D rbPlayer;
-    public Rigidbody2D rbFirePoint;
-    public Camera cam;
+    Rigidbody2D rbPlayer;
 
-    Vector2 mousePos;
+    Vector3 direction;
+    float angle;
+
+    Vector2 firePointYOffset = new Vector2(0, -0.2f);
 
     // Update is called once per frame
     void Update()
     {
-        mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+        rbPlayer = GameObject.Find("Player").GetComponent<Rigidbody2D>();
+        direction = Input.mousePosition - Camera.main.WorldToScreenPoint(rbPlayer.position);
+        angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90f;
+        UpdatePosition();
     }
 
     private void FixedUpdate()
     {
-        rbFirePoint.position = rbPlayer.position;
-        Vector2 lookDirection = mousePos - rbFirePoint.position;
-        float angle = Mathf.Atan2(lookDirection.y, lookDirection.x) * Mathf.Rad2Deg - 90f;
-        rbFirePoint.rotation = angle;
+        transform.rotation = Quaternion.Euler(0, 0, angle);
+    }
+
+    private void UpdatePosition()
+    {
+        transform.position = rbPlayer.position + firePointYOffset + (Vector2)direction.normalized;
     }
 }
