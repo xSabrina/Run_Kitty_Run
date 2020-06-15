@@ -142,22 +142,24 @@ public class EnemyMovement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        float contactX = 0;
-        float contactY = 0;
+        if (!collision.gameObject.tag.Equals("Enemy"))
+        {
+            float contactX = 0;
+            float contactY = 0;
 
-        if (collision.contacts.Length > 1)
-        {
-            contactX = (collision.contacts[0].point.x + collision.contacts[1].point.x) / 2;
-            contactY = (collision.contacts[0].point.y + collision.contacts[1].point.y) / 2;
-        } else
-        {
-            contactX = collision.contacts[0].point.x;
-            contactY = collision.contacts[0].point.y;
+            if (collision.contacts.Length > 1)
+            {
+                contactX = (collision.contacts[0].point.x + collision.contacts[1].point.x) / 2;
+                contactY = (collision.contacts[0].point.y + collision.contacts[1].point.y) / 2;
+            }
+            else
+            {
+                contactX = collision.contacts[0].point.x;
+                contactY = collision.contacts[0].point.y;
+            }
+
+            CatchCoordinateInvert(contactX, contactY);
         }
-
-
-        
-        CatchCoordinateInvert(contactX, contactY);
     }
 
     private void ClearMovementAnimations()
