@@ -26,8 +26,8 @@ public class ProjectileAbility : Ability
 
     public override void TriggerAbility()
     {
-        launcher.Launch();
         PlayShootingAnimation();
+        launcher.Launch();
     }
 
     private void PlayShootingAnimation()
@@ -38,20 +38,36 @@ public class ProjectileAbility : Ability
         if (angle < -225 && angle > -315 || angle < 135 && angle > 45)
         {
             animator.SetTrigger("isShootingUp");
+            float animTime = animator.GetCurrentAnimatorStateInfo(0).length;
+            AbilityCoolDown.instance.StartCoroutine(WaitingTime(animTime));
         }
         else if (angle >= -45 && angle <= 45)
         {
             animator.SetTrigger("isShootingSide");
+            float animTime = animator.GetCurrentAnimatorStateInfo(0).length;
+            AbilityCoolDown.instance.StartCoroutine(WaitingTime(animTime));
         }
         else if (angle < -45 && angle > -125)
         {
             animator.SetTrigger("isShootingDown");
+            float animTime = animator.GetCurrentAnimatorStateInfo(0).length;
+            AbilityCoolDown.instance.StartCoroutine(WaitingTime(animTime));
         }
         else
         {
             player.transform.rotation = Quaternion.Euler(0, 180, 0);
             animator.SetTrigger("isShootingSide");
+            float animTime = animator.GetCurrentAnimatorStateInfo(0).length;
+            AbilityCoolDown.instance.StartCoroutine(WaitingTime(animTime));
         }
+    }
+
+    IEnumerator WaitingTime(float Float)
+    {
+        Debug.Log(Time.time + ": " + Float);
+        yield return new WaitForSeconds(Float);
+        player.GetComponent<PlayerMovement>().enabled = true;
+        Debug.Log(Time.time + ": movement enabled");
     }
 
     private void ClearMovementAnimations()
