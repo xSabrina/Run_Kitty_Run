@@ -12,6 +12,7 @@ public class GameManagerScript : MonoBehaviour
     public static GameManagerScript instance = null;
     public List<Level> levels = new List<Level>();
     public Level currentLevel;
+    public bool abilitiesEnabled = true;
 
     // Use this for initialization
     void Awake()
