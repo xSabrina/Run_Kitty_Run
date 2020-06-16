@@ -9,6 +9,8 @@ public class AbilityCoolDown : MonoBehaviour
     //public Image darkMask;
     public Text coolDownTextDisplay;
 
+    public static AbilityCoolDown instance;
+
     [SerializeField] private Ability ability;
     private GameObject player;
     private Image myButtonImage;
@@ -20,6 +22,7 @@ public class AbilityCoolDown : MonoBehaviour
 
     void Start()
     {
+        AbilityCoolDown.instance = this;
         player = GameObject.Find("Player");
         Initialize(ability, player);
     }
@@ -46,6 +49,7 @@ public class AbilityCoolDown : MonoBehaviour
             if (Input.GetButtonDown(abilityButtonAxisName))
             {
                 Debug.Log("Ability triggered: " + ability.name);
+                player.GetComponent<PlayerMovement>().enabled = false;
                 ButtonTriggered();
             }
         }

@@ -19,9 +19,28 @@ public class Blink : Ability
 
     public override void TriggerAbility()
     {
-        Rigidbody2D rbPlayer = launcher.player.GetComponent<Rigidbody2D>();
-        rbPlayer.position += (Vector2)launcher.spawnPoint.transform.up.normalized * aRange;
+        ClearMovementAnimations();
+
+        Transform playerTransform = launcher.player.GetComponent<Transform>();
+        playerTransform.position += launcher.spawnPoint.transform.up.normalized * aRange;
+
+        // trigger blink animation and wait for it to finish
         animator.SetTrigger("isBlinking");
+        float animTime = animator.GetCurrentAnimatorStateInfo(0).length;
+        AbilityCoolDown.instance.StartCoroutine(WaitingTime(animTime));
+    }
+
+    IEnumerator WaitingTime(float Float)
+    {
+        yield return new WaitForSeconds(Float);
+        launcher.player.GetComponent<PlayerMovement>().enabled = true;
+    }
+
+    private void ClearMovementAnimations()
+    {
+        animator.SetBool("isWalkingSide", false);
+        animator.SetBool("isWalkingUp", false);
+        animator.SetBool("isWalkingDown", false);
     }
 
 }
