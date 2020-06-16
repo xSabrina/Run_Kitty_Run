@@ -19,8 +19,8 @@ public class Blink : Ability
 
     public override void TriggerAbility()
     {
-        Rigidbody2D rbPlayer = launcher.player.GetComponent<Rigidbody2D>();
-        rbPlayer.position += (Vector2)launcher.spawnPoint.transform.up.normalized * aRange;
+        Transform playerTransform = launcher.player.GetComponent<Transform>();
+        playerTransform.position += launcher.spawnPoint.transform.up.normalized * aRange;
         animator.SetTrigger("isBlinking");
     }
 
