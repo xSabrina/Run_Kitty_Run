@@ -15,4 +15,4 @@ MonoBehaviour:
   levelName: TutorialScene
   levelImg: {fileID: 0}
   levelTime: 
-  levelNr: 0
+  levelNr: 1
