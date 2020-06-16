@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 68bcf70a9b9944046ab5c9fec8fd4282, type: 3}
-  m_Name: Level 1
+  m_Name: TutorialLevel
   m_EditorClassIdentifier: 
-  levelName: FirstLevel
+  levelName: TutorialScene
   levelImg: {fileID: 0}
   levelTime: 
-  levelNr: 2
+  levelNr: 1

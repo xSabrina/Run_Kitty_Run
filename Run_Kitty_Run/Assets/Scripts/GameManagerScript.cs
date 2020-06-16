@@ -10,7 +10,7 @@ public class GameManagerScript : MonoBehaviour
     private int minutes;
     public bool countTime = true;
     public static GameManagerScript instance = null;
-    public List<Level> Levels = new List<Level>();
+    public List<Level> levels = new List<Level>();
     public Level currentLevel;
 
     // Use this for initialization
@@ -56,8 +56,16 @@ public class GameManagerScript : MonoBehaviour
     //should be triggered through EndLevelPrefab
     public void EndLevel()
     {
-        currentLevel = Levels[currentLevel.levelNr];
-        StartLevel();
+        if (currentLevel.levelNr < levels.Count)
+        {
+            currentLevel = levels[currentLevel.levelNr];
+            StartLevel();
+        }
+        else
+        {
+
+            SceneManager.LoadScene("MainMenu");
+        }
         
     }
 
@@ -72,6 +80,10 @@ public class GameManagerScript : MonoBehaviour
     public void RestartLevel()
     {
         SceneManager.LoadScene(currentLevel.levelName);
+    }
+    public void SetCurrentLevel(int i)
+    {
+        currentLevel = levels[i];
     }
  
 }
