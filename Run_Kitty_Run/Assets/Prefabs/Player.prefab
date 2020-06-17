@@ -16,8 +16,6 @@ GameObject:
   - component: {fileID: 5564521833680093783}
   - component: {fileID: 5564521833680093782}
   - component: {fileID: 5564521833680093780}
-  - component: {fileID: 404812114921684729}
-  - component: {fileID: 3878597306897683541}
   - component: {fileID: 7719149590923740457}
   - component: {fileID: 44395126511418716}
   m_Layer: 0
@@ -151,8 +149,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0044888738, y: -0.03315362}
-  m_Size: {x: 0.114809, y: 0.21748796}
+  m_Offset: {x: -0.008274562, y: -0.035046875}
+  m_Size: {x: 0.08704726, y: 0.1657388}
   m_Direction: 0
 --- !u!50 &5564521833680093782
 Rigidbody2D:
@@ -173,7 +171,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!114 &5564521833680093780
 MonoBehaviour:
@@ -187,34 +185,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65ec92ed42e2c9f4c9269434a1be321d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &404812114921684729
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5564521833680093790}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81516659ee2bfeb448b9a32170b75168, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  abilityButtonAxisName: Fire1
-  ability: {fileID: 11400000, guid: 5deafca6f537ec340ba3ce013c32a18a, type: 2}
---- !u!114 &3878597306897683541
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5564521833680093790}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81516659ee2bfeb448b9a32170b75168, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  abilityButtonAxisName: Fire2
-  ability: {fileID: 11400000, guid: aa8a7946d7b780042983272fddb6a856, type: 2}
 --- !u!114 &7719149590923740457
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -289,9 +259,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fde1bdacff03b243814fa7e7c7e2177, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rbPlayer: {fileID: 5564521833680093782}
-  rbFirePoint: {fileID: 1204832343041071058}
-  cam: {fileID: 0}
 --- !u!50 &1204832343041071058
 Rigidbody2D:
   serializedVersion: 4
