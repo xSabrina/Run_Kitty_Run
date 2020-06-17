@@ -873,7 +873,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Forrest Runner
+  m_Text: Forest Runner
 --- !u!222 &1814959736
 CanvasRenderer:
   m_ObjectHideFlags: 0
