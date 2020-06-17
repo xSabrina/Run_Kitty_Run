@@ -1,0 +1,4505 @@
+fileFormatVersion: 2
+guid: baf53b08d0ad0454f8e3788baac6a619
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2739807658926110822
+    second: Skull_0
+  - first:
+      213: -8375587311600527847
+    second: Skull_1
+  - first:
+      213: -3927005747788755955
+    second: Skull_2
+  - first:
+      213: -6772826663682122736
+    second: Skull_3
+  - first:
+      213: 850665084096451344
+    second: Skull_4
+  - first:
+      213: 4976157411595593133
+    second: Skull_5
+  - first:
+      213: -5468298644130788954
+    second: Skull_6
+  - first:
+      213: -5648198061226190591
+    second: Skull_7
+  - first:
+      213: -5770490774195072231
+    second: Skull_8
+  - first:
+      213: -7302446423807033929
+    second: Skull_9
+  - first:
+      213: 7978066866567822878
+    second: Skull_10
+  - first:
+      213: 338550356729546805
+    second: Skull_11
+  - first:
+      213: 2314874828677175480
+    second: Skull_12
+  - first:
+      213: -4574622989818975155
+    second: Skull_13
+  - first:
+      213: 8318427299632065334
+    second: Skull_14
+  - first:
+      213: 7963109088042385018
+    second: Skull_15
+  - first:
+      213: -105991236275119784
+    second: Skull_16
+  - first:
+      213: 6967586462243519993
+    second: Skull_17
+  - first:
+      213: 3376268389035966535
+    second: Skull_18
+  - first:
+      213: -4376674058739630461
+    second: Skull_19
+  - first:
+      213: -3043083219958958149
+    second: Skull_20
+  - first:
+      213: -5291074904789579608
+    second: Skull_21
+  - first:
+      213: 2757149780344575746
+    second: Skull_22
+  - first:
+      213: -81084638486505347
+    second: Skull_23
+  - first:
+      213: -1520189836290183399
+    second: Skull_24
+  - first:
+      213: -4734674487293630000
+    second: Skull_25
+  - first:
+      213: 7327085890469779795
+    second: Skull_26
+  - first:
+      213: 3770281300494832685
+    second: Skull_27
+  - first:
+      213: -4929773843589449152
+    second: Skull_28
+  - first:
+      213: 679642630117344084
+    second: Skull_29
+  - first:
+      213: 558327058455491580
+    second: Skull_30
+  - first:
+      213: -2359740410599792770
+    second: Skull_31
+  - first:
+      213: -5955897578843254183
+    second: Skull_32
+  - first:
+      213: 4554812588840030069
+    second: Skull_33
+  - first:
+      213: 9214971235064019158
+    second: Skull_34
+  - first:
+      213: -4488393868928168760
+    second: Skull_35
+  - first:
+      213: 905695484750655080
+    second: Skull_36
+  - first:
+      213: -7711879151653276034
+    second: Skull_37
+  - first:
+      213: 5131890945974637272
+    second: Skull_38
+  - first:
+      213: -3617698994018619200
+    second: Skull_39
+  - first:
+      213: 4914852264227588269
+    second: Skull_40
+  - first:
+      213: -3374441344469698118
+    second: Skull_41
+  - first:
+      213: -8380380510534091336
+    second: Skull_42
+  - first:
+      213: 781487057434058559
+    second: Skull_43
+  - first:
+      213: 876952093975320194
+    second: Skull_44
+  - first:
+      213: -2155341378102476077
+    second: Skull_45
+  - first:
+      213: 337222211471089061
+    second: Skull_46
+  - first:
+      213: -1708316144744950663
+    second: Skull_47
+  - first:
+      213: -2687692484847325754
+    second: Skull_48
+  - first:
+      213: -5950904484787017372
+    second: Skull_49
+  - first:
+      213: 2568118968149925773
+    second: Skull_50
+  - first:
+      213: -5768420992126887133
+    second: Skull_51
+  - first:
+      213: -3185970254832570363
+    second: Skull_52
+  - first:
+      213: -6448441540624159406
+    second: Skull_53
+  - first:
+      213: -5528833153634668727
+    second: Skull_54
+  - first:
+      213: -2306854517511189619
+    second: Skull_55
+  - first:
+      213: 2739609618697457872
+    second: Skull_56
+  - first:
+      213: 1681357719927404198
+    second: Skull_57
+  - first:
+      213: 4248884135369950368
+    second: Skull_58
+  - first:
+      213: 7979160618376236070
+    second: Skull_59
+  - first:
+      213: 1307661243432587099
+    second: Skull_60
+  - first:
+      213: -3981973206757122128
+    second: Skull_61
+  - first:
+      213: 7140112267577230870
+    second: Skull_62
+  - first:
+      213: 6535747899303695768
+    second: Skull_63
+  - first:
+      213: 6020559240994084532
+    second: Skull_64
+  - first:
+      213: 2760675705980901674
+    second: Skull_65
+  - first:
+      213: 450113283326627904
+    second: Skull_66
+  - first:
+      213: -2076459993828284230
+    second: Skull_67
+  - first:
+      213: 5784392969744872542
+    second: Skull_68
+  - first:
+      213: 2535573344215439004
+    second: Skull_69
+  - first:
+      213: 4692607600031478961
+    second: Skull_70
+  - first:
+      213: 1564630434580312497
+    second: Skull_71
+  - first:
+      213: -984061193764211173
+    second: Skull_72
+  - first:
+      213: 5279021748779265317
+    second: Skull_73
+  - first:
+      213: -471321963123877190
+    second: Skull_74
+  - first:
+      213: 5448990802672724029
+    second: Skull_75
+  - first:
+      213: -4136052461476913903
+    second: Skull_76
+  - first:
+      213: -4652444237330166910
+    second: Skull_77
+  - first:
+      213: 1936630943276681265
+    second: Skull_78
+  - first:
+      213: 2980759988237301272
+    second: Skull_79
+  - first:
+      213: -5278484248674120351
+    second: Skull_80
+  - first:
+      213: 7035134821716871008
+    second: Skull_81
+  - first:
+      213: 17442547893096770
+    second: Skull_82
+  - first:
+      213: -1241848985192249238
+    second: Skull_83
+  - first:
+      213: 3211406917928500567
+    second: Skull_84
+  - first:
+      213: -3808546731498731724
+    second: Skull_85
+  - first:
+      213: -4780410670872728207
+    second: Skull_86
+  - first:
+      213: 164577400701930857
+    second: Skull_87
+  - first:
+      213: -8676029067902661136
+    second: Skull_88
+  - first:
+      213: 5173299699407959596
+    second: Skull_89
+  - first:
+      213: -9048420516594168368
+    second: Skull_90
+  - first:
+      213: 8695949418209924738
+    second: Skull_91
+  - first:
+      213: 7522152098799258344
+    second: Skull_92
+  - first:
+      213: -919398226117801831
+    second: Skull_93
+  - first:
+      213: -5053864312569527186
+    second: Skull_94
+  - first:
+      213: -2910576028198589442
+    second: Skull_95
+  - first:
+      213: 2666819144501382221
+    second: Skull_96
+  - first:
+      213: 6342270470828016456
+    second: Skull_97
+  - first:
+      213: -7103524213946327009
+    second: Skull_98
+  - first:
+      213: 2897429493672780217
+    second: Skull_99
+  - first:
+      213: -813668982809666875
+    second: Skull_100
+  - first:
+      213: 982252883232495658
+    second: Skull_101
+  - first:
+      213: -4247336194950642017
+    second: Skull_102
+  - first:
+      213: 61415824160523132
+    second: Skull_103
+  - first:
+      213: 6811334795147452528
+    second: Skull_104
+  - first:
+      213: -5021968176715112902
+    second: Skull_105
+  - first:
+      213: 7933270068917882506
+    second: Skull_106
+  - first:
+      213: -4911647670260969965
+    second: Skull_107
+  - first:
+      213: -4948838514195680185
+    second: Skull_108
+  - first:
+      213: -513008472784116972
+    second: Skull_109
+  - first:
+      213: -411144568259871664
+    second: Skull_110
+  - first:
+      213: -7862761358008585239
+    second: Skull_111
+  - first:
+      213: -1176991846442625512
+    second: Skull_112
+  - first:
+      213: 4333839317764093899
+    second: Skull_113
+  - first:
+      213: -5142620297225010964
+    second: Skull_114
+  - first:
+      213: -545108233593622942
+    second: Skull_115
+  - first:
+      213: -7775502813116713511
+    second: Skull_116
+  - first:
+      213: 6284920551534302023
+    second: Skull_117
+  - first:
+      213: 2995389885094128900
+    second: Skull_118
+  - first:
+      213: 4473852010295686710
+    second: Skull_119
+  - first:
+      213: 4040215861232472093
+    second: Skull_120
+  - first:
+      213: -4140667964257996387
+    second: Skull_121
+  - first:
+      213: -840483623794863115
+    second: Skull_122
+  - first:
+      213: -6391942059672908874
+    second: Skull_123
+  - first:
+      213: -5667295057176174352
+    second: Skull_124
+  - first:
+      213: -2470284977362760144
+    second: Skull_125
+  - first:
+      213: 3622161815486172647
+    second: Skull_126
+  - first:
+      213: 8813015880937812112
+    second: Skull_127
+  - first:
+      213: -1382894173431295335
+    second: Skull_128
+  - first:
+      213: -8261033980575761303
+    second: Skull_129
+  - first:
+      213: -2364904841026219206
+    second: Skull_130
+  - first:
+      213: -8786872070432264548
+    second: Skull_131
+  - first:
+      213: -2462557216151808741
+    second: Skull_132
+  - first:
+      213: 5432504758609276305
+    second: Skull_133
+  - first:
+      213: 4652042015256906845
+    second: Skull_134
+  - first:
+      213: -6860086884549616728
+    second: Skull_135
+  - first:
+      213: -7668846263027438630
+    second: Skull_136
+  - first:
+      213: -5907017289922987243
+    second: Skull_137
+  - first:
+      213: -2417320878848656238
+    second: Skull_138
+  - first:
+      213: 4121461805934332944
+    second: Skull_139
+  - first:
+      213: -4883203221841374159
+    second: Skull_140
+  - first:
+      213: -8133766396574712208
+    second: Skull_141
+  - first:
+      213: 842535674621185245
+    second: Skull_142
+  - first:
+      213: 1517549021395881090
+    second: Skull_143
+  - first:
+      213: -3179415978473185054
+    second: Skull_144
+  - first:
+      213: -2995240492042664350
+    second: Skull_145
+  - first:
+      213: 2552499871572687453
+    second: Skull_146
+  - first:
+      213: -7565820487276726912
+    second: Skull_147
+  - first:
+      213: -4570613703643196923
+    second: Skull_148
+  - first:
+      213: 3973209351932266259
+    second: Skull_149
+  - first:
+      213: 5713826873621766971
+    second: Skull_150
+  - first:
+      213: 7763652648277351579
+    second: Skull_151
+  - first:
+      213: 6086346531797932776
+    second: Skull_152
+  - first:
+      213: 5063450379563472414
+    second: Skull_153
+  - first:
+      213: -5890650310124145848
+    second: Skull_154
+  - first:
+      213: -5459481579520590527
+    second: Skull_155
+  - first:
+      213: 6852611016671559010
+    second: Skull_156
+  - first:
+      213: -6859489477907848314
+    second: Skull_157
+  - first:
+      213: 305161016347392496
+    second: Skull_158
+  - first:
+      213: -1777890041054158200
+    second: Skull_159
+  - first:
+      213: 8415886280957240959
+    second: Skull_160
+  - first:
+      213: -7154062088848242598
+    second: Skull_161
+  - first:
+      213: -4237565987558172517
+    second: Skull_162
+  - first:
+      213: 67759613335087909
+    second: Skull_163
+  - first:
+      213: 4665112271114435112
+    second: Skull_164
+  - first:
+      213: -2607172291419322540
+    second: Skull_165
+  - first:
+      213: -6976709987601497090
+    second: Skull_166
+  - first:
+      213: 2187307888919869734
+    second: Skull_167
+  - first:
+      213: 7943138052439370359
+    second: Skull_168
+  - first:
+      213: -336879314893223370
+    second: Skull_169
+  - first:
+      213: 4264743581678592183
+    second: Skull_170
+  - first:
+      213: -1539441922179962328
+    second: Skull_171
+  - first:
+      213: 2733721496993214962
+    second: Skull_172
+  - first:
+      213: 4207779555010891526
+    second: Skull_173
+  - first:
+      213: 3856665771382797886
+    second: Skull_174
+  - first:
+      213: -7713571332380421485
+    second: Skull_175
+  - first:
+      213: 7038544393583523636
+    second: Skull_176
+  - first:
+      213: 2530547116256486429
+    second: Skull_177
+  - first:
+      213: -8172792099761472815
+    second: Skull_178
+  - first:
+      213: 8690153635395318532
+    second: Skull_179
+  - first:
+      213: 5314476992317729520
+    second: Skull_180
+  - first:
+      213: 3239346895117993691
+    second: Skull_181
+  - first:
+      213: 6440278320784697121
+    second: Skull_182
+  - first:
+      213: 678286077637220329
+    second: Skull_183
+  - first:
+      213: 4725707421686598391
+    second: Skull_184
+  - first:
+      213: -570826923992793296
+    second: Skull_185
+  - first:
+      213: -4504244548460340855
+    second: Skull_186
+  - first:
+      213: -4427784422476167784
+    second: Skull_187
+  - first:
+      213: -8852087137180578202
+    second: Skull_188
+  - first:
+      213: -1120599630903426224
+    second: Skull_189
+  - first:
+      213: -3179894342583992457
+    second: Skull_190
+  - first:
+      213: 8234658434719085916
+    second: Skull_191
+  - first:
+      213: 6269871788192007878
+    second: Skull_192
+  - first:
+      213: 2821617769977965883
+    second: Skull_193
+  - first:
+      213: -8000270050610475421
+    second: Skull_194
+  - first:
+      213: 5147720259138767725
+    second: Skull_195
+  - first:
+      213: 5522362141432953728
+    second: Skull_196
+  - first:
+      213: -132657656301893917
+    second: Skull_197
+  - first:
+      213: 8714432886756836905
+    second: Skull_198
+  - first:
+      213: 1910129900270574036
+    second: Skull_199
+  - first:
+      213: 1318142474697408130
+    second: Skull_200
+  - first:
+      213: -485734754909335067
+    second: Skull_201
+  - first:
+      213: 1532124660638507701
+    second: Skull_202
+  - first:
+      213: 782545281725918475
+    second: Skull_203
+  - first:
+      213: -2974335184718501214
+    second: Skull_204
+  - first:
+      213: -8844307416892444539
+    second: Skull_205
+  - first:
+      213: -8804493115338781585
+    second: Skull_206
+  - first:
+      213: 8063230052814632668
+    second: Skull_207
+  - first:
+      213: -1368151869747407915
+    second: Skull_208
+  - first:
+      213: -6867977986318777071
+    second: Skull_209
+  - first:
+      213: -2876122694274210737
+    second: Skull_210
+  - first:
+      213: -9198991127250927810
+    second: Skull_211
+  - first:
+      213: -2764886957111094288
+    second: Skull_212
+  - first:
+      213: -1694482619366762010
+    second: Skull_213
+  - first:
+      213: -6258154498209981553
+    second: Skull_214
+  - first:
+      213: -6433472279143140998
+    second: Skull_215
+  - first:
+      213: 5260257192784009379
+    second: Skull_216
+  - first:
+      213: -8303290892256465550
+    second: Skull_217
+  - first:
+      213: -7279591336225258292
+    second: Skull_218
+  - first:
+      213: 7279483676083775044
+    second: Skull_219
+  - first:
+      213: -8063170725000343470
+    second: Skull_220
+  - first:
+      213: -747006804264137400
+    second: Skull_221
+  - first:
+      213: -6499273006686217863
+    second: Skull_222
+  - first:
+      213: -4006145674642550856
+    second: Skull_223
+  - first:
+      213: -9098831970132173689
+    second: Skull_224
+  - first:
+      213: -667757660153878950
+    second: Skull_225
+  - first:
+      213: 6311762784273040420
+    second: Skull_226
+  - first:
+      213: -8157490599578460002
+    second: Skull_227
+  - first:
+      213: -21189050781508252
+    second: Skull_228
+  - first:
+      213: -1397649783838658084
+    second: Skull_229
+  - first:
+      213: 9185216989460382784
+    second: Skull_230
+  - first:
+      213: 3368909955212377155
+    second: Skull_231
+  - first:
+      213: 5316952770811964979
+    second: Skull_232
+  - first:
+      213: -6010671817494238875
+    second: Skull_233
+  - first:
+      213: 7609414154863963228
+    second: Skull_234
+  - first:
+      213: 6156533123334365422
+    second: Skull_235
+  - first:
+      213: 387316114651397149
+    second: Skull_236
+  - first:
+      213: -880200126019261916
+    second: Skull_237
+  - first:
+      213: 7907847486917680533
+    second: Skull_238
+  - first:
+      213: 8016523231779930019
+    second: Skull_239
+  - first:
+      213: -5001386303658183302
+    second: Skull_240
+  - first:
+      213: -5872242840205497482
+    second: Skull_241
+  - first:
+      213: 4709700487570112886
+    second: Skull_242
+  - first:
+      213: -3168638827929870284
+    second: Skull_243
+  - first:
+      213: -3675549824937208251
+    second: Skull_244
+  - first:
+      213: -7562707884148353893
+    second: Skull_245
+  - first:
+      213: -3073937035513249749
+    second: Skull_246
+  - first:
+      213: -5153040486156595728
+    second: Skull_247
+  - first:
+      213: -8093372573979462850
+    second: Skull_248
+  - first:
+      213: -3374441416193199150
+    second: Skull_249
+  - first:
+      213: 8962752519121112607
+    second: Skull_250
+  - first:
+      213: 467202457243530755
+    second: Skull_251
+  - first:
+      213: 2707402776041423656
+    second: Skull_252
+  - first:
+      213: 6564510847011914255
+    second: Skull_253
+  - first:
+      213: -279088444924835938
+    second: Skull_254
+  - first:
+      213: 6828511280245684391
+    second: Skull_255
+  - first:
+      213: -4124477595494964311
+    second: Skull_256
+  - first:
+      213: -416037266832865308
+    second: Skull_257
+  - first:
+      213: -5263866421430898041
+    second: Skull_258
+  - first:
+      213: -8339436142144642230
+    second: Skull_259
+  - first:
+      213: 4507619215878175868
+    second: Skull_260
+  - first:
+      213: 5795199208361573306
+    second: Skull_261
+  - first:
+      213: -6786480704151641594
+    second: Skull_262
+  - first:
+      213: -233613885371430486
+    second: Skull_263
+  - first:
+      213: 6624106032839017939
+    second: Skull_264
+  - first:
+      213: 7908886091868078173
+    second: Skull_265
+  - first:
+      213: 4591544548225680051
+    second: Skull_266
+  - first:
+      213: -6168534338243176759
+    second: Skull_267
+  - first:
+      213: -2074242432139867762
+    second: Skull_268
+  - first:
+      213: -347437433294194185
+    second: Skull_269
+  - first:
+      213: -789040349463337708
+    second: Skull_270
+  - first:
+      213: -9050148644186401923
+    second: Skull_271
+  - first:
+      213: -7984205704435772260
+    second: Skull_272
+  - first:
+      213: -6338345594495499362
+    second: Skull_273
+  - first:
+      213: 7120624005835441896
+    second: Skull_274
+  - first:
+      213: 5010918748028403529
+    second: Skull_275
+  - first:
+      213: 5430643587445876431
+    second: Skull_276
+  - first:
+      213: -5202667285106004730
+    second: Skull_277
+  - first:
+      213: 6407506745128892654
+    second: Skull_278
+  - first:
+      213: 8306233118124410337
+    second: Skull_279
+  - first:
+      213: 1693032336717875198
+    second: Skull_280
+  - first:
+      213: 6573981413965500993
+    second: Skull_281
+  - first:
+      213: -8070790246469743896
+    second: Skull_282
+  - first:
+      213: 4336772342373369253
+    second: Skull_283
+  - first:
+      213: -2003021608102410544
+    second: Skull_284
+  - first:
+      213: -6566746430164574012
+    second: Skull_285
+  - first:
+      213: 9211572996515281690
+    second: Skull_286
+  - first:
+      213: -8310125040512902070
+    second: Skull_287
+  - first:
+      213: 2641847808858214733
+    second: Skull_288
+  - first:
+      213: 8727270540494212624
+    second: Skull_289
+  - first:
+      213: -8065318518476732091
+    second: Skull_290
+  - first:
+      213: 7417853332375803888
+    second: Skull_291
+  - first:
+      213: 8563110514705041762
+    second: Skull_292
+  - first:
+      213: 9173167066008819013
+    second: Skull_293
+  - first:
+      213: -1185926401695912196
+    second: Skull_294
+  - first:
+      213: 3696944180709179246
+    second: Skull_295
+  - first:
+      213: 110505013942502042
+    second: Skull_296
+  - first:
+      213: 638113668873854994
+    second: Skull_297
+  - first:
+      213: -3749740684113951194
+    second: Skull_298
+  - first:
+      213: -8966751689156598141
+    second: Skull_299
+  - first:
+      213: 5921902988371153255
+    second: Skull_300
+  - first:
+      213: 2101335230197423830
+    second: Skull_301
+  - first:
+      213: 7086010952026318512
+    second: Skull_302
+  - first:
+      213: -7954295541669501085
+    second: Skull_303
+  - first:
+      213: -1062686468822436987
+    second: Skull_304
+  - first:
+      213: -4089328557866785251
+    second: Skull_305
+  - first:
+      213: -6665535272921952720
+    second: Skull_306
+  - first:
+      213: 4130689804713827808
+    second: Skull_307
+  - first:
+      213: -885830958184441727
+    second: Skull_308
+  - first:
+      213: 612356656036001388
+    second: Skull_309
+  - first:
+      213: -3156078377439506272
+    second: Skull_310
+  - first:
+      213: -6715975301004929614
+    second: Skull_311
+  - first:
+      213: -1720130402607479810
+    second: Skull_312
+  - first:
+      213: 3011088275007337573
+    second: Skull_313
+  - first:
+      213: 6572734182743094941
+    second: Skull_314
+  - first:
+      213: -4012081489425406343
+    second: Skull_315
+  - first:
+      213: 1247689271188318904
+    second: Skull_316
+  - first:
+      213: -2650702623588748044
+    second: Skull_317
+  - first:
+      213: 1656171173769336909
+    second: Skull_318
+  - first:
+      213: 3599645750716576713
+    second: Skull_319
+  - first:
+      213: -3920240781409541528
+    second: Skull_320
+  - first:
+      213: -8567612046826782595
+    second: Skull_321
+  - first:
+      213: 5761819854526992509
+    second: Skull_322
+  - first:
+      213: -5388337252732674946
+    second: Skull_323
+  - first:
+      213: 2964367868215075103
+    second: Skull_324
+  - first:
+      213: -2827311634477520840
+    second: Skull_325
+  - first:
+      213: -8210567779143180789
+    second: Skull_326
+  - first:
+      213: -983507428872982282
+    second: Skull_327
+  - first:
+      213: 6466031544661139773
+    second: Skull_328
+  - first:
+      213: 5418378862315977151
+    second: Skull_329
+  - first:
+      213: 6169479368743226304
+    second: Skull_330
+  - first:
+      213: 6265532641254703340
+    second: Skull_331
+  - first:
+      213: -6744902332910761466
+    second: Skull_332
+  - first:
+      213: -4276095144013318871
+    second: Skull_333
+  - first:
+      213: 1086339712418219146
+    second: Skull_334
+  - first:
+      213: 7648182069286915195
+    second: Skull_335
+  - first:
+      213: -8112339004805427177
+    second: Skull_336
+  - first:
+      213: -8671478285953622176
+    second: Skull_337
+  - first:
+      213: 7010578635592507106
+    second: Skull_338
+  - first:
+      213: 9002105359609051911
+    second: Skull_339
+  - first:
+      213: -6755606326108150390
+    second: Skull_340
+  - first:
+      213: -2214381021281507638
+    second: Skull_341
+  - first:
+      213: 8245978578268866010
+    second: Skull_342
+  - first:
+      213: 1473406346366577743
+    second: Skull_343
+  - first:
+      213: -1551797322190210635
+    second: Skull_344
+  - first:
+      213: 3885441824851747975
+    second: Skull_345
+  - first:
+      213: -4468128175550439625
+    second: Skull_346
+  - first:
+      213: -9083131128131695439
+    second: Skull_347
+  - first:
+      213: 3626630463304935375
+    second: Skull_348
+  - first:
+      213: -2238253917485978252
+    second: Skull_349
+  - first:
+      213: -1879540069147099538
+    second: Skull_350
+  - first:
+      213: -8302761518276985559
+    second: Skull_351
+  - first:
+      213: 7715164979856096281
+    second: Skull_352
+  - first:
+      213: -2520510303676203108
+    second: Skull_353
+  - first:
+      213: 1718449844532068201
+    second: Skull_354
+  - first:
+      213: 5222160036602887693
+    second: Skull_355
+  - first:
+      213: -5112431093258015435
+    second: Skull_356
+  - first:
+      213: -6772321326510946303
+    second: Skull_357
+  - first:
+      213: -6605720895244597748
+    second: Skull_358
+  - first:
+      213: -4808564506984666044
+    second: Skull_359
+  - first:
+      213: -6876624893540693960
+    second: Skull_360
+  - first:
+      213: 773823755627006868
+    second: Skull_361
+  - first:
+      213: -7283433419798348946
+    second: Skull_362
+  - first:
+      213: 3798419291622308392
+    second: Skull_363
+  - first:
+      213: -4197648934821355308
+    second: Skull_364
+  - first:
+      213: 5743036976485018920
+    second: Skull_365
+  - first:
+      213: 3000332689264317350
+    second: Skull_366
+  - first:
+      213: 6638406033831447564
+    second: Skull_367
+  - first:
+      213: -878669247567124675
+    second: Skull_368
+  - first:
+      213: -6936591105126958942
+    second: Skull_369
+  - first:
+      213: 3272562246323348101
+    second: Skull_370
+  - first:
+      213: -5266778583931114149
+    second: Skull_371
+  - first:
+      213: 5577146372676830621
+    second: Skull_372
+  - first:
+      213: -5043931748684459353
+    second: Skull_373
+  - first:
+      213: -2125637639211201843
+    second: Skull_374
+  - first:
+      213: -1373393989229934347
+    second: Skull_375
+  - first:
+      213: 2143015647740527856
+    second: Skull_376
+  - first:
+      213: -8407565251220763776
+    second: Skull_377
+  - first:
+      213: -5762373489885299163
+    second: Skull_378
+  - first:
+      213: -3318714095431990229
+    second: Skull_379
+  - first:
+      213: 8903376111897338606
+    second: Skull_380
+  - first:
+      213: 3055162482677551384
+    second: Skull_381
+  - first:
+      213: -1565247893086618639
+    second: Skull_382
+  - first:
+      213: 5068607568596673762
+    second: Skull_383
+  - first:
+      213: -4064957162849707110
+    second: Skull_384
+  - first:
+      213: -5320657073452577707
+    second: Skull_385
+  - first:
+      213: 2843545355682984395
+    second: Skull_386
+  - first:
+      213: 5060273381653549401
+    second: Skull_387
+  - first:
+      213: -673983271250010796
+    second: Skull_388
+  - first:
+      213: -5949845481383368989
+    second: Skull_389
+  - first:
+      213: 4785390928801984918
+    second: Skull_390
+  - first:
+      213: -1457006107561331216
+    second: Skull_391
+  - first:
+      213: 319381793767100911
+    second: Skull_392
+  - first:
+      213: 4215799015293626737
+    second: Skull_393
+  - first:
+      213: 5302435452372899660
+    second: Skull_394
+  - first:
+      213: 229555366252598000
+    second: Skull_395
+  - first:
+      213: 458668093652595875
+    second: Skull_396
+  - first:
+      213: -2993980521525441485
+    second: Skull_397
+  - first:
+      213: -6192647401030668134
+    second: Skull_398
+  - first:
+      213: 227586654972599563
+    second: Skull_399
+  - first:
+      213: 8403697877530780289
+    second: Skull_400
+  - first:
+      213: 9079190395887428167
+    second: Skull_401
+  - first:
+      213: 647248046159734761
+    second: Skull_402
+  - first:
+      213: -6894039774015605524
+    second: Skull_403
+  - first:
+      213: -743711411141880734
+    second: Skull_404
+  - first:
+      213: -4789888811259184634
+    second: Skull_405
+  - first:
+      213: 6783028715253405780
+    second: Skull_406
+  - first:
+      213: -2026383917284838237
+    second: Skull_407
+  - first:
+      213: -7212777425190567459
+    second: Skull_408
+  - first:
+      213: 4259173201443101135
+    second: Skull_409
+  - first:
+      213: 4656842589275479776
+    second: Skull_410
+  - first:
+      213: -3039050217633215452
+    second: Skull_411
+  - first:
+      213: 590692751796972285
+    second: Skull_412
+  - first:
+      213: -2098275153681985936
+    second: Skull_413
+  - first:
+      213: -3613786932651596051
+    second: Skull_414
+  - first:
+      213: -2829940894311521870
+    second: Skull_415
+  - first:
+      213: 3876282693299249092
+    second: Skull_416
+  - first:
+      213: -7696023062106158890
+    second: Skull_417
+  - first:
+      213: -8642193761603409784
+    second: Skull_418
+  - first:
+      213: -2012459689811540283
+    second: Skull_419
+  - first:
+      213: 7131966227507599038
+    second: Skull_420
+  - first:
+      213: 1960068167235459140
+    second: Skull_421
+  - first:
+      213: -6765740405818660710
+    second: Skull_422
+  - first:
+      213: -5771925600761230375
+    second: Skull_423
+  - first:
+      213: -522768688613606638
+    second: Skull_424
+  - first:
+      213: 6006032657418285928
+    second: Skull_425
+  - first:
+      213: -7388806845693476157
+    second: Skull_426
+  - first:
+      213: -3462262873482010194
+    second: Skull_427
+  - first:
+      213: -206201823877985900
+    second: Skull_428
+  - first:
+      213: 5933929392452359484
+    second: Skull_429
+  - first:
+      213: 3317654525288737665
+    second: Skull_430
+  - first:
+      213: 2460406613485123334
+    second: Skull_431
+  - first:
+      213: -3299842779857600187
+    second: Skull_432
+  - first:
+      213: -9205070658989218668
+    second: Skull_433
+  - first:
+      213: 6553874290819305923
+    second: Skull_434
+  - first:
+      213: -4484106342544270891
+    second: Skull_435
+  - first:
+      213: 1829760247771865989
+    second: Skull_436
+  - first:
+      213: 7503170205116080914
+    second: Skull_437
+  - first:
+      213: 9069538704356822114
+    second: Skull_438
+  - first:
+      213: -1863887460027039223
+    second: Skull_439
+  - first:
+      213: -2593552581699064267
+    second: Skull_440
+  - first:
+      213: -3554828027100036204
+    second: Skull_441
+  - first:
+      213: 5925247646854272631
+    second: Skull_442
+  - first:
+      213: -5686802375712637346
+    second: Skull_443
+  - first:
+      213: 4712037015338649924
+    second: Skull_444
+  - first:
+      213: 4789499868841938979
+    second: Skull_445
+  - first:
+      213: 4805839031360283508
+    second: Skull_446
+  - first:
+      213: -8442524743598157313
+    second: Skull_447
+  - first:
+      213: 7279160657513563213
+    second: Skull_448
+  - first:
+      213: 269265015103916588
+    second: Skull_449
+  - first:
+      213: 1141272945083409143
+    second: Skull_450
+  - first:
+      213: 4890421529853038189
+    second: Skull_451
+  - first:
+      213: -4675417651326348457
+    second: Skull_452
+  - first:
+      213: -2891355405282666629
+    second: Skull_453
+  - first:
+      213: 1362897411765835124
+    second: Skull_454
+  - first:
+      213: 4935314328502120044
+    second: Skull_455
+  - first:
+      213: 8457160572370450415
+    second: Skull_456
+  - first:
+      213: -7636426479615651074
+    second: Skull_457
+  - first:
+      213: 8734253121276714026
+    second: Skull_458
+  - first:
+      213: 5698918762753923621
+    second: Skull_459
+  - first:
+      213: -3974315653928146489
+    second: Skull_460
+  - first:
+      213: 1510353381675120750
+    second: Skull_461
+  - first:
+      213: -1386719902818333601
+    second: Skull_462
+  - first:
+      213: 900965560414762304
+    second: Skull_463
+  - first:
+      213: -434750710166921388
+    second: Skull_464
+  - first:
+      213: 6996237962098476601
+    second: Skull_465
+  - first:
+      213: -5597832020313296030
+    second: Skull_466
+  - first:
+      213: 6837751532818205643
+    second: Skull_467
+  - first:
+      213: -1363075182349005890
+    second: Skull_468
+  - first:
+      213: -8898837427477719550
+    second: Skull_469
+  - first:
+      213: -1701729388618942486
+    second: Skull_470
+  - first:
+      213: 2480576835503971264
+    second: Skull_471
+  - first:
+      213: -358534974702885811
+    second: Skull_472
+  - first:
+      213: 8387071548542855658
+    second: Skull_473
+  - first:
+      213: 7243126184274738368
+    second: Skull_474
+  - first:
+      213: -9132467895760711841
+    second: Skull_475
+  - first:
+      213: -984065211156924464
+    second: Skull_476
+  - first:
+      213: 2166358200223248860
+    second: Skull_477
+  - first:
+      213: -5794637976761353169
+    second: Skull_478
+  - first:
+      213: 1636641021451610337
+    second: Skull_479
+  - first:
+      213: 7152062363023375741
+    second: Skull_480
+  - first:
+      213: 7248226584135896638
+    second: Skull_481
+  - first:
+      213: 3956647754341549971
+    second: Skull_482
+  - first:
+      213: -5910183938436962962
+    second: Skull_483
+  - first:
+      213: 6391558840560983059
+    second: Skull_484
+  - first:
+      213: 8457206232634621463
+    second: Skull_485
+  - first:
+      213: 4297478383295409550
+    second: Skull_486
+  - first:
+      213: -4340452039431692893
+    second: Skull_487
+  - first:
+      213: -6884720621045182143
+    second: Skull_488
+  - first:
+      213: 2432544568670731660
+    second: Skull_489
+  - first:
+      213: -8576630326422394582
+    second: Skull_490
+  - first:
+      213: 8485090885777134688
+    second: Skull_491
+  - first:
+      213: 13193561589775153
+    second: Skull_492
+  - first:
+      213: 1366878194391972382
+    second: Skull_493
+  - first:
+      213: 651667501917117338
+    second: Skull_494
+  - first:
+      213: -5798895579935019490
+    second: Skull_495
+  - first:
+      213: 924514736802759575
+    second: Skull_496
+  - first:
+      213: 3566930682112043005
+    second: Skull_497
+  - first:
+      213: -325714805745299843
+    second: Skull_498
+  - first:
+      213: -152957859329767753
+    second: Skull_499
+  - first:
+      213: -5557793185714725710
+    second: Skull_500
+  - first:
+      213: 3372043920150930277
+    second: Skull_501
+  - first:
+      213: -7823075956936787205
+    second: Skull_502
+  - first:
+      213: -5997699795195996128
+    second: Skull_503
+  - first:
+      213: -3487987990485186399
+    second: Skull_504
+  - first:
+      213: -5461230420053683453
+    second: Skull_505
+  - first:
+      213: 8437605089670138856
+    second: Skull_506
+  - first:
+      213: -2714784611951428670
+    second: Skull_507
+  - first:
+      213: 7775151157507548447
+    second: Skull_508
+  - first:
+      213: -8923139821708224465
+    second: Skull_509
+  - first:
+      213: -1160158479763505575
+    second: Skull_510
+  - first:
+      213: 8375897610394764604
+    second: Skull_511
+  - first:
+      213: -3058563251407443908
+    second: Skull_512
+  - first:
+      213: 7257574472988787908
+    second: Skull_513
+  - first:
+      213: 3507400762956677224
+    second: Skull_514
+  - first:
+      213: -6908941225047634083
+    second: Skull_515
+  - first:
+      213: 3427969956070585893
+    second: Skull_516
+  - first:
+      213: 980293492804820228
+    second: Skull_517
+  - first:
+      213: 3575830823137767218
+    second: Skull_518
+  - first:
+      213: 4118176968217599966
+    second: Skull_519
+  - first:
+      213: -9207157351911090643
+    second: Skull_520
+  - first:
+      213: -2049973345274006802
+    second: Skull_521
+  - first:
+      213: 8120187537868479991
+    second: Skull_522
+  - first:
+      213: 7709635128711625352
+    second: Skull_523
+  - first:
+      213: 5023797613231302488
+    second: Skull_524
+  - first:
+      213: -1959754014761309493
+    second: Skull_525
+  - first:
+      213: 409862898255770026
+    second: Skull_526
+  - first:
+      213: 6708772725065708704
+    second: Skull_527
+  - first:
+      213: 5674524646832754938
+    second: Skull_528
+  - first:
+      213: 7064844280790625645
+    second: Skull_529
+  - first:
+      213: -3054850026587443859
+    second: Skull_530
+  - first:
+      213: -8648738874950306986
+    second: Skull_531
+  - first:
+      213: 7471667808692878345
+    second: Skull_532
+  - first:
+      213: 3598435341990917380
+    second: Skull_533
+  - first:
+      213: -8766854386686720623
+    second: Skull_534
+  - first:
+      213: -995276839718051061
+    second: Skull_535
+  - first:
+      213: 90377965528991989
+    second: Skull_536
+  - first:
+      213: 61710464601531771
+    second: Skull_537
+  - first:
+      213: -3173961333074147919
+    second: Skull_538
+  - first:
+      213: 9217334143967869037
+    second: Skull_539
+  - first:
+      213: 4242771996435838562
+    second: Skull_540
+  - first:
+      213: -5473514657596754351
+    second: Skull_541
+  - first:
+      213: -3530216846025112882
+    second: Skull_542
+  - first:
+      213: -2619318702740604855
+    second: Skull_543
+  - first:
+      213: 4412558584628697380
+    second: Skull_544
+  - first:
+      213: 5846424618446144052
+    second: Skull_545
+  - first:
+      213: 2273775326006141255
+    second: Skull_546
+  - first:
+      213: 5255072613268968623
+    second: Skull_547
+  - first:
+      213: -1957803635690454691
+    second: Skull_548
+  - first:
+      213: 1088329186455573692
+    second: Skull_549
+  - first:
+      213: 5327305586177141015
+    second: Skull_550
+  - first:
+      213: -8981951438921389896
+    second: Skull_551
+  - first:
+      213: -8665270637457520590
+    second: Skull_552
+  - first:
+      213: -6354253073911458894
+    second: Skull_553
+  - first:
+      213: -8676125743622216563
+    second: Skull_554
+  - first:
+      213: 5318948367050499923
+    second: Skull_555
+  - first:
+      213: -2280455981658442165
+    second: Skull_556
+  - first:
+      213: 7376591723267730012
+    second: Skull_557
+  - first:
+      213: 1594426124977920381
+    second: Skull_558
+  - first:
+      213: -6469179041514531381
+    second: Skull_559
+  - first:
+      213: 1792868633600079143
+    second: Skull_560
+  - first:
+      213: 2857494674663162911
+    second: Skull_561
+  - first:
+      213: -1117319534410861559
+    second: Skull_562
+  - first:
+      213: 8142611446876629171
+    second: Skull_563
+  - first:
+      213: -3505217947926441086
+    second: Skull_564
+  - first:
+      213: -5951867468316691027
+    second: Skull_565
+  - first:
+      213: 7619336952795901481
+    second: Skull_566
+  - first:
+      213: -5627705799878089555
+    second: Skull_567
+  - first:
+      213: -6319964066435753220
+    second: Skull_568
+  - first:
+      213: 8924476962019138537
+    second: Skull_569
+  - first:
+      213: 426755578041698790
+    second: Skull_570
+  - first:
+      213: 6313361137395078641
+    second: Skull_571
+  - first:
+      213: 1671381773441047081
+    second: Skull_572
+  - first:
+      213: -1109695273188642017
+    second: Skull_573
+  - first:
+      213: 7186720855482168630
+    second: Skull_574
+  - first:
+      213: -9162551909490011721
+    second: Skull_575
+  - first:
+      213: 7480936773008264820
+    second: Skull_576
+  - first:
+      213: 5500559876699274195
+    second: Skull_577
+  - first:
+      213: -7815880366597927783
+    second: Skull_578
+  - first:
+      213: -3227565031786470304
+    second: Skull_579
+  - first:
+      213: 3203026774565696756
+    second: Skull_580
+  - first:
+      213: -5005445402086024031
+    second: Skull_581
+  - first:
+      213: 340487563115506067
+    second: Skull_582
+  - first:
+      213: 3310519138141852874
+    second: Skull_583
+  - first:
+      213: 4152302325075962857
+    second: Skull_584
+  - first:
+      213: -7864033558848169713
+    second: Skull_585
+  - first:
+      213: 2629986625261231080
+    second: Skull_586
+  - first:
+      213: 5723349651319312067
+    second: Skull_587
+  - first:
+      213: 198859706852658985
+    second: Skull_588
+  - first:
+      213: 1283475747778926349
+    second: Skull_589
+  - first:
+      213: -5046518625250235370
+    second: Skull_590
+  - first:
+      213: -2228289411405945064
+    second: Skull_591
+  - first:
+      213: 4383814917522365486
+    second: Skull_592
+  - first:
+      213: 7039186190363575713
+    second: Skull_593
+  - first:
+      213: -1878235129540334793
+    second: Skull_594
+  - first:
+      213: 5057381330707497853
+    second: Skull_595
+  - first:
+      213: 1378853326599085699
+    second: Skull_596
+  - first:
+      213: 8819462145858986188
+    second: Skull_597
+  - first:
+      213: -122181015965438224
+    second: Skull_598
+  - first:
+      213: 1568141594568375770
+    second: Skull_599
+  - first:
+      213: -4486104157601989848
+    second: Skull_600
+  - first:
+      213: -8691059969294691945
+    second: Skull_601
+  - first:
+      213: 2962758234443794068
+    second: Skull_602
+  - first:
+      213: 820396820592293337
+    second: Skull_603
+  - first:
+      213: -6595651975451649450
+    second: Skull_604
+  - first:
+      213: 5557741868604423574
+    second: Skull_605
+  - first:
+      213: 1167090180609509455
+    second: Skull_606
+  - first:
+      213: 3691014899470081567
+    second: Skull_607
+  - first:
+      213: -738401220329846877
+    second: Skull_608
+  - first:
+      213: 1102722703214196824
+    second: Skull_609
+  - first:
+      213: 3386354616437413036
+    second: Skull_610
+  - first:
+      213: 7896921710103072753
+    second: Skull_611
+  - first:
+      213: -1299466377158450462
+    second: Skull_612
+  - first:
+      213: -8157536683168907653
+    second: Skull_613
+  - first:
+      213: -5216659554924416863
+    second: Skull_614
+  - first:
+      213: -7568816508924693808
+    second: Skull_615
+  - first:
+      213: -7781317172969015792
+    second: Skull_616
+  - first:
+      213: -6215111917748382977
+    second: Skull_617
+  - first:
+      213: 5102324715890557248
+    second: Skull_618
+  - first:
+      213: -6622255085886161211
+    second: Skull_619
+  - first:
+      213: -5134098904947893212
+    second: Skull_620
+  - first:
+      213: -6327230402129309571
+    second: Skull_621
+  - first:
+      213: -465031526902448621
+    second: Skull_622
+  - first:
+      213: 7858837414477537888
+    second: Skull_623
+  - first:
+      213: -7830277204433778905
+    second: Skull_624
+  - first:
+      213: 4763674103645680466
+    second: Skull_625
+  - first:
+      213: 6008090300953844478
+    second: Skull_626
+  - first:
+      213: -5521129898339816198
+    second: Skull_627
+  - first:
+      213: -4880623110465886849
+    second: Skull_628
+  - first:
+      213: 5027579303216019590
+    second: Skull_629
+  - first:
+      213: -5817231527930948382
+    second: Skull_630
+  - first:
+      213: 5259762540091140303
+    second: Skull_631
+  - first:
+      213: 4144261491933490487
+    second: Skull_632
+  - first:
+      213: 2152127715335157359
+    second: Skull_633
+  - first:
+      213: 6023670363398045520
+    second: Skull_634
+  - first:
+      213: 442189921820654444
+    second: Skull_635
+  - first:
+      213: -3413419876337050029
+    second: Skull_636
+  - first:
+      213: -239880697592540195
+    second: Skull_637
+  - first:
+      213: -302305537533220152
+    second: Skull_638
+  - first:
+      213: 6374838536754271627
+    second: Skull_639
+  - first:
+      213: 1967054273743358317
+    second: Skull_640
+  - first:
+      213: 124760129116640509
+    second: Skull_641
+  - first:
+      213: -852346144086833355
+    second: Skull_642
+  - first:
+      213: 7359610185949318298
+    second: Skull_643
+  - first:
+      213: 3113823465417521182
+    second: Skull_644
+  - first:
+      213: 1090378086985218482
+    second: Skull_645
+  - first:
+      213: 1736151512618571480
+    second: Skull_646
+  - first:
+      213: -5953792047153813666
+    second: Skull_647
+  - first:
+      213: -3735920351138246097
+    second: Skull_648
+  - first:
+      213: 80963853910654394
+    second: Skull_649
+  - first:
+      213: -6019248318625508681
+    second: Skull_650
+  - first:
+      213: 4335912299021604256
+    second: Skull_651
+  - first:
+      213: -848901767757287560
+    second: Skull_652
+  - first:
+      213: 4847263911799146893
+    second: Skull_653
+  - first:
+      213: -7800563979918716024
+    second: Skull_654
+  - first:
+      213: 2651850465565169140
+    second: Skull_655
+  - first:
+      213: 5584539756731187041
+    second: Skull_656
+  - first:
+      213: -7004709753222261124
+    second: Skull_657
+  - first:
+      213: 6380145825023091127
+    second: Skull_658
+  - first:
+      213: 5645927352557268997
+    second: Skull_659
+  - first:
+      213: -1645986629194948089
+    second: Skull_660
+  - first:
+      213: -355821971162079259
+    second: Skull_661
+  - first:
+      213: -813743514478508960
+    second: Skull_662
+  - first:
+      213: 4505946602309101006
+    second: Skull_663
+  - first:
+      213: -2509742103445387013
+    second: Skull_664
+  - first:
+      213: 7179394322655865714
+    second: Skull_665
+  - first:
+      213: -8526164408074854680
+    second: Skull_666
+  - first:
+      213: 4823183454365190277
+    second: Skull_667
+  - first:
+      213: 6079919561621811171
+    second: Skull_668
+  - first:
+      213: -534280897542583869
+    second: Skull_669
+  - first:
+      213: -1800171386592759768
+    second: Skull_670
+  - first:
+      213: -1608731077014425382
+    second: Skull_671
+  - first:
+      213: 5960216839127794967
+    second: Skull_672
+  - first:
+      213: -2738240580073124736
+    second: Skull_673
+  - first:
+      213: -2919261465498774988
+    second: Skull_674
+  - first:
+      213: -3974329591503022351
+    second: Skull_675
+  - first:
+      213: 6035290109219482065
+    second: Skull_676
+  - first:
+      213: -706291779621798891
+    second: Skull_677
+  - first:
+      213: 7102976900950678594
+    second: Skull_678
+  - first:
+      213: 4375938661938020710
+    second: Skull_679
+  - first:
+      213: -203764205463762887
+    second: Skull_680
+  - first:
+      213: 1935648736033740708
+    second: Skull_681
+  - first:
+      213: -1887048874445780180
+    second: Skull_682
+  - first:
+      213: -2941572505587464918
+    second: Skull_683
+  - first:
+      213: 5843635715885507706
+    second: Skull_684
+  - first:
+      213: -5224865748973713643
+    second: Skull_685
+  - first:
+      213: -7838774972078710051
+    second: Skull_686
+  - first:
+      213: -4386047158646590662
+    second: Skull_687
+  - first:
+      213: 164304587389663615
+    second: Skull_688
+  - first:
+      213: -7261959918712944857
+    second: Skull_689
+  - first:
+      213: -2713007245542588899
+    second: Skull_690
+  - first:
+      213: -4331209117906684896
+    second: Skull_691
+  - first:
+      213: -5370984564027006467
+    second: Skull_692
+  - first:
+      213: -4356410890784580208
+    second: Skull_693
+  - first:
+      213: -5674645414165245675
+    second: Skull_694
+  - first:
+      213: -2849195140043381063
+    second: Skull_695
+  - first:
+      213: 6250495362918601205
+    second: Skull_696
+  - first:
+      213: 5466936129232969043
+    second: Skull_697
+  - first:
+      213: -1969486455950881196
+    second: Skull_698
+  - first:
+      213: -3465865472834561600
+    second: Skull_699
+  - first:
+      213: -1727336880153534252
+    second: Skull_700
+  - first:
+      213: 2775935345087701494
+    second: Skull_701
+  - first:
+      213: -2639919507422564125
+    second: Skull_702
+  - first:
+      213: 4123082274278379660
+    second: Skull_703
+  - first:
+      213: 5777189541148719280
+    second: Skull_704
+  - first:
+      213: 6373436766093348745
+    second: Skull_705
+  - first:
+      213: -2224782693967899587
+    second: Skull_706
+  - first:
+      213: -8801477433914661581
+    second: Skull_707
+  - first:
+      213: 1755703718407912077
+    second: Skull_708
+  - first:
+      213: -1438523940580656952
+    second: Skull_709
+  - first:
+      213: -5924575713709222746
+    second: Skull_710
+  - first:
+      213: 2423960945665100375
+    second: Skull_711
+  - first:
+      213: 5629198468020862072
+    second: Skull_712
+  - first:
+      213: 2402255985829315279
+    second: Skull_713
+  - first:
+      213: -8745134943061872509
+    second: Skull_714
+  - first:
+      213: -730874072294069671
+    second: Skull_715
+  - first:
+      213: -4294270556268214341
+    second: Skull_716
+  - first:
+      213: -1448981336452172797
+    second: Skull_717
+  - first:
+      213: 5532852958760076812
+    second: Skull_718
+  - first:
+      213: -6686910574711055325
+    second: Skull_719
+  - first:
+      213: -8601256095347089984
+    second: Skull_720
+  - first:
+      213: -656166386129264729
+    second: Skull_721
+  - first:
+      213: 7993915801484715491
+    second: Skull_722
+  - first:
+      213: -4478102585659161855
+    second: Skull_723
+  - first:
+      213: 1081759292940777223
+    second: Skull_724
+  - first:
+      213: 6740589889195151615
+    second: Skull_725
+  - first:
+      213: 2385626296659776060
+    second: Skull_726
+  - first:
+      213: -8050642430293328108
+    second: Skull_727
+  - first:
+      213: 4113449403431428872
+    second: Skull_728
+  - first:
+      213: -8025667916453180735
+    second: Skull_729
+  - first:
+      213: -1135387363358771050
+    second: Skull_730
+  - first:
+      213: -1724868049305065427
+    second: Skull_731
+  - first:
+      213: -6406811038507294262
+    second: Skull_732
+  - first:
+      213: -4924397454070623046
+    second: Skull_733
+  - first:
+      213: -3937109449181088224
+    second: Skull_734
+  - first:
+      213: 602874331398357886
+    second: Skull_735
+  - first:
+      213: -4832680702572363040
+    second: Skull_736
+  - first:
+      213: 3932519526022100745
+    second: Skull_737
+  - first:
+      213: -8489499174123892578
+    second: Skull_738
+  - first:
+      213: -8757753611844387680
+    second: Skull_739
+  - first:
+      213: -3108621315419500572
+    second: Skull_740
+  - first:
+      213: -6257083363830809585
+    second: Skull_741
+  - first:
+      213: 946463007204802998
+    second: Skull_742
+  - first:
+      213: -1190976036632313223
+    second: Skull_743
+  - first:
+      213: -4382515908696386050
+    second: Skull_744
+  - first:
+      213: -4478122107284841654
+    second: Skull_745
+  - first:
+      213: -1583916596613468655
+    second: Skull_746
+  - first:
+      213: 1947911022085862721
+    second: Skull_747
+  - first:
+      213: 4207992847164186139
+    second: Skull_748
+  - first:
+      213: 5450677906607190613
+    second: Skull_749
+  - first:
+      213: -5055755603668184106
+    second: Skull_750
+  - first:
+      213: 5837475254979901658
+    second: Skull_751
+  - first:
+      213: 291151176357448112
+    second: Skull_752
+  - first:
+      213: 8384877269367972618
+    second: Skull_753
+  - first:
+      213: 3409695227222326809
+    second: Skull_754
+  - first:
+      213: 6280784202113036420
+    second: Skull_755
+  - first:
+      213: -2140709842006102003
+    second: Skull_756
+  - first:
+      213: -2504249007567424386
+    second: Skull_757
+  - first:
+      213: -8042500578195313022
+    second: Skull_758
+  - first:
+      213: -8053972100202339190
+    second: Skull_759
+  - first:
+      213: 3254786007453182164
+    second: Skull_760
+  - first:
+      213: 3298550674148494475
+    second: Skull_761
+  - first:
+      213: 3548712500927001867
+    second: Skull_762
+  - first:
+      213: 7800580991632357454
+    second: Skull_763
+  - first:
+      213: 3585438336877033137
+    second: Skull_764
+  - first:
+      213: 7242873195763208896
+    second: Skull_765
+  - first:
+      213: -1607837079122731497
+    second: Skull_766
+  - first:
+      213: -1855733173133971984
+    second: Skull_767
+  - first:
+      213: -4376001540758321504
+    second: Skull_768
+  - first:
+      213: 6584734420230082211
+    second: Skull_769
+  - first:
+      213: -4651596111230160747
+    second: Skull_770
+  - first:
+      213: 9154862152556828576
+    second: Skull_771
+  - first:
+      213: 4914887955764227399
+    second: Skull_772
+  - first:
+      213: 935310770365183921
+    second: Skull_773
+  - first:
+      213: -6450218897601627296
+    second: Skull_774
+  - first:
+      213: -7659786381366627765
+    second: Skull_775
+  - first:
+      213: -100121303942674470
+    second: Skull_776
+  - first:
+      213: -3266382122149480430
+    second: Skull_777
+  - first:
+      213: 7924766403656344288
+    second: Skull_778
+  - first:
+      213: -4243790964000328022
+    second: Skull_779
+  - first:
+      213: 7050614215161496760
+    second: Skull_780
+  - first:
+      213: -1101889330710233303
+    second: Skull_781
+  - first:
+      213: 8419569412162271829
+    second: Skull_782
+  - first:
+      213: -4144118803785554014
+    second: Skull_783
+  - first:
+      213: -6890435088383714909
+    second: Skull_784
+  - first:
+      213: 3472613235412585899
+    second: Skull_785
+  - first:
+      213: -1501766742738482421
+    second: Skull_786
+  - first:
+      213: 7957120663592072383
+    second: Skull_787
+  - first:
+      213: -130382188949792908
+    second: Skull_788
+  - first:
+      213: 6681971615393137821
+    second: Skull_789
+  - first:
+      213: -7691707282567312271
+    second: Skull_790
+  - first:
+      213: 4025921906782064093
+    second: Skull_791
+  - first:
+      213: 971975021470342194
+    second: Skull_792
+  - first:
+      213: 7234745977348763467
+    second: Skull_793
+  - first:
+      213: -9026591812338091898
+    second: Skull_794
+  - first:
+      213: 7957996476459580028
+    second: Skull_795
+  - first:
+      213: -77623928608251420
+    second: Skull_796
+  - first:
+      213: 5205220279675838557
+    second: Skull_797
+  - first:
+      213: -3225243053691224143
+    second: Skull_798
+  - first:
+      213: 8547421146031651268
+    second: Skull_799
+  - first:
+      213: -7059243417151659395
+    second: Skull_800
+  - first:
+      213: -1953377864369739289
+    second: Skull_801
+  - first:
+      213: 429872704362573765
+    second: Skull_802
+  - first:
+      213: 2968577950810793976
+    second: Skull_803
+  - first:
+      213: 1942515548632608638
+    second: Skull_804
+  - first:
+      213: 1621116665329231729
+    second: Skull_805
+  - first:
+      213: 6318801220752638500
+    second: Skull_806
+  - first:
+      213: 215230481612906879
+    second: Skull_807
+  - first:
+      213: 8795313309878886210
+    second: Skull_808
+  - first:
+      213: -2491695186617664528
+    second: Skull_809
+  - first:
+      213: -18955734317488572
+    second: Skull_810
+  - first:
+      213: 8693484298408476496
+    second: Skull_811
+  - first:
+      213: -4434780176119112352
+    second: Skull_812
+  - first:
+      213: 4401711188402298085
+    second: Skull_813
+  - first:
+      213: 6909517384588880992
+    second: Skull_814
+  - first:
+      213: 2836991695895101747
+    second: Skull_815
+  - first:
+      213: -4515199438038636865
+    second: Skull_816
+  - first:
+      213: 2893231879836988417
+    second: Skull_817
+  - first:
+      213: 3268744030468468896
+    second: Skull_818
+  - first:
+      213: 8103841298726511668
+    second: Skull_819
+  - first:
+      213: 8976531016022977941
+    second: Skull_820
+  - first:
+      213: 6300348398143196168
+    second: Skull_821
+  - first:
+      213: -994450319297376859
+    second: Skull_822
+  - first:
+      213: 8070385067374393133
+    second: Skull_823
+  - first:
+      213: -3231151675393476033
+    second: Skull_824
+  - first:
+      213: -7101065975832419409
+    second: Skull_825
+  - first:
+      213: -8460863348062297746
+    second: Skull_826
+  - first:
+      213: -7949865023662649853
+    second: Skull_827
+  - first:
+      213: 5710733787218584345
+    second: Skull_828
+  - first:
+      213: -2681066613391995070
+    second: Skull_829
+  - first:
+      213: -7868162781316660969
+    second: Skull_830
+  - first:
+      213: -6186169017607416610
+    second: Skull_831
+  - first:
+      213: 4681877438874377927
+    second: Skull_832
+  - first:
+      213: 2430379411957951874
+    second: Skull_833
+  - first:
+      213: 1586377970226971390
+    second: Skull_834
+  - first:
+      213: -5292020651762440290
+    second: Skull_835
+  - first:
+      213: -5225357837856040529
+    second: Skull_836
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 400
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Skull_0
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 1037
+        width: 193
+        height: 189
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9780d8437f3af9d0800000000000000
+      internalID: -2739807658926110822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_1
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 1037
+        width: 193
+        height: 189
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91618c247bfe3cb80800000000000000
+      internalID: -8375587311600527847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_2
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 1036
+        width: 197
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0c422c14197089c0800000000000000
+      internalID: -3927005747788755955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_3
+      rect:
+        serializedVersion: 2
+        x: 795
+        y: 1044
+        width: 158
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01cdee988061202a0800000000000000
+      internalID: -6772826663682122736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_4
+      rect:
+        serializedVersion: 2
+        x: 1099
+        y: 1071
+        width: 105
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0139560136b2ecb00800000000000000
+      internalID: 850665084096451344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_5
+      rect:
+        serializedVersion: 2
+        x: 1354
+        y: 1069
+        width: 107
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da525901dccde0540800000000000000
+      internalID: 4976157411595593133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_6
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 811
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a985defa53bc14b0800000000000000
+      internalID: -5468298644130788954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_7
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 808
+        width: 114
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 109109be9c19d91b0800000000000000
+      internalID: -5648198061226190591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_8
+      rect:
+        serializedVersion: 2
+        x: 582
+        y: 806
+        width: 117
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9131f68d6391befa0800000000000000
+      internalID: -5770490774195072231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_9
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 804
+        width: 120
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bdf8a5eaaf78aa90800000000000000
+      internalID: -7302446423807033929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_10
+      rect:
+        serializedVersion: 2
+        x: 1091
+        y: 803
+        width: 123
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1eb618ab89c7be60800000000000000
+      internalID: 7978066866567822878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_11
+      rect:
+        serializedVersion: 2
+        x: 1345
+        y: 801
+        width: 127
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 538427771c5c2b400800000000000000
+      internalID: 338550356729546805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_12
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 543
+        width: 130
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b8dbc65466102020800000000000000
+      internalID: 2314874828677175480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_13
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 567
+        width: 132
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4c218ec0aca380c0800000000000000
+      internalID: -4574622989818975155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_14
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 567
+        width: 111
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63b2b7c5e8df07370800000000000000
+      internalID: 8318427299632065334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_15
+      rect:
+        serializedVersion: 2
+        x: 851
+        y: 587
+        width: 114
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7e73747685a28e60800000000000000
+      internalID: 7963109088042385018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_16
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 600
+        width: 100
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 859548c3881778ef0800000000000000
+      internalID: -105991236275119784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_17
+      rect:
+        serializedVersion: 2
+        x: 1380
+        y: 666
+        width: 56
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fd78d7b8f6d1b060800000000000000
+      internalID: 6967586462243519993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_18
+      rect:
+        serializedVersion: 2
+        x: 1448
+        y: 647
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7408eda263aeade20800000000000000
+      internalID: 3376268389035966535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_19
+      rect:
+        serializedVersion: 2
+        x: 1107
+        y: 651
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38e3827d12ee243c0800000000000000
+      internalID: -4376674058739630461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_20
+      rect:
+        serializedVersion: 2
+        x: 1362
+        y: 654
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb7f4643febc4c5d0800000000000000
+      internalID: -3043083219958958149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_21
+      rect:
+        serializedVersion: 2
+        x: 1384
+        y: 610
+        width: 62
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a8880c48635296b0800000000000000
+      internalID: -5291074904789579608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_22
+      rect:
+        serializedVersion: 2
+        x: 573
+        y: 609
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2071cf10e1d534620800000000000000
+      internalID: 2757149780344575746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_23
+      rect:
+        serializedVersion: 2
+        x: 827
+        y: 611
+        width: 20
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d78554e63fdefdef0800000000000000
+      internalID: -81084638486505347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_24
+      rect:
+        serializedVersion: 2
+        x: 1082
+        y: 612
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91fa3c0f56337eae0800000000000000
+      internalID: -1520189836290183399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_25
+      rect:
+        serializedVersion: 2
+        x: 1337
+        y: 613
+        width: 15
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d922c1a3ae0b4eb0800000000000000
+      internalID: -4734674487293630000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_26
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 542
+        width: 59
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3595a3cfbc90fa560800000000000000
+      internalID: 7327085890469779795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_27
+      rect:
+        serializedVersion: 2
+        x: 602
+        y: 550
+        width: 27
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d24da43fddab25430800000000000000
+      internalID: 3770281300494832685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_28
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 549
+        width: 25
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04ab6ddeecce59bb0800000000000000
+      internalID: -4929773843589449152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_29
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 566
+        width: 43
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4534b560f539e6900800000000000000
+      internalID: 679642630117344084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_30
+      rect:
+        serializedVersion: 2
+        x: 1162
+        y: 568
+        width: 19
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf37ab360839fb700800000000000000
+      internalID: 558327058455491580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_31
+      rect:
+        serializedVersion: 2
+        x: 1182
+        y: 565
+        width: 22
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7f90185994804fd0800000000000000
+      internalID: -2359740410599792770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_32
+      rect:
+        serializedVersion: 2
+        x: 1419
+        y: 568
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 952507e25b6685da0800000000000000
+      internalID: -5955897578843254183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_33
+      rect:
+        serializedVersion: 2
+        x: 1442
+        y: 563
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57f8948cae1f53f30800000000000000
+      internalID: 4554812588840030069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_34
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 540
+        width: 29
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d8fe69e38722ef70800000000000000
+      internalID: 9214971235064019158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_35
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 538
+        width: 28
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ccce768e8506b1c0800000000000000
+      internalID: -4488393868928168760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_36
+      rect:
+        serializedVersion: 2
+        x: 1114
+        y: 547
+        width: 23
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86eec3bae3da19c00800000000000000
+      internalID: 905695484750655080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_37
+      rect:
+        serializedVersion: 2
+        x: 1145
+        y: 536
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7637f655c6e9f490800000000000000
+      internalID: -7711879151653276034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_38
+      rect:
+        serializedVersion: 2
+        x: 1369
+        y: 545
+        width: 21
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d29cdc10a3283740800000000000000
+      internalID: 5131890945974637272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_39
+      rect:
+        serializedVersion: 2
+        x: 1402
+        y: 533
+        width: 24
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c07b3daee95bcdc0800000000000000
+      internalID: -3617698994018619200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_40
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 417
+        width: 50
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da84fc42810153440800000000000000
+      internalID: 4914852264227588269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_41
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 425
+        width: 42
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab9fd7bc9739b21d0800000000000000
+      internalID: -3374441344469698118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_42
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 434
+        width: 30
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bd320ba358e2bb80800000000000000
+      internalID: -8380380510534091336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_43
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 444
+        width: 16
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3f1ce6965668da00800000000000000
+      internalID: 781487057434058559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_44
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 393
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2861f6e784f8b2c00800000000000000
+      internalID: 876952093975320194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_45
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 395
+        width: 27
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d24084af60b612e0800000000000000
+      internalID: -2155341378102476077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_46
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 397
+        width: 25
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ad1b1d80dd0ea400800000000000000
+      internalID: 337222211471089061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_47
+      rect:
+        serializedVersion: 2
+        x: 948
+        y: 407
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97499647487da48e0800000000000000
+      internalID: -1708316144744950663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_48
+      rect:
+        serializedVersion: 2
+        x: 1207
+        y: 410
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cd203fcce563bad0800000000000000
+      internalID: -2687692484847325754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_49
+      rect:
+        serializedVersion: 2
+        x: 1467
+        y: 413
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 469adfb76e32a6da0800000000000000
+      internalID: -5950904484787017372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_50
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 401
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8fd485589ac3a320800000000000000
+      internalID: 2568118968149925773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_51
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 404
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32bde598ba372ffa0800000000000000
+      internalID: -5768420992126887133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_52
+      rect:
+        serializedVersion: 2
+        x: 963
+        y: 399
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5007eb7eee829c3d0800000000000000
+      internalID: -3185970254832570363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_53
+      rect:
+        serializedVersion: 2
+        x: 1222
+        y: 402
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25d693885988286a0800000000000000
+      internalID: -6448441540624159406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_54
+      rect:
+        serializedVersion: 2
+        x: 1481
+        y: 404
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94fe33f2a83a543b0800000000000000
+      internalID: -5528833153634668727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_55
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 370
+        width: 13
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8b8d3fd9086cffd0800000000000000
+      internalID: -2306854517511189619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_56
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 368
+        width: 39
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d094b1ee6c050620800000000000000
+      internalID: 2739609618697457872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_57
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 371
+        width: 11
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a632a420f1655710800000000000000
+      internalID: 1681357719927404198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_58
+      rect:
+        serializedVersion: 2
+        x: 566
+        y: 373
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a4c48c0c9117fa30800000000000000
+      internalID: 4248884135369950368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_59
+      rect:
+        serializedVersion: 2
+        x: 821
+        y: 381
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62c0a189e4cabbe60800000000000000
+      internalID: 7979160618376236070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_60
+      rect:
+        serializedVersion: 2
+        x: 822
+        y: 374
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5f485df8feb52210800000000000000
+      internalID: 1307661243432587099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_61
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 359
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bf5e1247703db8c0800000000000000
+      internalID: -3981973206757122128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_62
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 311
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61689550746c61360800000000000000
+      internalID: 7140112267577230870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_63
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 306
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89590872614a3ba50800000000000000
+      internalID: 6535747899303695768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_64
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 311
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b6d5ac3bb25d8350800000000000000
+      internalID: 6020559240994084532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_65
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 305
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a29da0b8de3ef4620800000000000000
+      internalID: 2760675705980901674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_66
+      rect:
+        serializedVersion: 2
+        x: 655
+        y: 310
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0405e5975af1f3600800000000000000
+      internalID: 450113283326627904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_67
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 304
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab82e8d13aeee23e0800000000000000
+      internalID: -2076459993828284230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_68
+      rect:
+        serializedVersion: 2
+        x: 913
+        y: 309
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e54f8ea42ca464050800000000000000
+      internalID: 5784392969744872542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_69
+      rect:
+        serializedVersion: 2
+        x: 943
+        y: 303
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9619e3c58a203320800000000000000
+      internalID: 2535573344215439004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_70
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 309
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b4bc2eefbd7f1140800000000000000
+      internalID: 4692607600031478961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_71
+      rect:
+        serializedVersion: 2
+        x: 1427
+        y: 308
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b1bce9271fa6b510800000000000000
+      internalID: 1564630434580312497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_72
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 287
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b16ff6cde89e752f0800000000000000
+      internalID: -984061193764211173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_73
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 275
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52dac81af4ad24940800000000000000
+      internalID: 5279021748779265317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_74
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 285
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aba5925fb278579f0800000000000000
+      internalID: -471321963123877190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_75
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 272
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d38ada9d344be9b40800000000000000
+      internalID: 5448990802672724029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_76
+      rect:
+        serializedVersion: 2
+        x: 602
+        y: 283
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11dd945333ac996c0800000000000000
+      internalID: -4136052461476913903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_77
+      rect:
+        serializedVersion: 2
+        x: 639
+        y: 270
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28b4f98ad923f6fb0800000000000000
+      internalID: -4652444237330166910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_78
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 281
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 138490b059b40ea10800000000000000
+      internalID: 1936630943276681265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_79
+      rect:
+        serializedVersion: 2
+        x: 1114
+        y: 279
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 816f493aa69cd5920800000000000000
+      internalID: 2980759988237301272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_80
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 267
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16dc84dda8e0fb6b0800000000000000
+      internalID: -5278484248674120351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_81
+      rect:
+        serializedVersion: 2
+        x: 1153
+        y: 265
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0674a6bb8d1d1a160800000000000000
+      internalID: 7035134821716871008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_82
+      rect:
+        serializedVersion: 2
+        x: 1410
+        y: 262
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2415527a7e7fd3000800000000000000
+      internalID: 17442547893096770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_83
+      rect:
+        serializedVersion: 2
+        x: 958
+        y: 160
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a68cfe47de014cee0800000000000000
+      internalID: -1241848985192249238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_84
+      rect:
+        serializedVersion: 2
+        x: 1217
+        y: 164
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75d3c5cb395319c20800000000000000
+      internalID: 3211406917928500567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_85
+      rect:
+        serializedVersion: 2
+        x: 1477
+        y: 167
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4370b8e1de2552bc0800000000000000
+      internalID: -3808546731498731724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_86
+      rect:
+        serializedVersion: 2
+        x: 916
+        y: 52
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17de42292d198adb0800000000000000
+      internalID: -4780410670872728207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_87
+      rect:
+        serializedVersion: 2
+        x: 1174
+        y: 52
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96d45e22642b84200800000000000000
+      internalID: 164577400701930857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_88
+      rect:
+        serializedVersion: 2
+        x: 899
+        y: 4
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fdc2b2c78d889780800000000000000
+      internalID: -8676029067902661136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_89
+      rect:
+        serializedVersion: 2
+        x: 1157
+        y: 2
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c26b8d3daa04bc740800000000000000
+      internalID: 5173299699407959596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
