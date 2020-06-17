@@ -44,14 +44,6 @@ public class EnemyMovement : MonoBehaviour
             UpdatePositionCoordinates();
             HandleMovement();
         }
-        if (Input.GetKey(KeyCode.A))
-        {
-            Camera.main.transform.Translate(new Vector3(-1, 0, 0)*Time.deltaTime);
-        } 
-        else if (Input.GetKey(KeyCode.D))
-        {
-            Camera.main.transform.Translate(new Vector3(1, 0, 0)*Time.deltaTime);
-        }
     }
 
     void PlaceEnemy()
