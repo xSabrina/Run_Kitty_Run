@@ -7,9 +7,6 @@ public class EnemyMovement : MonoBehaviour
 
     public Rigidbody2D rb;
 
-    public float x;
-    public float y;
-
     public float speed;
 
     public float[] movementStartTimeInterval = new float[2];
@@ -32,7 +29,6 @@ public class EnemyMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        PlaceEnemy();
         InitValues();
         animator = GetComponent<Animator>();
     }
@@ -41,14 +37,8 @@ public class EnemyMovement : MonoBehaviour
     void Update()
     {
         if (isVisible) {
-            UpdatePositionCoordinates();
             HandleMovement();
         }
-    }
-
-    void PlaceEnemy()
-    {
-        this.transform.localPosition = new Vector3(x, y, 0);
     }
 
     void InitValues()
@@ -59,12 +49,6 @@ public class EnemyMovement : MonoBehaviour
         invertXNeg = false;
         invertYPos = false;
         invertYNeg = false;
-    }
-
-    void UpdatePositionCoordinates()
-    {
-        x = this.transform.localPosition.x;
-        y = this.transform.localPosition.y;
     }
 
     void HandleMovement()
