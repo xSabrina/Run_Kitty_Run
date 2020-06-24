@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: BlinkShort
   m_EditorClassIdentifier: 
   aName: BlinkShort
-  aBaseCoolDown: 3
-  aRange: 5
+  aBaseCoolDown: 8
+  aRange: 6

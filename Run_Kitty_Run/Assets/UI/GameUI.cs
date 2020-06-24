@@ -36,9 +36,11 @@ public class GameUI : MonoBehaviour {
         if (InGameMenu.activeSelf) {
             InGameMenu.SetActive(false);
             Time.timeScale = 1;
+            GameManagerScript.instance.abilitiesEnabled = true;
         } else {
             InGameMenu.SetActive(true);
             Time.timeScale = 0;
+            GameManagerScript.instance.abilitiesEnabled = false;
         }
     }
 

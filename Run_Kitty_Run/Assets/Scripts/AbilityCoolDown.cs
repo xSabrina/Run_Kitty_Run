@@ -39,22 +39,25 @@ public class AbilityCoolDown : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        bool coolDownComplete = (Time.time > nextReadyTime);
-        if (coolDownComplete)
+        if (GameManagerScript.instance.abilitiesEnabled)
         {
-            AbilityReady();
-            if (Input.GetButtonDown(abilityButtonAxisName))
+            bool coolDownComplete = (Time.time > nextReadyTime);
+            if (coolDownComplete)
             {
-                Debug.Log("Ability triggered: " + ability.name);
-                ButtonTriggered();
+                AbilityReady();
+                if (Input.GetButtonDown(abilityButtonAxisName))
+                {
+                    Debug.Log("Ability triggered: " + ability.name);
+                    ButtonTriggered();
+                }
             }
-        }
-        else
-        {
-            CoolDown();
-            if (Input.GetButtonDown(abilityButtonAxisName))
+            else
             {
-                Debug.Log(coolDownTimeLeft);
+                CoolDown();
+                if (Input.GetButtonDown(abilityButtonAxisName))
+                {
+                    Debug.Log(coolDownTimeLeft);
+                }
             }
         }
     }

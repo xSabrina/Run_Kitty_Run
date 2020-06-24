@@ -17,7 +17,7 @@ public class Blink : Ability
     public override void TriggerAbility()
     {
         Transform playerTransform = launcher.player.GetComponent<Transform>();
-        
+
         ContactFilter2D filter = new ContactFilter2D();
         List<RaycastHit2D> res = new List<RaycastHit2D>();
         int hitint = Physics2D.Raycast(playerTransform.position, launcher.spawnPoint.transform.up, filter.NoFilter(), res, aRange);
@@ -32,5 +32,4 @@ public class Blink : Ability
 
         //playerTransform.position += launcher.spawnPoint.transform.up.normalized * aRange;
     }
-
 }
