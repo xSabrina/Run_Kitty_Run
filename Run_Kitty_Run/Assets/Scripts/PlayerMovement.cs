@@ -32,7 +32,7 @@ public class PlayerMovement : MonoBehaviour
         float h = movementInput.x;
         float v = movementInput.y;
         var targetInput = new Vector3(h,v,0);
-        inputDirection = Vector3.Lerp(inputDirection, targetInput, Time.deltaTime * 10f);
+        inputDirection = Vector3.Lerp(inputDirection, targetInput, Time.deltaTime*20f);
         MoveThePlayer(inputDirection);
         AnimateThePlayer(inputDirection);
     }
