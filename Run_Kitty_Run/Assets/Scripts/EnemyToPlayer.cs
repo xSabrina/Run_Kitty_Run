@@ -7,28 +7,31 @@ public class EnemyToPlayer : MonoBehaviour
 
     public GameObject player;
     public float speed;
+    
+    private bool isInside;
 
     private Animator animator;
-    private GameObject enemyLight;
 
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
-        enemyLight = transform.GetChild(0).gameObject;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (enemyLight.GetComponent<EnemyLight>().isInside)
+        if (isInside)
         {
             WalkTowardsPlayer();
         } 
         else
         {
-            GetComponent<EnemyMovement>().enabled = true;
-            GetComponent<EnemyRotation>().enabled = true;
+            if (GetComponent<EnemyMovement>().enabled == false && GetComponent<EnemyRotation>().enabled == false)
+            {
+                GetComponent<EnemyMovement>().enabled = true;
+                GetComponent<EnemyRotation>().enabled = true;
+            }
         }
     }
 
@@ -42,31 +45,50 @@ public class EnemyToPlayer : MonoBehaviour
         var direction = Vector3.MoveTowards(transform.position, player.transform.position, speed);
         transform.position = direction;
         var angle = Mathf.Atan2((player.transform.position - transform.position).y, (player.transform.position - transform.position).x) * Mathf.Rad2Deg;
-        ClearMovementAnimations();
-        if (animator.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
+        if (angle == 0 && !animator.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
         {
-            if (angle == 0)
-            {
-                transform.rotation = Quaternion.Euler(Vector3.zero);
-            }
-            else if (angle < -225 && angle > -315 || angle < 135 && angle > 45)
-            {
-                animator.SetBool("isWalkingUp", true);
-            }
-            else if (angle >= -45 && angle <= 45)
-            {
-                transform.rotation = Quaternion.Euler(Vector3.zero);
-                animator.SetBool("isWalkingSide", true);
-            }
-            else if (angle < -45 && angle > -125)
-            {
-                animator.SetBool("isWalkingDown", true);
-            }
-            else
-            {
-                transform.rotation = Quaternion.Euler(0, 180, 0);
-                animator.SetBool("isWalkingSide", true);
-            }
+            transform.rotation = Quaternion.Euler(Vector3.zero);
+        }
+        else if ((angle < 135 && angle > 45) && !animator.GetBool("isWalkingUp"))
+        {
+            ClearMovementAnimations();
+            animator.SetBool("isWalkingUp", true);
+        }
+        else if ((angle >= -45 && angle <= 45) && !animator.GetBool("isWalkingSide"))
+        {
+            ClearMovementAnimations();
+            transform.rotation = Quaternion.Euler(Vector3.zero);
+            animator.SetBool("isWalkingSide", true);
+        }
+        else if ((angle < -45 && angle > -135) && !animator.GetBool("isWalkingDown"))
+        {
+            ClearMovementAnimations();
+            animator.SetBool("isWalkingDown", true);
+        }
+        else if((angle < -135 && angle >= -180 || angle <= 180 && angle > 135) && !animator.GetBool("isWalkingSide"))
+        {
+            ClearMovementAnimations();
+            transform.rotation = Quaternion.Euler(0, 180, 0);
+            animator.SetBool("isWalkingSide", true);
+        }
+        
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag.Equals("Player"))
+        {
+            isInside = true;
+            GetComponent<CircleCollider2D>().radius = 0.6f;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag.Equals("Player"))
+        {
+            isInside = false;
+            GetComponent<CircleCollider2D>().radius = 0.4f;
         }
     }
 

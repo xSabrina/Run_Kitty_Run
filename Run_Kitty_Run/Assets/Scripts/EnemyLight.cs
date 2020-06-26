@@ -25,7 +25,6 @@ public class EnemyLight : MonoBehaviour
         {
             isInside = true;
         }
-        print("lul");
     }
 
     private void OnTriggerExit2D(Collider2D collision)

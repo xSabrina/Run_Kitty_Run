@@ -181,5 +181,13 @@ public class EnemyMovement : MonoBehaviour
     void OnBecameVisible()
     {
         isVisible = true;
+        ClearMovementAnimations();
+    }
+
+    private void OnDisable()
+    {
+        rb.velocity = new Vector3(0, 0, 0);
+        ClearMovementAnimations();
+        deltaTime = 0;
     }
 }
