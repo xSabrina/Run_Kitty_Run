@@ -161,15 +161,37 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "",
-                    "id": "2c304965-aa3f-49f9-8168-5f559141c820",
+                    "name": "Button With One Modifier",
+                    "id": "4b38035b-47e2-4c86-a744-5fce0e782731",
+                    "path": "ButtonWithOneModifier",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Blink",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "modifier",
+                    "id": "8f2d5e26-c246-436a-baad-42097a3000c4",
                     "path": "<Mouse>/position",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Keyboard",
-                    "action": "Shoot",
+                    "groups": "",
+                    "action": "Blink",
                     "isComposite": false,
-                    "isPartOfComposite": false
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "button",
+                    "id": "61b8fb9c-ec76-4b03-a2b7-5bbb577a5838",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Blink",
+                    "isComposite": false,
+                    "isPartOfComposite": true
                 },
                 {
                     "name": "Button With One Modifier",
@@ -197,6 +219,39 @@
                     "name": "button",
                     "id": "68dd7f57-3c64-4925-8c52-44b17613fa12",
                     "path": "<Gamepad>/rightShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Shoot",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "Button With One Modifier",
+                    "id": "ea55f2b8-b0ae-47ee-abef-bfa469759672",
+                    "path": "ButtonWithOneModifier",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Shoot",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "modifier",
+                    "id": "90442c17-d5c2-4724-b3e8-2f51122da357",
+                    "path": "<Mouse>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Shoot",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "button",
+                    "id": "7f829d3f-514a-44c8-97d5-55ab589d88f2",
+                    "path": "<Mouse>/rightButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
