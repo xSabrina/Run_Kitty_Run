@@ -14,8 +14,10 @@ public class PlayerMovement : MonoBehaviour
     Animator playerAnimator;
     PlayerInputActions inputAction;
     Vector2 movementInput;
+    Vector2 rotateInput;
     Vector3 movement;
     Vector3 inputDirection;
+    
 
     void Start(){
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -25,6 +27,7 @@ public class PlayerMovement : MonoBehaviour
     void Awake() {
         inputAction = new PlayerInputActions();
         inputAction.PlayerControls.Move.performed += ctx => movementInput = ctx.ReadValue<Vector2>();
+        inputAction.PlayerControls.Rotate.performed += ctx => rotateInput = ctx.ReadValue<Vector2>();
     }
 
     void FixedUpdate() 
@@ -74,31 +77,57 @@ public class PlayerMovement : MonoBehaviour
 
     void TurnThePlayer() 
     {
-        Vector2 mousePos = Mouse.current.position.ReadValue();
-        Vector2 objectPos = Camera.main.WorldToScreenPoint(transform.position);
-        mousePos.x = mousePos.x - objectPos.x;
-        mousePos.y = mousePos.y - objectPos.y;
-        var angle = Mathf.Atan2(mousePos.y, mousePos.x) * Mathf.Rad2Deg;
-        if (playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("Idle") || GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("UseSkill"))
-        {
-            //Adjust player sprite depending on angle
-            if (angle < -225 && angle > -315 || angle < 135 && angle > 45)
+        if(Gamepad.current == null){
+            Vector2 mousePos = Mouse.current.position.ReadValue();
+            Vector2 objectPos = Camera.main.WorldToScreenPoint(transform.position);
+            mousePos.x = mousePos.x - objectPos.x;
+            mousePos.y = mousePos.y - objectPos.y;
+            var angle = Mathf.Atan2(mousePos.y, mousePos.x) * Mathf.Rad2Deg;
+            if (playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("Idle") || GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("UseSkill"))
             {
-                spriteRenderer.sprite = Up;
+                //Adjust player sprite depending on angle
+                if (angle < -225 && angle > -315 || angle < 135 && angle > 45)
+                {
+                    spriteRenderer.sprite = Up;
+                }
+                else if (angle >= -45 && angle <= 45)
+                {
+                    spriteRenderer.sprite = Side;
+                    transform.rotation = Quaternion.Euler(Vector3.zero);
+                }
+                else if (angle < -45 && angle > -125)
+                {
+                    spriteRenderer.sprite = Down;
+                }
+                else
+                {
+                    spriteRenderer.sprite = Side;
+                    transform.rotation = Quaternion.Euler(0, 180, 0);
+                }
             }
-            else if (angle >= -45 && angle <= 45)
+        } else {
+            Vector2 rightStickDir = rotateInput;
+            if (playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("Idle") || GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("UseSkill"))
             {
-                spriteRenderer.sprite = Side;
-                transform.rotation = Quaternion.Euler(Vector3.zero);
-            }
-            else if (angle < -45 && angle > -125)
-            {
-                spriteRenderer.sprite = Down;
-            }
-            else
-            {
-                spriteRenderer.sprite = Side;
-                transform.rotation = Quaternion.Euler(0, 180, 0);
+                //Adjust player sprite depending on angle
+                if (rotateInput.y > 0)
+                {
+                    spriteRenderer.sprite = Up;
+                }
+                else if (rotateInput.x > 0)
+                {
+                    spriteRenderer.sprite = Side;
+                    transform.rotation = Quaternion.Euler(Vector3.zero);
+                }
+                else if (rotateInput.y < 0)
+                {
+                    spriteRenderer.sprite = Down;
+                }
+                else
+                {
+                    spriteRenderer.sprite = Side;
+                    transform.rotation = Quaternion.Euler(0, 180, 0);
+                }
             }
         }
     }
