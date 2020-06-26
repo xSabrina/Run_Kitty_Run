@@ -29,7 +29,7 @@ public class AbilityCoolDown : MonoBehaviour
 
      void Awake() {
         inputAction = new PlayerInputActions();
-        inputAction.PlayerControls.Blink.performed += ctx => Shoot();
+        inputAction.PlayerControls.Blink.performed += ctx => Blink();
         inputAction.PlayerControls.Shoot.performed += ctx => Shoot();
     }
 
@@ -45,10 +45,21 @@ public class AbilityCoolDown : MonoBehaviour
         AbilityReady();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    void Blink(){
+        if (GameManagerScript.instance.abilitiesEnabled)
+        {
+            bool coolDownComplete = (Time.time > nextReadyTime);
+            if (coolDownComplete)
+            {
+                AbilityReady();
+                ButtonTriggered();
+            }
+            else
+            {
+                CoolDown();
+                Debug.Log(coolDownTimeLeft);
+            }
+        }
     }
 
     void Shoot(){
@@ -104,5 +115,5 @@ public class AbilityCoolDown : MonoBehaviour
     {
         inputAction.Disable();
     }
-    
+
 }

@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     Animator playerAnimator;
     PlayerInputActions inputAction;
     Vector2 movementInput;
+    Vector3 movement;
 
     void Start(){
         spriteRenderer = GetComponent<SpriteRenderer>();
