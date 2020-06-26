@@ -49,14 +49,14 @@ public class PlayerMovement : MonoBehaviour
     void AnimateThePlayer(Vector3 desiredDirection)
     {
         ClearAnimations();
-        if(Keyboard.current.wKey.isPressed){
+        if(Keyboard.current.wKey.isPressed || Gamepad.current.leftStick.up.isPressed){
             playerAnimator.SetBool("isWalkingUp", true);
-        } else  if(Keyboard.current.sKey.isPressed){
+        } else  if(Keyboard.current.sKey.isPressed || Gamepad.current.leftStick.down.isPressed){
             playerAnimator.SetBool("isWalkingDown", true);
-        } else  if(Keyboard.current.aKey.isPressed){
+        } else  if(Keyboard.current.aKey.isPressed || Gamepad.current.leftStick.left.isPressed){
             playerAnimator.SetBool("isWalkingSide", true);
               transform.rotation = Quaternion.Euler(0, 180, 0);
-        } else if (Keyboard.current.dKey.isPressed){
+        } else if (Keyboard.current.dKey.isPressed || Gamepad.current.leftStick.right.isPressed){
             playerAnimator.SetBool("isWalkingSide", true);
              transform.rotation = Quaternion.Euler(0, 0, 0);
         }
