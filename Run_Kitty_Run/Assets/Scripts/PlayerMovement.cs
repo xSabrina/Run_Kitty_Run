@@ -15,11 +15,11 @@ public class PlayerMovement : MonoBehaviour
     PlayerInputActions inputAction;
     Vector2 movementInput;
     Vector3 movement;
+    Vector3 inputDirection;
 
     void Start(){
         spriteRenderer = GetComponent<SpriteRenderer>();
         playerAnimator = GetComponent<Animator>();
-    
     }
 
     void Awake() {
@@ -29,7 +29,6 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate() 
     {
-        Vector3 inputDirection = new Vector2();
         float h = movementInput.x;
         float v = movementInput.y;
         var targetInput = new Vector3(h,v,0);
