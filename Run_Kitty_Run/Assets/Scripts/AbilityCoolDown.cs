@@ -45,19 +45,19 @@ public class AbilityCoolDown : MonoBehaviour
             if (coolDownComplete)
             {
                 AbilityReady();
-                if (Input.GetButtonDown(abilityButtonAxisName))
-                {
-                    Debug.Log("Ability triggered: " + ability.name);
-                    ButtonTriggered();
-                }
+               // if (Input.GetButtonDown(abilityButtonAxisName))
+              // {
+               //     Debug.Log("Ability triggered: " + ability.name);
+              //      ButtonTriggered();
+               // }
             }
             else
             {
                 CoolDown();
-                if (Input.GetButtonDown(abilityButtonAxisName))
-                {
-                    Debug.Log(coolDownTimeLeft);
-                }
+             //   if (Input.GetButtonDown(abilityButtonAxisName))
+              //  {
+               //     Debug.Log(coolDownTimeLeft);
+             //   }
             }
         }
     }
