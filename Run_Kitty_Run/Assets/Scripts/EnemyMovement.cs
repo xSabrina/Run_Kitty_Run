@@ -172,7 +172,9 @@ public class EnemyMovement : MonoBehaviour
     void OnBecameInvisible()
     {
         isVisible = false;
+        isMoving = false; 
         rb.velocity = new Vector3(0, 0, 0);
+        ClearMovementAnimations();
         deltaTime = 0;
     }
 
