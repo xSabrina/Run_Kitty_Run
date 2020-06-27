@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Timers;
+using UnityEngine.InputSystem;
 
 public class GameUI : MonoBehaviour {
     private const int MainMenuScene = 0;
@@ -12,17 +13,21 @@ public class GameUI : MonoBehaviour {
     public Text TimeText;
     public Text Level;
     public GameObject InGameMenu;
+    PlayerInputActions inputAction;
+    
 
     private void Start() {
         StartLevel();
         ToggleMenu();
     }
 
+    void Awake() {
+        inputAction = new PlayerInputActions();
+        inputAction.PlayerControls.Menu.performed += ctx => ToggleMenu();
+    }
+
     void Update() {
         UpdateTimer();
-        if (Input.GetKeyDown(KeyCode.Escape)) {
-            ToggleMenu();
-        }
     }
 
     //Start next level
@@ -52,6 +57,16 @@ public class GameUI : MonoBehaviour {
     //Update the timer
     private void UpdateTimer() {
         TimeText.text = GameManagerScript.instance.timer;
+    }
+
+    private void OnEnable()
+    {
+        inputAction.Enable();
+    }
+
+    private void OnDisable()
+    {
+        inputAction.Disable();
     }
 
 }
