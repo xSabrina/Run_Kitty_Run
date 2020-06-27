@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 5564521833680093780}
   - component: {fileID: 7719149590923740457}
   - component: {fileID: 44395126511418716}
+  - component: {fileID: 7308554629680945942}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -204,6 +205,21 @@ MonoBehaviour:
   spawnPoint: {fileID: 6945114259851465965}
   projectileForce: 250
   projectileRange: 5
+--- !u!114 &7308554629680945942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5564521833680093790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f17f66d5f552c664282ca72e869270dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  allAbilities:
+  - {fileID: 11400000, guid: 5deafca6f537ec340ba3ce013c32a18a, type: 2}
+  - {fileID: 11400000, guid: aa8a7946d7b780042983272fddb6a856, type: 2}
 --- !u!1 &7367580938141953735
 GameObject:
   m_ObjectHideFlags: 0
