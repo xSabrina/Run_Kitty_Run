@@ -11,13 +11,13 @@ GameObject:
   - component: {fileID: 5564521833680093784}
   - component: {fileID: 5564521833680093785}
   - component: {fileID: 5564521833680093781}
-  - component: {fileID: 5564521833680093786}
   - component: {fileID: 5564521833680093787}
   - component: {fileID: 5564521833680093783}
   - component: {fileID: 5564521833680093782}
   - component: {fileID: 5564521833680093780}
   - component: {fileID: 7719149590923740457}
   - component: {fileID: 44395126511418716}
+  - component: {fileID: 7308554629680945942}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -109,21 +109,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &5564521833680093786
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5564521833680093790}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ce8f2245bc0acb44bea1a641126f053, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Up: {fileID: 21300000, guid: 4fc82fadd0e1d4ed8a697be473d72842, type: 3}
-  Down: {fileID: 21300000, guid: 0f39a9205e4394ee1b6ba8269428d176, type: 3}
-  Side: {fileID: 21300000, guid: 21ae12909dfa64464820da55fc494021, type: 3}
 --- !u!114 &5564521833680093787
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136,6 +121,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a67a1c4d7f588de4ab3511f935ea206b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerRigidbody: {fileID: 5564521833680093782}
+  Up: {fileID: 21300000, guid: 4fc82fadd0e1d4ed8a697be473d72842, type: 3}
+  Down: {fileID: 21300000, guid: 0f39a9205e4394ee1b6ba8269428d176, type: 3}
+  Side: {fileID: 21300000, guid: 21ae12909dfa64464820da55fc494021, type: 3}
+  speed: 8
 --- !u!70 &5564521833680093783
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -215,6 +205,21 @@ MonoBehaviour:
   spawnPoint: {fileID: 6945114259851465965}
   projectileForce: 250
   projectileRange: 5
+--- !u!114 &7308554629680945942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5564521833680093790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f17f66d5f552c664282ca72e869270dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  allAbilities:
+  - {fileID: 11400000, guid: 5deafca6f537ec340ba3ce013c32a18a, type: 2}
+  - {fileID: 11400000, guid: aa8a7946d7b780042983272fddb6a856, type: 2}
 --- !u!1 &7367580938141953735
 GameObject:
   m_ObjectHideFlags: 0
@@ -259,6 +264,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fde1bdacff03b243814fa7e7c7e2177, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rbPlayer: {fileID: 5564521833680093782}
 --- !u!50 &1204832343041071058
 Rigidbody2D:
   serializedVersion: 4

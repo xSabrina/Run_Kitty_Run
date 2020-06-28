@@ -1,89 +1,115 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.InputSystem;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement : MonoBehaviour 
 {
-    private float speed;
-    Animator animator;
-    Rigidbody2D rb;
+    public Rigidbody2D playerRigidbody;
+    public Sprite Up;
+    public Sprite Down;
+    public Sprite Side;
+    public float speed = 4.5f;
+    SpriteRenderer spriteRenderer;
+    Animator playerAnimator;
+    PlayerInputActions inputAction;
+    Vector2 movementInput;
+    Vector3 movement;
+    Vector3 inputDirection;
     
-    private void Start()
-    {
-        animator = GetComponent<Animator>();
-        rb = GetComponent<Rigidbody2D>();
+    void Start(){
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        playerAnimator = GetComponent<Animator>();
     }
 
-    void FixedUpdate()
-    {
-        HandleKeyboardInput();
-        PlayMovementAnimation();
+    void Awake() {
+        inputAction = new PlayerInputActions();
+        inputAction.PlayerControls.Move.performed += ctx => movementInput = ctx.ReadValue<Vector2>();
     }
 
-    private void HandleKeyboardInput()
+    void FixedUpdate() 
     {
-        //Enable player to move faster while holding shift
-        if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
-        {
-            speed = 20f;
-            animator.SetFloat("AnimationSpeed", 2);
-        }
-        else
-        {
-            speed = 10f;
-            animator.SetFloat("AnimationSpeed", 1);
-        }
-        //Enable player movement (WASD based)
-        if (Input.GetKey(KeyCode.W))
-        {
+        float h = movementInput.x;
+        float v = movementInput.y;
+        var targetInput = new Vector3(h,v,0);
+        inputDirection = Vector3.Lerp(inputDirection, targetInput, Time.deltaTime*20f);
+        MoveThePlayer(inputDirection);
+        AnimateThePlayer(inputDirection);
+    }
 
-            transform.rotation = Quaternion.Euler(Vector3.zero);
-            transform.Translate(0f, speed * Time.deltaTime, 0f);
-        }
-        if (Input.GetKey(KeyCode.A))
-        {
-
-            transform.rotation = Quaternion.Euler(0, 180f, 0);
-            transform.Translate(speed * Time.deltaTime, 0f, 0f);
-        }
-        if (Input.GetKey(KeyCode.D))
-        {
+    void MoveThePlayer(Vector3 desiredDirection) 
+    {
+        movement.Set(desiredDirection.x, desiredDirection.y, 0f);
+        movement = movement * speed * Time.deltaTime;
+        playerRigidbody.MovePosition(transform.position + movement);
+    }
     
-            transform.rotation = Quaternion.Euler(Vector3.zero);
-            transform.Translate(speed * Time.deltaTime, 0f, 0f);
+    void AnimateThePlayer(Vector3 desiredDirection)
+    {
+        ClearAnimations();
+        if(Keyboard.current.wKey.isPressed){
+            playerAnimator.SetBool("isWalkingUp", true);
+        } else  if(Keyboard.current.sKey.isPressed){
+            playerAnimator.SetBool("isWalkingDown", true);
+        } else  if(Keyboard.current.aKey.isPressed){
+            playerAnimator.SetBool("isWalkingSide", true);
+              transform.rotation = Quaternion.Euler(0, 180, 0);
+        } else if (Keyboard.current.dKey.isPressed){
+            playerAnimator.SetBool("isWalkingSide", true);
+             transform.rotation = Quaternion.Euler(0, 0, 0);
         }
-        if (Input.GetKey(KeyCode.S))
+    }
+
+    private void ClearAnimations(){
+        playerAnimator.SetBool("isWalkingUp", false);
+        playerAnimator.SetBool("isWalkingDown", false);
+        playerAnimator.SetBool("isWalkingSide", false);
+    }
+
+    void LateUpdate()
+    {
+        TurnThePlayer();
+    }
+
+    void TurnThePlayer() 
+    {
+        Vector2 mousePos = Mouse.current.position.ReadValue();
+        Vector2 objectPos = Camera.main.WorldToScreenPoint(transform.position);
+        mousePos.x = mousePos.x - objectPos.x;
+        mousePos.y = mousePos.y - objectPos.y;
+        var angle = Mathf.Atan2(mousePos.y, mousePos.x) * Mathf.Rad2Deg;
+        if (playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("Idle") || GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("UseSkill"))
         {
-            //Adjust player rotation whenever walking downwards diagonally
-            if (transform.rotation == Quaternion.Euler(0, 180f, 0))
+            //Adjust player sprite depending on angle
+            if (angle < -225 && angle > -315 || angle < 135 && angle > 45)
             {
-                transform.rotation = Quaternion.Euler(0, 180f, 0);
+                spriteRenderer.sprite = Up;
+            }
+            else if (angle >= -45 && angle <= 45)
+            {
+                spriteRenderer.sprite = Side;
+                transform.rotation = Quaternion.Euler(Vector3.zero);
+            }
+            else if (angle < -45 && angle > -125)
+            {
+                spriteRenderer.sprite = Down;
             }
             else
             {
-                transform.rotation = Quaternion.Euler(Vector3.zero);
+                spriteRenderer.sprite = Side;
+                transform.rotation = Quaternion.Euler(0, 180, 0);
             }
-            transform.Translate(0f, -speed * Time.deltaTime, 0f);
         }
     }
 
-    private void PlayMovementAnimation()
+    private void OnEnable()
     {
-        ClearMovementAnimations();
-        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
-        {
-            animator.SetBool("isWalkingSide", true);
-        } else if (Input.GetKey(KeyCode.W))
-        {
-            animator.SetBool("isWalkingUp", true);
-        } else if (Input.GetKey(KeyCode.S)){
-            animator.SetBool("isWalkingDown", true);
-        }
+        inputAction.Enable();
     }
 
-    private void ClearMovementAnimations()
+    private void OnDisable()
     {
-        animator.SetBool("isWalkingSide", false);
-        animator.SetBool("isWalkingUp", false);
-        animator.SetBool("isWalkingDown", false);
+        inputAction.Disable();
     }
 
 }
