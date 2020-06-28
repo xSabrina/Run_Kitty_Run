@@ -29,6 +29,7 @@ public class EnemyToPlayer : MonoBehaviour
         {
             if (GetComponent<EnemyMovement>().enabled == false && GetComponent<EnemyRotation>().enabled == false)
             {
+                ClearMovementAnimations();
                 GetComponent<EnemyMovement>().enabled = true;
                 GetComponent<EnemyRotation>().enabled = true;
             }

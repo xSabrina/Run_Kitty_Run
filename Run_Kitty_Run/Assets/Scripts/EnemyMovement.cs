@@ -188,6 +188,7 @@ public class EnemyMovement : MonoBehaviour
     {
         rb.velocity = new Vector3(0, 0, 0);
         ClearMovementAnimations();
+        isMoving = false;
         deltaTime = 0;
     }
 }
