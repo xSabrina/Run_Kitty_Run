@@ -134,10 +134,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2642674803438684022, guid: 4fe4f209fa35fc247a84c5e6b8666081,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 2642674803438684023, guid: 4fe4f209fa35fc247a84c5e6b8666081,
         type: 3}
       propertyPath: m_Name
       value: FollowingEnemy (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2642674803438684023, guid: 4fe4f209fa35fc247a84c5e6b8666081,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2642674803438684029, guid: 4fe4f209fa35fc247a84c5e6b8666081,
         type: 3}
@@ -199,6 +209,21 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 342710221}
+    - target: {fileID: 9162936010190133767, guid: 4fe4f209fa35fc247a84c5e6b8666081,
+        type: 3}
+      propertyPath: speed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9162936010190133767, guid: 4fe4f209fa35fc247a84c5e6b8666081,
+        type: 3}
+      propertyPath: monitoringRadius
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 9162936010190133767, guid: 4fe4f209fa35fc247a84c5e6b8666081,
+        type: 3}
+      propertyPath: attackingRadius
+      value: 0.6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4fe4f209fa35fc247a84c5e6b8666081, type: 3}
 --- !u!1001 &304754350
@@ -208,10 +233,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2642674803438684022, guid: 4fe4f209fa35fc247a84c5e6b8666081,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 2642674803438684023, guid: 4fe4f209fa35fc247a84c5e6b8666081,
         type: 3}
       propertyPath: m_Name
       value: FollowingEnemy (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2642674803438684023, guid: 4fe4f209fa35fc247a84c5e6b8666081,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2642674803438684029, guid: 4fe4f209fa35fc247a84c5e6b8666081,
         type: 3}
@@ -273,6 +308,21 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 342710221}
+    - target: {fileID: 9162936010190133767, guid: 4fe4f209fa35fc247a84c5e6b8666081,
+        type: 3}
+      propertyPath: speed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9162936010190133767, guid: 4fe4f209fa35fc247a84c5e6b8666081,
+        type: 3}
+      propertyPath: monitoringRadius
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 9162936010190133767, guid: 4fe4f209fa35fc247a84c5e6b8666081,
+        type: 3}
+      propertyPath: attackingRadius
+      value: 0.6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4fe4f209fa35fc247a84c5e6b8666081, type: 3}
 --- !u!1 &342710221 stripped
@@ -377,6 +427,16 @@ PrefabInstance:
     - target: {fileID: 6594927343154006811, guid: 13a872c1f7cd472489fdda968215e249,
         type: 3}
       propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6594927343154006811, guid: 13a872c1f7cd472489fdda968215e249,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6594927343154006811, guid: 13a872c1f7cd472489fdda968215e249,
+        type: 3}
+      propertyPath: m_BodyType
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1149,6 +1209,16 @@ PrefabInstance:
       propertyPath: m_CollisionDetection
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6594927343154006811, guid: 13a872c1f7cd472489fdda968215e249,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6594927343154006811, guid: 13a872c1f7cd472489fdda968215e249,
+        type: 3}
+      propertyPath: m_BodyType
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 13a872c1f7cd472489fdda968215e249, type: 3}
 --- !u!1001 &1082600544
@@ -1247,6 +1317,16 @@ PrefabInstance:
     - target: {fileID: 6594927343154006811, guid: 13a872c1f7cd472489fdda968215e249,
         type: 3}
       propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6594927343154006811, guid: 13a872c1f7cd472489fdda968215e249,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6594927343154006811, guid: 13a872c1f7cd472489fdda968215e249,
+        type: 3}
+      propertyPath: m_BodyType
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1353,6 +1433,16 @@ PrefabInstance:
     - target: {fileID: 6594927343154006811, guid: 13a872c1f7cd472489fdda968215e249,
         type: 3}
       propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6594927343154006811, guid: 13a872c1f7cd472489fdda968215e249,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6594927343154006811, guid: 13a872c1f7cd472489fdda968215e249,
+        type: 3}
+      propertyPath: m_BodyType
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1765,6 +1855,16 @@ PrefabInstance:
       propertyPath: m_CollisionDetection
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6594927343154006811, guid: 13a872c1f7cd472489fdda968215e249,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6594927343154006811, guid: 13a872c1f7cd472489fdda968215e249,
+        type: 3}
+      propertyPath: m_BodyType
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 13a872c1f7cd472489fdda968215e249, type: 3}
 --- !u!1001 &1894782794
@@ -1774,10 +1874,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2642674803438684022, guid: 4fe4f209fa35fc247a84c5e6b8666081,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 2642674803438684023, guid: 4fe4f209fa35fc247a84c5e6b8666081,
         type: 3}
       propertyPath: m_Name
       value: FollowingEnemy (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2642674803438684023, guid: 4fe4f209fa35fc247a84c5e6b8666081,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2642674803438684029, guid: 4fe4f209fa35fc247a84c5e6b8666081,
         type: 3}
@@ -1839,6 +1949,21 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 342710221}
+    - target: {fileID: 9162936010190133767, guid: 4fe4f209fa35fc247a84c5e6b8666081,
+        type: 3}
+      propertyPath: speed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9162936010190133767, guid: 4fe4f209fa35fc247a84c5e6b8666081,
+        type: 3}
+      propertyPath: monitoringRadius
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 9162936010190133767, guid: 4fe4f209fa35fc247a84c5e6b8666081,
+        type: 3}
+      propertyPath: attackingRadius
+      value: 0.6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4fe4f209fa35fc247a84c5e6b8666081, type: 3}
 --- !u!1001 &1947695281
@@ -1937,6 +2062,16 @@ PrefabInstance:
     - target: {fileID: 6594927343154006811, guid: 13a872c1f7cd472489fdda968215e249,
         type: 3}
       propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6594927343154006811, guid: 13a872c1f7cd472489fdda968215e249,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6594927343154006811, guid: 13a872c1f7cd472489fdda968215e249,
+        type: 3}
+      propertyPath: m_BodyType
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

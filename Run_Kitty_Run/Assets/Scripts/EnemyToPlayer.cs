@@ -7,6 +7,8 @@ public class EnemyToPlayer : MonoBehaviour
 
     public GameObject player;
     public float speed;
+    public float monitoringRadius;
+    public float attackingRadius;
     
     private bool isInside;
 
@@ -16,6 +18,7 @@ public class EnemyToPlayer : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
+        GetComponent<CircleCollider2D>().radius = monitoringRadius;
     }
 
     // Update is called once per frame
@@ -24,12 +27,14 @@ public class EnemyToPlayer : MonoBehaviour
         if (isInside)
         {
             WalkTowardsPlayer();
+            GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
         } 
         else
         {
             if (GetComponent<EnemyMovement>().enabled == false && GetComponent<EnemyRotation>().enabled == false)
             {
                 ClearMovementAnimations();
+                GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
                 GetComponent<EnemyMovement>().enabled = true;
                 GetComponent<EnemyRotation>().enabled = true;
             }
@@ -43,8 +48,8 @@ public class EnemyToPlayer : MonoBehaviour
             GetComponent<EnemyMovement>().enabled = false;
             GetComponent<EnemyRotation>().enabled = false;
         }
-        var direction = Vector3.MoveTowards(transform.position, player.transform.position, speed);
-        transform.position = direction;
+        GetComponent<Rigidbody2D>().velocity = Vector3.Normalize(player.transform.position - transform.position) * speed;
+
         var angle = Mathf.Atan2((player.transform.position - transform.position).y, (player.transform.position - transform.position).x) * Mathf.Rad2Deg;
         if (angle == 0 && !animator.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
         {
@@ -80,7 +85,7 @@ public class EnemyToPlayer : MonoBehaviour
         if (collision.gameObject.tag.Equals("Player"))
         {
             isInside = true;
-            GetComponent<CircleCollider2D>().radius = 0.6f;
+            GetComponent<CircleCollider2D>().radius = attackingRadius;
         }
     }
 
@@ -89,7 +94,7 @@ public class EnemyToPlayer : MonoBehaviour
         if (collision.gameObject.tag.Equals("Player"))
         {
             isInside = false;
-            GetComponent<CircleCollider2D>().radius = 0.4f;
+            GetComponent<CircleCollider2D>().radius = monitoringRadius;
         }
     }
 
