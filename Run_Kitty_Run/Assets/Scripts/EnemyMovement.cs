@@ -44,7 +44,7 @@ public class EnemyMovement : MonoBehaviour
     void InitValues()
     {
         deltaTime = 0;
-        isMoving = true;
+        isMoving = false;
         invertXPos = false;
         invertXNeg = false;
         invertYPos = false;
