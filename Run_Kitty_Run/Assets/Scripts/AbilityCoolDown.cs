@@ -2,6 +2,7 @@
 using System.Collections;
 using UnityEngine.UI;
 
+
 public class AbilityCoolDown : MonoBehaviour
 {
 
@@ -17,11 +18,19 @@ public class AbilityCoolDown : MonoBehaviour
     private float nextReadyTime;
     private float coolDownTimeLeft;
 
+    PlayerInputActions inputAction;
+
 
     void Start()
     {
         player = GameObject.Find("Player");
         Initialize(ability, player);
+    }
+
+     void Awake() {
+        inputAction = new PlayerInputActions();
+        inputAction.PlayerControls.Blink.performed += ctx => Blink();
+        inputAction.PlayerControls.Shoot.performed += ctx => Shoot();
     }
 
     public void Initialize(Ability selectedAbility, GameObject firePointHolder)
@@ -36,28 +45,36 @@ public class AbilityCoolDown : MonoBehaviour
         AbilityReady();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
+    void Blink(){
         if (GameManagerScript.instance.abilitiesEnabled)
         {
             bool coolDownComplete = (Time.time > nextReadyTime);
             if (coolDownComplete)
             {
                 AbilityReady();
-                if (Input.GetButtonDown(abilityButtonAxisName))
-                {
-                    Debug.Log("Ability triggered: " + ability.name);
-                    ButtonTriggered();
-                }
+                ButtonTriggered();
             }
             else
             {
                 CoolDown();
-                if (Input.GetButtonDown(abilityButtonAxisName))
-                {
-                    Debug.Log(coolDownTimeLeft);
-                }
+                Debug.Log(coolDownTimeLeft);
+            }
+        }
+    }
+
+    void Shoot(){
+        if (GameManagerScript.instance.abilitiesEnabled)
+        {
+            bool coolDownComplete = (Time.time > nextReadyTime);
+            if (coolDownComplete)
+            {
+                AbilityReady();
+                ButtonTriggered();
+            }
+            else
+            {
+                CoolDown();
+                Debug.Log(coolDownTimeLeft);
             }
         }
     }
@@ -88,4 +105,15 @@ public class AbilityCoolDown : MonoBehaviour
         //abilitySource.Play();
         ability.TriggerAbility();
     }
+
+     private void OnEnable()
+    {
+        inputAction.Enable();
+    }
+
+    private void OnDisable()
+    {
+        inputAction.Disable();
+    }
+
 }
