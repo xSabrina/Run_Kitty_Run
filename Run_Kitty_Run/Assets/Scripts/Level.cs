@@ -8,7 +8,7 @@ public class Level : ScriptableObject
 {
     public string levelName = "Level";
     public Texture levelImg;
-    public string levelTime;
+    public int levelTime;
     public int levelNr;
 
     // Use this for initialization

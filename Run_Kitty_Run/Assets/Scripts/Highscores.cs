@@ -11,32 +11,22 @@ public class Highscores : MonoBehaviour
 
     private void Awake()
     {
-        AddScore("kays", 1010);
-        AddScore("kas", 22);
+        
+       /* AddScore("kas", 22);
         AddScore("kys", 100);
 
 
         DownloadScores();
-
-    }
-    public struct Highscore
-    {
-        public string userName;
-        public string score;
-        public Highscore(string userName, string score)
-        {
-            this.userName = userName;
-            this.score = score;
-        }
+        */
     }
 
     public void AddScore(string userName, int score)
     {
         StartCoroutine(UploadHighscore(userName, score));
     }
- IEnumerator UploadHighscore(string userName, int score)
+    IEnumerator UploadHighscore(string userName, int score)
     {
-        WWW url = new WWW(webUrl + privateCode + "/add/" + WWW.EscapeURL(userName) + "/0/" + score);
+        WWW url = new WWW(webUrl + privateCode + "/add/" + WWW.EscapeURL(userName) + "/" + score);
         yield return url;
         if (string.IsNullOrEmpty(url.error))
         {
@@ -51,7 +41,9 @@ public class Highscores : MonoBehaviour
     public void DownloadScores()
     {
         StartCoroutine("DownloadHighscores");
+        //return highscoresList;
     }
+
     IEnumerator DownloadHighscores()
     {
         Debug.Log("start download");
@@ -60,15 +52,18 @@ public class Highscores : MonoBehaviour
         if (string.IsNullOrEmpty(url.error))
         {
             Debug.Log(url.text);
+            FormatHighscore(url.text);
         }
         else
         {
             Debug.Log("Download failed:" + url.error);
         }
     }
+
     public void FormatHighscore(string textStream)
     {
         string[] scores = textStream.Split(new char[] {'\n'}, System.StringSplitOptions.RemoveEmptyEntries);
+        highscoresList = new Highscore[scores.Length];
         int i = 0;
         foreach (string score in scores)
         {
@@ -76,14 +71,17 @@ public class Highscores : MonoBehaviour
             string username = scoreEntry[0];
 
             int seconds = int.Parse(scoreEntry[1]);
-            int minutes = seconds % 60;
-            seconds = seconds - (60 * minutes);
+            
+            int minutes = seconds / 60;
+            seconds = seconds %60;
 
             string highscore = minutes.ToString("00") + ":" + seconds.ToString("00.00"); ;
 
-            highscoresList[i] = new Highscore(username, score);
-            i++;
+            highscoresList[i] = new Highscore(username, highscore);
             Debug.Log("username: " + highscoresList[i].userName + " score: " + highscoresList[i].score);
+            i++;
+            
         }
+        
     }
 }

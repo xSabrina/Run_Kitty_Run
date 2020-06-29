@@ -15,11 +15,15 @@ public class GameManagerScript : MonoBehaviour
     public bool abilitiesEnabled = true;
     public int selectedAbility1 = 0;
     public int selectedAbility2 = 1;
+    public Highscores highscoresScript;
 
     // Use this for initialization
     void Awake()
     {
-       
+       if (highscoresScript == null)
+        {
+            gameObject.GetComponent<Highscores>();
+        }
         if (instance)
         {
             DestroyImmediate(gameObject);
@@ -43,7 +47,7 @@ public class GameManagerScript : MonoBehaviour
     }
 
 
-    //counts Time in minutes, second and milliseconds, should be called inj Update function
+    //counts Time in minutes, second and milliseconds, should be called in Update function
     private void CountTime()
     {
         seconds += Time.deltaTime;
@@ -59,6 +63,7 @@ public class GameManagerScript : MonoBehaviour
     //should be triggered through EndLevelPrefab
     public void EndLevel()
     {
+        currentLevel.levelTime = minutes * 60 + (int)seconds;
         if (currentLevel.levelNr < levels.Count)
         {
             currentLevel = levels[currentLevel.levelNr];
@@ -67,7 +72,10 @@ public class GameManagerScript : MonoBehaviour
         else
         {
 
-            SceneManager.LoadScene("MainMenu");
+            AddHighscore("kay");
+            GetHighscores();
+
+            //SceneManager.LoadScene("MainMenu");
         }
         
     }
@@ -84,11 +92,29 @@ public class GameManagerScript : MonoBehaviour
     {
         SceneManager.LoadScene(currentLevel.levelName);
     }
+
     public void SetCurrentLevel(int i)
     {
         currentLevel = levels[i];
     }
- 
+    
+    public void AddHighscore(string name)
+    {
+        int score = 0;
+        Debug.Log("Levels: "+ levels.Count);
+        foreach (Level lvl in levels)
+        {
+            Debug.Log("Leveltime: "+lvl.levelTime);
+            score += lvl.levelTime;
+            Debug.Log("score: "+score);
+        }
+        highscoresScript.AddScore(name, score);
+    }
+    public void GetHighscores()
+    {
+        highscoresScript.DownloadScores(); 
+      
+    }
 }
 
 

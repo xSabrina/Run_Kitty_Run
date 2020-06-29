@@ -15,11 +15,13 @@ public class EnemyShoot : MonoBehaviour
     {
         
     }
+
+    //Launch if player entered collider
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.tag == "Player")
         {
-            Debug.Log("ENtered");
+            
             player = collision.transform;
             InvokeRepeating("LaunchBullet", 1.0f, shootingInterval);
 
@@ -37,10 +39,10 @@ public class EnemyShoot : MonoBehaviour
 
     private void LaunchBullet()
     {
-        Debug.Log("BulletLaunched");
+       
         bullet = Instantiate(bulletPrefab, transform.position,transform.rotation);
         bullet.GetComponent<BulletScript>().FireBullet(player.position,bulletSpeed);
-        Debug.Log(bullet.name);
+        
     }
     
 }
