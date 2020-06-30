@@ -5,15 +5,10 @@ public class EnemyRotation : MonoBehaviour
     public Rigidbody2D rb;
 
     Animator animator;
-    SpriteRenderer spriteRenderer;
-    public Sprite Up;
-    public Sprite Down;
-    public Sprite Side;
 
     private void Start()
     {
         animator = GetComponent<Animator>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     void LateUpdate()
