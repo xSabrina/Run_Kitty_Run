@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyToPlayer : MonoBehaviour
 {
 
-    public GameObject player;
+    private GameObject player;
     public float speed;
     public float monitoringRadius;
     public float attackingRadius;
@@ -84,6 +84,10 @@ public class EnemyToPlayer : MonoBehaviour
     {
         if (collision.gameObject.tag.Equals("Player"))
         {
+            if(player == null)
+            {
+                player = collision.gameObject;
+            }
             isInside = true;
             GetComponent<CircleCollider2D>().radius = attackingRadius;
         }
