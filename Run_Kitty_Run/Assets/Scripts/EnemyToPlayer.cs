@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyToPlayer : MonoBehaviour
 {
 
-    public GameObject player;
+    private GameObject player;
     public float speed;
     public float monitoringRadius;
     public float attackingRadius;
@@ -17,6 +17,7 @@ public class EnemyToPlayer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        player = GameObject.Find("Player");
         animator = GetComponent<Animator>();
         GetComponent<CircleCollider2D>().radius = monitoringRadius;
     }
