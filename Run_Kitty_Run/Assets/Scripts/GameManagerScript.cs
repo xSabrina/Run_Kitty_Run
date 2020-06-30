@@ -60,25 +60,7 @@ public class GameManagerScript : MonoBehaviour
 
     }
 
-    //should be triggered through EndLevelPrefab
-    public void EndLevel()
-    {
-        currentLevel.levelTime = minutes * 60 + (int)seconds;
-        if (currentLevel.levelNr < levels.Count)
-        {
-            currentLevel = levels[currentLevel.levelNr];
-            StartLevel();
-        }
-        else
-        {
 
-            AddHighscore("kay");
-            GetHighscores();
-
-            //SceneManager.LoadScene("MainMenu");
-        }
-        
-    }
 
     //for restarting Level or loading anew one
 
@@ -97,8 +79,32 @@ public class GameManagerScript : MonoBehaviour
     {
         currentLevel = levels[i];
     }
-    
-    public void AddHighscore(string name)
+
+    //should be triggered through EndLevelPrefab
+    public void EndLevel()
+    {
+        currentLevel.levelTime = minutes * 60 + (int)seconds;
+        if (currentLevel.levelNr < levels.Count)
+        {
+            currentLevel = levels[currentLevel.levelNr];
+            StartLevel();
+        }
+        else
+        {
+
+            AddHighscore(PlayerPrefs.GetString("Username", "DefaultUser"));
+
+            //SceneManager.LoadScene("MainMenu");
+        }
+
+    }
+    public void AddHighscore(string username)
+    {
+        StartCoroutine(AddHighscoreCoroutine(username));
+    }
+
+
+    IEnumerator AddHighscoreCoroutine(string username)
     {
         int score = 0;
         Debug.Log("Levels: "+ levels.Count);
@@ -108,12 +114,34 @@ public class GameManagerScript : MonoBehaviour
             score += lvl.levelTime;
             Debug.Log("score: "+score);
         }
-        highscoresScript.AddScore(name, score);
+
+        if (PlayerPrefs.GetInt("Score") > score|| PlayerPrefs.HasKey("Score")==false)
+        {
+            yield return StartCoroutine(highscoresScript.DeleteHighscore(username));
+            PlayerPrefs.SetInt("Score", score);
+            yield return StartCoroutine(highscoresScript.UploadHighscore(username, score));
+
+        }
+        
+        GetHighscores();
+        Debug.Log("Added and loaded scores");
+        
     }
+
+   
     public void GetHighscores()
     {
-        highscoresScript.DownloadScores(); 
+        StartCoroutine(GetHighscoreCoroutine());
       
+    }
+    IEnumerator GetHighscoreCoroutine()
+    {
+        yield return StartCoroutine(highscoresScript.DownloadHighscores());
+        Highscore[] highscores = highscoresScript.highscoresList;
+        for (int i = highscores.Length-1; i >= 0; i--)
+        {
+            Debug.Log("username: " + highscores[i].userName + " score: " + highscores[i].score);
+        }
     }
 }
 

@@ -11,26 +11,22 @@ public class Highscores : MonoBehaviour
 
     private void Awake()
     {
-        
-       /* AddScore("kas", 22);
-        AddScore("kys", 100);
-
-
-        DownloadScores();
-        */
+        //PlayerPrefs.DeleteAll();
+      
     }
 
     public void AddScore(string userName, int score)
     {
         StartCoroutine(UploadHighscore(userName, score));
     }
-    IEnumerator UploadHighscore(string userName, int score)
+    public IEnumerator UploadHighscore(string userName, int score)
     {
         WWW url = new WWW(webUrl + privateCode + "/add/" + WWW.EscapeURL(userName) + "/" + score);
         yield return url;
         if (string.IsNullOrEmpty(url.error))
         {
             Debug.Log("Uploaded "+ userName + "s score");
+            //DownloadScores();
         }
         else
         {
@@ -38,13 +34,25 @@ public class Highscores : MonoBehaviour
         }
     }
 
-    public void DownloadScores()
+
+
+    public IEnumerator DeleteHighscore(string userName)
     {
-        StartCoroutine("DownloadHighscores");
-        //return highscoresList;
+        WWW url = new WWW(webUrl + privateCode + "/delete/" + WWW.EscapeURL(userName));
+        yield return url;
+        if (string.IsNullOrEmpty(url.error))
+        {
+            Debug.Log("Deleted " + userName + "s score");
+        }
+        else
+        {
+            Debug.Log("Deletion failed:" + url.error);
+        }
     }
 
-    IEnumerator DownloadHighscores()
+   
+
+    public IEnumerator DownloadHighscores()
     {
         Debug.Log("start download");
         WWW url = new WWW(webUrl + publicCode + "/pipe");
@@ -78,7 +86,6 @@ public class Highscores : MonoBehaviour
             string highscore = minutes.ToString("00") + ":" + seconds.ToString("00.00"); ;
 
             highscoresList[i] = new Highscore(username, highscore);
-            Debug.Log("username: " + highscoresList[i].userName + " score: " + highscoresList[i].score);
             i++;
             
         }

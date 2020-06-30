@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Highscore : ScriptableObject
+public class Highscore
 {
     public string userName;
     public string score;
