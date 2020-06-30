@@ -256,6 +256,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 24e2d223e421ff14c8fb28825808896f, type: 2}
   - {fileID: 11400000, guid: ab7231b7acd716b4c8c3279e630f6a63, type: 2}
   - {fileID: 11400000, guid: fcd4b57fdf3d52f4486a6c3372cfe11b, type: 2}
+  - {fileID: 11400000, guid: 1517f21fd291de44588c2a0860640169, type: 2}
+  - {fileID: 11400000, guid: 1c8f9f9fa9f34524c88b9ce6c21cc75d, type: 2}
   currentLevel: {fileID: 0}
   abilitiesEnabled: 1
   selectedAbility1: 0
