@@ -17,7 +17,6 @@ public class EnemyToPlayer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.Find("Player");
         animator = GetComponent<Animator>();
         GetComponent<CircleCollider2D>().radius = monitoringRadius;
     }
@@ -85,6 +84,10 @@ public class EnemyToPlayer : MonoBehaviour
     {
         if (collision.gameObject.tag.Equals("Player"))
         {
+            if(player == null)
+            {
+                player = collision.gameObject;
+            }
             isInside = true;
             GetComponent<CircleCollider2D>().radius = attackingRadius;
         }
