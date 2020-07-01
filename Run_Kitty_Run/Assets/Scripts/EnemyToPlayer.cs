@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Experimental.Rendering.Universal;
 
 public class EnemyToPlayer : MonoBehaviour
 {
@@ -88,6 +89,7 @@ public class EnemyToPlayer : MonoBehaviour
             if(transform.childCount == 1)
             {
                 GetComponentInChildren<EdgeCollider2D>().enabled = false;
+                GetComponentInChildren<Light2D>().color = new Color(1.0f,0.0f,0.0f,1.0f);
             }
             if(player == null)
             {
@@ -105,6 +107,7 @@ public class EnemyToPlayer : MonoBehaviour
             if (transform.childCount == 1)
             {
                 GetComponentInChildren<EdgeCollider2D>().enabled = true;
+                GetComponentInChildren<Light2D>().color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
             }
             isInside = false;
             GetComponent<CircleCollider2D>().radius = monitoringRadius;
