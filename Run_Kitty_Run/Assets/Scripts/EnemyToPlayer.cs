@@ -9,6 +9,7 @@ public class EnemyToPlayer : MonoBehaviour
     public float speed;
     public float monitoringRadius;
     public float attackingRadius;
+    public float angle;
     
     private bool isInside;
 
@@ -50,7 +51,7 @@ public class EnemyToPlayer : MonoBehaviour
         }
         GetComponent<Rigidbody2D>().velocity = Vector3.Normalize(player.transform.position - transform.position) * speed;
 
-        var angle = Mathf.Atan2((player.transform.position - transform.position).y, (player.transform.position - transform.position).x) * Mathf.Rad2Deg;
+        angle = Mathf.Atan2((player.transform.position - transform.position).y, (player.transform.position - transform.position).x) * Mathf.Rad2Deg;
         if (angle == 0 && !animator.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
         {
             transform.rotation = Quaternion.Euler(Vector3.zero);
@@ -84,6 +85,10 @@ public class EnemyToPlayer : MonoBehaviour
     {
         if (collision.gameObject.tag.Equals("Player"))
         {
+            if(transform.childCount == 1)
+            {
+                GetComponentInChildren<EdgeCollider2D>().enabled = false;
+            }
             if(player == null)
             {
                 player = collision.gameObject;
@@ -97,6 +102,10 @@ public class EnemyToPlayer : MonoBehaviour
     {
         if (collision.gameObject.tag.Equals("Player"))
         {
+            if (transform.childCount == 1)
+            {
+                GetComponentInChildren<EdgeCollider2D>().enabled = true;
+            }
             isInside = false;
             GetComponent<CircleCollider2D>().radius = monitoringRadius;
         }
