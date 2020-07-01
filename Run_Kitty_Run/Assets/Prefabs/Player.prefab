@@ -11,16 +11,15 @@ GameObject:
   - component: {fileID: 5564521833680093784}
   - component: {fileID: 5564521833680093785}
   - component: {fileID: 5564521833680093781}
-  - component: {fileID: 5564521833680093786}
   - component: {fileID: 5564521833680093787}
   - component: {fileID: 5564521833680093783}
   - component: {fileID: 5564521833680093782}
   - component: {fileID: 5564521833680093780}
-  - component: {fileID: 404812114921684729}
-  - component: {fileID: 3878597306897683541}
   - component: {fileID: 7719149590923740457}
   - component: {fileID: 44395126511418716}
-  m_Layer: 0
+  - component: {fileID: 7308554629680945942}
+  - component: {fileID: 739279647}
+  m_Layer: 8
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -80,7 +79,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 21ae12909dfa64464820da55fc494021, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -107,25 +106,10 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &5564521833680093786
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5564521833680093790}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ce8f2245bc0acb44bea1a641126f053, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Up: {fileID: 21300000, guid: 4fc82fadd0e1d4ed8a697be473d72842, type: 3}
-  Down: {fileID: 21300000, guid: 0f39a9205e4394ee1b6ba8269428d176, type: 3}
-  Side: {fileID: 21300000, guid: 21ae12909dfa64464820da55fc494021, type: 3}
 --- !u!114 &5564521833680093787
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136,8 +120,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a67a1c4d7f588de4ab3511f935ea206b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
+  playerRigidbody: {fileID: 5564521833680093782}
+  Up: {fileID: 21300000, guid: 4fc82fadd0e1d4ed8a697be473d72842, type: 3}
+  Down: {fileID: 21300000, guid: 0f39a9205e4394ee1b6ba8269428d176, type: 3}
+  Side: {fileID: 21300000, guid: 21ae12909dfa64464820da55fc494021, type: 3}
+  speed: 8
 --- !u!70 &5564521833680093783
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -151,8 +140,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0044888738, y: -0.03315362}
-  m_Size: {x: 0.114809, y: 0.21748796}
+  m_Offset: {x: -0.008274562, y: -0.035046875}
+  m_Size: {x: 0.08704726, y: 0.1657388}
   m_Direction: 0
 --- !u!50 &5564521833680093782
 Rigidbody2D:
@@ -173,7 +162,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!114 &5564521833680093780
 MonoBehaviour:
@@ -185,36 +174,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 65ec92ed42e2c9f4c9269434a1be321d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &404812114921684729
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5564521833680093790}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81516659ee2bfeb448b9a32170b75168, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  abilityButtonAxisName: Fire1
-  ability: {fileID: 11400000, guid: 5deafca6f537ec340ba3ce013c32a18a, type: 2}
---- !u!114 &3878597306897683541
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5564521833680093790}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81516659ee2bfeb448b9a32170b75168, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  abilityButtonAxisName: Fire2
-  ability: {fileID: 11400000, guid: aa8a7946d7b780042983272fddb6a856, type: 2}
+  m_Name:
+  m_EditorClassIdentifier:
 --- !u!114 &7719149590923740457
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -225,8 +186,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 49ff90ce627da49429a46d9d6dde582d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   player: {fileID: 5564521833680093790}
   spawnPoint: {fileID: 6945114259851465965}
 --- !u!114 &44395126511418716
@@ -239,12 +200,68 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4c885b954b9d53d489b834fbcf739d48, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   projectilePrefab: {fileID: 0}
   spawnPoint: {fileID: 6945114259851465965}
   projectileForce: 250
   projectileRange: 5
+--- !u!114 &739279647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5564521833680093790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  m_LightType: 3
+  m_BlendStyleIndex: 0
+  m_FalloffIntensity: 0.64
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 1.14
+  m_LightVolumeOpacity: 0
+  m_ApplyToSortingLayers: 00000000fbc83c9e
+  m_LightCookieSprite: {fileID: 0}
+  m_UseNormalMap: 0
+  m_LightOrder: 0
+  m_AlphaBlendOnOverlap: 0
+  m_ShadowIntensity: 0
+  m_ShadowVolumeIntensity: 0
+  m_PointLightInnerAngle: 360
+  m_PointLightOuterAngle: 360
+  m_PointLightInnerRadius: 2.95
+  m_PointLightOuterRadius: 8.11
+  m_PointLightDistance: 3
+  m_PointLightQuality: 1
+  m_ShapeLightParametricSides: 8
+  m_ShapeLightParametricAngleOffset: 0
+  m_ShapeLightParametricRadius: 0.15
+  m_ShapeLightFalloffSize: 0.5
+  m_ShapeLightFalloffOffset: {x: 0, y: 0}
+  m_ShapePath:
+  - {x: -0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: 0.5, z: 0}
+  - {x: -0.5, y: 0.5, z: 0}
+--- !u!114 &7308554629680945942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5564521833680093790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f17f66d5f552c664282ca72e869270dd, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  allAbilities:
+  - {fileID: 11400000, guid: 5deafca6f537ec340ba3ce013c32a18a, type: 2}
+  - {fileID: 11400000, guid: aa8a7946d7b780042983272fddb6a856, type: 2}
 --- !u!1 &7367580938141953735
 GameObject:
   m_ObjectHideFlags: 0
@@ -256,7 +273,7 @@ GameObject:
   - component: {fileID: 6945114259851465965}
   - component: {fileID: 2292266826634922152}
   - component: {fileID: 1204832343041071058}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -287,11 +304,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2fde1bdacff03b243814fa7e7c7e2177, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   rbPlayer: {fileID: 5564521833680093782}
-  rbFirePoint: {fileID: 1204832343041071058}
-  cam: {fileID: 0}
 --- !u!50 &1204832343041071058
 Rigidbody2D:
   serializedVersion: 4
