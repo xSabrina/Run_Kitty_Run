@@ -128,7 +128,7 @@ public class PlayerAbilities : MonoBehaviour
         if (ab2Ready)
         {
             //ab2coolDownTextDisplay.enabled = false;
-            ab1coolDownOverlay.fillAmount = 0;
+            ab2coolDownOverlay.fillAmount = 0;
         }
         else
         {
