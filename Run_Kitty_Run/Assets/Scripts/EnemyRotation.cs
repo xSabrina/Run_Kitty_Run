@@ -26,6 +26,7 @@ public class EnemyRotation : MonoBehaviour
             }
             else if (angle < -225 && angle > -315 || angle < 135 && angle > 45)
             {
+                transform.rotation = Quaternion.Euler(Vector3.zero);
                 animator.SetBool("isWalkingUp", true);
             }
             else if (angle >= -45 && angle <= 45)
@@ -35,6 +36,7 @@ public class EnemyRotation : MonoBehaviour
             }
             else if (angle < -45 && angle > -135)
             {
+                transform.rotation = Quaternion.Euler(Vector3.zero);
                 animator.SetBool("isWalkingDown", true);
             }
             else
