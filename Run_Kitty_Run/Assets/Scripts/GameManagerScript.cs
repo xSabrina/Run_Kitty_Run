@@ -13,11 +13,17 @@ public class GameManagerScript : MonoBehaviour
     public List<Level> levels = new List<Level>();
     public Level currentLevel;
     public bool abilitiesEnabled = true;
+    public int selectedAbility1 = 0;
+    public int selectedAbility2 = 1;
+    public Highscores highscoresScript;
 
     // Use this for initialization
     void Awake()
     {
-       
+       if (highscoresScript == null)
+        {
+            gameObject.GetComponent<Highscores>();
+        }
         if (instance)
         {
             DestroyImmediate(gameObject);
@@ -41,7 +47,7 @@ public class GameManagerScript : MonoBehaviour
     }
 
 
-    //counts Time in minutes, second and milliseconds, should be called inj Update function
+    //counts Time in minutes, second and milliseconds, should be called in Update function
     private void CountTime()
     {
         seconds += Time.deltaTime;
@@ -54,21 +60,7 @@ public class GameManagerScript : MonoBehaviour
 
     }
 
-    //should be triggered through EndLevelPrefab
-    public void EndLevel()
-    {
-        if (currentLevel.levelNr < levels.Count)
-        {
-            currentLevel = levels[currentLevel.levelNr];
-            StartLevel();
-        }
-        else
-        {
 
-            SceneManager.LoadScene("MainMenu");
-        }
-        
-    }
 
     //for restarting Level or loading anew one
 
@@ -82,11 +74,75 @@ public class GameManagerScript : MonoBehaviour
     {
         SceneManager.LoadScene(currentLevel.levelName);
     }
+
     public void SetCurrentLevel(int i)
     {
         currentLevel = levels[i];
     }
- 
+
+    //should be triggered through EndLevelPrefab
+    public void EndLevel()
+    {
+        currentLevel.levelTime = minutes * 60 + (int)seconds;
+        if (currentLevel.levelNr < levels.Count)
+        {
+            currentLevel = levels[currentLevel.levelNr];
+            StartLevel();
+        }
+        else
+        {
+
+            AddHighscore(PlayerPrefs.GetString("Username", "DefaultUser"));
+
+            //SceneManager.LoadScene("MainMenu");
+        }
+
+    }
+    public void AddHighscore(string username)
+    {
+        StartCoroutine(AddHighscoreCoroutine(username));
+    }
+
+
+    IEnumerator AddHighscoreCoroutine(string username)
+    {
+        int score = 0;
+        Debug.Log("Levels: "+ levels.Count);
+        foreach (Level lvl in levels)
+        {
+            Debug.Log("Leveltime: "+lvl.levelTime);
+            score += lvl.levelTime;
+            Debug.Log("score: "+score);
+        }
+
+        if (PlayerPrefs.GetInt("Score") > score|| PlayerPrefs.HasKey("Score")==false)
+        {
+            yield return StartCoroutine(highscoresScript.DeleteHighscore(username));
+            PlayerPrefs.SetInt("Score", score);
+            yield return StartCoroutine(highscoresScript.UploadHighscore(username, score));
+
+        }
+        
+        GetHighscores();
+        Debug.Log("Added and loaded scores");
+        
+    }
+
+   
+    public void GetHighscores()
+    {
+        StartCoroutine(GetHighscoreCoroutine());
+      
+    }
+    IEnumerator GetHighscoreCoroutine()
+    {
+        yield return StartCoroutine(highscoresScript.DownloadHighscores());
+        Highscore[] highscores = highscoresScript.highscoresList;
+        for (int i = highscores.Length-1; i >= 0; i--)
+        {
+            Debug.Log("username: " + highscores[i].userName + " score: " + highscores[i].score);
+        }
+    }
 }
 
 
