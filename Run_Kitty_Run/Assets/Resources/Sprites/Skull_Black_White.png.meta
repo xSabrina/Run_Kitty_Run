@@ -1,0 +1,2264 @@
+fileFormatVersion: 2
+guid: fd4105b4a786cb4468f52f446547dfce
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6016263150112828158
+    second: Skull_Black_White_0
+  - first:
+      213: 1597652042869169285
+    second: Skull_Black_White_1
+  - first:
+      213: -867921231679735261
+    second: Skull_Black_White_2
+  - first:
+      213: 4332341950345722195
+    second: Skull_Black_White_3
+  - first:
+      213: -5997437066312840086
+    second: Skull_Black_White_4
+  - first:
+      213: -6848632992300532024
+    second: Skull_Black_White_5
+  - first:
+      213: 3566467769951619773
+    second: Skull_Black_White_6
+  - first:
+      213: -5681130891409919331
+    second: Skull_Black_White_7
+  - first:
+      213: -8922678219509518917
+    second: Skull_Black_White_8
+  - first:
+      213: -1134877238578804843
+    second: Skull_Black_White_9
+  - first:
+      213: -6841225720757456528
+    second: Skull_Black_White_10
+  - first:
+      213: -9067574191315032827
+    second: Skull_Black_White_11
+  - first:
+      213: -1764789159424901268
+    second: Skull_Black_White_12
+  - first:
+      213: 2176144584874268286
+    second: Skull_Black_White_13
+  - first:
+      213: -2512239770495905795
+    second: Skull_Black_White_14
+  - first:
+      213: 4249566257664925309
+    second: Skull_Black_White_15
+  - first:
+      213: 5136334356566468126
+    second: Skull_Black_White_16
+  - first:
+      213: 8219144341307948567
+    second: Skull_Black_White_17
+  - first:
+      213: -1770308501771851639
+    second: Skull_Black_White_18
+  - first:
+      213: 2206509762881447934
+    second: Skull_Black_White_19
+  - first:
+      213: 7915716863809852289
+    second: Skull_Black_White_20
+  - first:
+      213: 2183765462173990528
+    second: Skull_Black_White_21
+  - first:
+      213: 2672091736687494069
+    second: Skull_Black_White_22
+  - first:
+      213: 5076028345566188985
+    second: Skull_Black_White_23
+  - first:
+      213: -4685670715845173477
+    second: Skull_Black_White_24
+  - first:
+      213: -3530537463431691955
+    second: Skull_Black_White_25
+  - first:
+      213: -5559390452985203592
+    second: Skull_Black_White_26
+  - first:
+      213: 7085922611428465129
+    second: Skull_Black_White_27
+  - first:
+      213: -7987472709836577807
+    second: Skull_Black_White_28
+  - first:
+      213: 6552863346096912662
+    second: Skull_Black_White_29
+  - first:
+      213: -3676265721002961083
+    second: Skull_Black_White_30
+  - first:
+      213: 664142369645211464
+    second: Skull_Black_White_31
+  - first:
+      213: 9013742104022505817
+    second: Skull_Black_White_32
+  - first:
+      213: -5925268860166299893
+    second: Skull_Black_White_33
+  - first:
+      213: -7255930568382120014
+    second: Skull_Black_White_34
+  - first:
+      213: 1928842063915279931
+    second: Skull_Black_White_35
+  - first:
+      213: 712479712719873391
+    second: Skull_Black_White_36
+  - first:
+      213: -2043495526996387982
+    second: Skull_Black_White_37
+  - first:
+      213: -674386690533119658
+    second: Skull_Black_White_38
+  - first:
+      213: 4784780870738282378
+    second: Skull_Black_White_39
+  - first:
+      213: -1176137155494760706
+    second: Skull_Black_White_40
+  - first:
+      213: -9039579999850532953
+    second: Skull_Black_White_41
+  - first:
+      213: -8900190189359112851
+    second: Skull_Black_White_42
+  - first:
+      213: -5517766648694089697
+    second: Skull_Black_White_43
+  - first:
+      213: 2281375691755976319
+    second: Skull_Black_White_44
+  - first:
+      213: 2067165306276390104
+    second: Skull_Black_White_45
+  - first:
+      213: -1021058449798663219
+    second: Skull_Black_White_46
+  - first:
+      213: 2034490681483885083
+    second: Skull_Black_White_47
+  - first:
+      213: 3767786204892347600
+    second: Skull_Black_White_48
+  - first:
+      213: -5966650955812245204
+    second: Skull_Black_White_49
+  - first:
+      213: 6064553547783303119
+    second: Skull_Black_White_50
+  - first:
+      213: -3932494952944254054
+    second: Skull_Black_White_51
+  - first:
+      213: 527292789248364879
+    second: Skull_Black_White_52
+  - first:
+      213: 4373872469558677543
+    second: Skull_Black_White_53
+  - first:
+      213: 6296059737882526829
+    second: Skull_Black_White_54
+  - first:
+      213: 7327176301664333829
+    second: Skull_Black_White_55
+  - first:
+      213: -7910029262224542727
+    second: Skull_Black_White_56
+  - first:
+      213: -107611351177239210
+    second: Skull_Black_White_57
+  - first:
+      213: -3302831896677185991
+    second: Skull_Black_White_58
+  - first:
+      213: 3716921113326661750
+    second: Skull_Black_White_59
+  - first:
+      213: -3393092863112762026
+    second: Skull_Black_White_60
+  - first:
+      213: 4216291375304448408
+    second: Skull_Black_White_61
+  - first:
+      213: 1744892888625107920
+    second: Skull_Black_White_62
+  - first:
+      213: -7128851590285352631
+    second: Skull_Black_White_63
+  - first:
+      213: 5561891418795990996
+    second: Skull_Black_White_64
+  - first:
+      213: 5301789832873736484
+    second: Skull_Black_White_65
+  - first:
+      213: 887822362762760293
+    second: Skull_Black_White_66
+  - first:
+      213: 1280459019817498635
+    second: Skull_Black_White_67
+  - first:
+      213: 3095601512639168253
+    second: Skull_Black_White_68
+  - first:
+      213: 3567148071894605182
+    second: Skull_Black_White_69
+  - first:
+      213: 7746063729156786726
+    second: Skull_Black_White_70
+  - first:
+      213: 2384130856774990685
+    second: Skull_Black_White_71
+  - first:
+      213: 7916568198167346208
+    second: Skull_Black_White_72
+  - first:
+      213: 3756779142075018342
+    second: Skull_Black_White_73
+  - first:
+      213: -5664225961969367077
+    second: Skull_Black_White_74
+  - first:
+      213: 6402239960017439762
+    second: Skull_Black_White_75
+  - first:
+      213: -2482525289084877955
+    second: Skull_Black_White_76
+  - first:
+      213: 5445139324217180009
+    second: Skull_Black_White_77
+  - first:
+      213: -2916704916406339
+    second: Skull_Black_White_78
+  - first:
+      213: 4760437911138101129
+    second: Skull_Black_White_79
+  - first:
+      213: 9039127402375636975
+    second: Skull_Black_White_80
+  - first:
+      213: 799348139186511580
+    second: Skull_Black_White_81
+  - first:
+      213: 555009211176037248
+    second: Skull_Black_White_82
+  - first:
+      213: -1014307369626921446
+    second: Skull_Black_White_83
+  - first:
+      213: 8432964787826467832
+    second: Skull_Black_White_84
+  - first:
+      213: 499458121789619269
+    second: Skull_Black_White_85
+  - first:
+      213: -3252680247097324003
+    second: Skull_Black_White_86
+  - first:
+      213: -750617537387166427
+    second: Skull_Black_White_87
+  - first:
+      213: -2725194423658674877
+    second: Skull_Black_White_88
+  - first:
+      213: -5559073837907647126
+    second: Skull_Black_White_89
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 400
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Skull_Black_White_0
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 1037
+        width: 193
+        height: 189
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 205904e5a80f18ca0800000000000000
+      internalID: -6016263150112828158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_Black_White_1
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 1037
+        width: 193
+        height: 189
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58cd4e971100c2610800000000000000
+      internalID: 1597652042869169285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_Black_White_2
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 1036
+        width: 197
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32ab5bcfc3684f3f0800000000000000
+      internalID: -867921231679735261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_Black_White_3
+      rect:
+        serializedVersion: 2
+        x: 795
+        y: 1044
+        width: 158
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35931e3dc029f1c30800000000000000
+      internalID: 4332341950345722195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_Black_White_4
+      rect:
+        serializedVersion: 2
+        x: 1099
+        y: 1071
+        width: 105
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6c89a393c2d4cca0800000000000000
+      internalID: -5997437066312840086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_Black_White_5
+      rect:
+        serializedVersion: 2
+        x: 1354
+        y: 1069
+        width: 107
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cef7e04494c4f0a0800000000000000
+      internalID: -6848632992300532024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_Black_White_6
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 811
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dba88d27a83ae7130800000000000000
+      internalID: 3566467769951619773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_Black_White_7
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 808
+        width: 114
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d92730fdd819821b0800000000000000
+      internalID: -5681130891409919331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_Black_White_8
+      rect:
+        serializedVersion: 2
+        x: 582
+        y: 806
+        width: 117
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbd25090f674c2480800000000000000
+      internalID: -8922678219509518917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_Black_White_9
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 804
+        width: 120
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59785d21a2b1040f0800000000000000
+      internalID: -1134877238578804843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_Black_White_10
+      rect:
+        serializedVersion: 2
+        x: 1091
+        y: 803
+        width: 123
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0717cfd04751f01a0800000000000000
+      internalID: -6841225720757456528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_Black_White_11
+      rect:
+        serializedVersion: 2
+        x: 1345
+        y: 801
+        width: 127
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 505ea28a051892280800000000000000
+      internalID: -9067574191315032827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_Black_White_12
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 543
+        width: 130
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6fb4091c953287e0800000000000000
+      internalID: -1764789159424901268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_Black_White_13
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 567
+        width: 132
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e76125168f7333e10800000000000000
+      internalID: 2176144584874268286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_Black_White_14
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 567
+        width: 111
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dff8bf83d3bb22dd0800000000000000
+      internalID: -2512239770495905795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_Black_White_15
+      rect:
+        serializedVersion: 2
+        x: 851
+        y: 587
+        width: 114
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7e9a950ffd79fa30800000000000000
+      internalID: 4249566257664925309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_Black_White_16
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 600
+        width: 100
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1667c242ece74740800000000000000
+      internalID: 5136334356566468126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_Black_White_17
+      rect:
+        serializedVersion: 2
+        x: 1380
+        y: 666
+        width: 56
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71e72554b34401270800000000000000
+      internalID: 8219144341307948567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_Black_White_18
+      rect:
+        serializedVersion: 2
+        x: 1448
+        y: 647
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 988e8011cc99e67e0800000000000000
+      internalID: -1770308501771851639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_Black_White_19
+      rect:
+        serializedVersion: 2
+        x: 1107
+        y: 651
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef7eaf150f81f9e10800000000000000
+      internalID: 2206509762881447934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_Black_White_20
+      rect:
+        serializedVersion: 2
+        x: 1362
+        y: 654
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18394f16c864add60800000000000000
+      internalID: 7915716863809852289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_Black_White_21
+      rect:
+        serializedVersion: 2
+        x: 1384
+        y: 610
+        width: 62
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08eb5a52e1b4e4e10800000000000000
+      internalID: 2183765462173990528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_Black_White_22
+      rect:
+        serializedVersion: 2
+        x: 573
+        y: 609
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b3c384f64d251520800000000000000
+      internalID: 2672091736687494069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_Black_White_23
+      rect:
+        serializedVersion: 2
+        x: 827
+        y: 611
+        width: 20
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b55947e2eca17640800000000000000
+      internalID: 5076028345566188985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_Black_White_24
+      rect:
+        serializedVersion: 2
+        x: 1082
+        y: 612
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1f19974f4729feb0800000000000000
+      internalID: -4685670715845173477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_Black_White_25
+      rect:
+        serializedVersion: 2
+        x: 1337
+        y: 613
+        width: 15
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4102f1f1e2010fc0800000000000000
+      internalID: -3530537463431691955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_Black_White_26
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 542
+        width: 59
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8747e1286d319d2b0800000000000000
+      internalID: -5559390452985203592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_Black_White_27
+      rect:
+        serializedVersion: 2
+        x: 602
+        y: 550
+        width: 27
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e91a108211465260800000000000000
+      internalID: 7085922611428465129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_Black_White_28
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 549
+        width: 25
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f3601dc3ebc62190800000000000000
+      internalID: -7987472709836577807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_Black_White_29
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 566
+        width: 43
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 619b8c5ae7270fa50800000000000000
+      internalID: 6552863346096912662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_Black_White_30
+      rect:
+        serializedVersion: 2
+        x: 1162
+        y: 568
+        width: 19
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5475cafedc74bfcc0800000000000000
+      internalID: -3676265721002961083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_Black_White_31
+      rect:
+        serializedVersion: 2
+        x: 1182
+        y: 565
+        width: 22
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84f2df667f1873900800000000000000
+      internalID: 664142369645211464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_Black_White_32
+      rect:
+        serializedVersion: 2
+        x: 1419
+        y: 568
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9595e3fcfae371d70800000000000000
+      internalID: 9013742104022505817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_Black_White_33
+      rect:
+        serializedVersion: 2
+        x: 1442
+        y: 563
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0f9a177d5735cda0800000000000000
+      internalID: -5925268860166299893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_Black_White_34
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 540
+        width: 29
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bf7fa47791cd4b90800000000000000
+      internalID: -7255930568382120014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_Black_White_35
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 538
+        width: 28
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b36608f33af94ca10800000000000000
+      internalID: 1928842063915279931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_Black_White_36
+      rect:
+        serializedVersion: 2
+        x: 1114
+        y: 547
+        width: 23
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f65275a168c33e900800000000000000
+      internalID: 712479712719873391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_Black_White_37
+      rect:
+        serializedVersion: 2
+        x: 1145
+        y: 536
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 277d74525ab04a3e0800000000000000
+      internalID: -2043495526996387982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_Black_White_38
+      rect:
+        serializedVersion: 2
+        x: 1369
+        y: 545
+        width: 21
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 659a585c0e814a6f0800000000000000
+      internalID: -674386690533119658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_Black_White_39
+      rect:
+        serializedVersion: 2
+        x: 1402
+        y: 533
+        width: 24
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a878070e9d4f66240800000000000000
+      internalID: 4784780870738282378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_Black_White_40
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 417
+        width: 50
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efea89f0d758dafe0800000000000000
+      internalID: -1176137155494760706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_Black_White_41
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 425
+        width: 42
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7afee2642e5fc8280800000000000000
+      internalID: -9039579999850532953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_Black_White_42
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 434
+        width: 30
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6d55d19d2c2c7480800000000000000
+      internalID: -8900190189359112851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_Black_White_43
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 444
+        width: 16
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f185717a774fc63b0800000000000000
+      internalID: -5517766648694089697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_Black_White_44
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 393
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f76735aba1319af10800000000000000
+      internalID: 2281375691755976319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_Black_White_45
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 395
+        width: 27
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d4ad9cc4eb00bc10800000000000000
+      internalID: 2067165306276390104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_Black_White_46
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 397
+        width: 25
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc3f6dcefb874d1f0800000000000000
+      internalID: -1021058449798663219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_Black_White_47
+      rect:
+        serializedVersion: 2
+        x: 948
+        y: 407
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1a70b0ee76fb3c10800000000000000
+      internalID: 2034490681483885083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_Black_White_48
+      rect:
+        serializedVersion: 2
+        x: 1207
+        y: 410
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dcb93c379dd94430800000000000000
+      internalID: 3767786204892347600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_Black_White_49
+      rect:
+        serializedVersion: 2
+        x: 1467
+        y: 413
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c21f0108192323da0800000000000000
+      internalID: -5966650955812245204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_Black_White_50
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 401
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcf65f0025f992450800000000000000
+      internalID: 6064553547783303119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_Black_White_51
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 404
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a93cdb0fca8fc69c0800000000000000
+      internalID: -3932494952944254054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_Black_White_52
+      rect:
+        serializedVersion: 2
+        x: 963
+        y: 399
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4116c38ff1515700800000000000000
+      internalID: 527292789248364879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_Black_White_53
+      rect:
+        serializedVersion: 2
+        x: 1222
+        y: 402
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 720d7e856dd13bc30800000000000000
+      internalID: 4373872469558677543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_Black_White_54
+      rect:
+        serializedVersion: 2
+        x: 1481
+        y: 404
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d64802149f8106750800000000000000
+      internalID: 6296059737882526829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_Black_White_55
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 370
+        width: 13
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 500fc5b760c5fa560800000000000000
+      internalID: 7327176301664333829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_Black_White_56
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 368
+        width: 39
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f3392e8b4ee93290800000000000000
+      internalID: -7910029262224542727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_Black_White_57
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 371
+        width: 11
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 655e747db00b18ef0800000000000000
+      internalID: -107611351177239210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_Black_White_58
+      rect:
+        serializedVersion: 2
+        x: 566
+        y: 373
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9360abd93ebf922d0800000000000000
+      internalID: -3302831896677185991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_Black_White_59
+      rect:
+        serializedVersion: 2
+        x: 821
+        y: 381
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6703cf93f08259330800000000000000
+      internalID: 3716921113326661750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_Black_White_60
+      rect:
+        serializedVersion: 2
+        x: 822
+        y: 374
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65d2044b40059e0d0800000000000000
+      internalID: -3393092863112762026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_Black_White_61
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 359
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 899909ebaa6438a30800000000000000
+      internalID: 4216291375304448408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_Black_White_62
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 311
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d3da9d56da173810800000000000000
+      internalID: 1744892888625107920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_Black_White_63
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 306
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9412098bf3b311d90800000000000000
+      internalID: -7128851590285352631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_Black_White_64
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 311
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dfd0a8f6cecf2d40800000000000000
+      internalID: 5561891418795990996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_Black_White_65
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 305
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 429773e43cdb39940800000000000000
+      internalID: 5301789832873736484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_Black_White_66
+      rect:
+        serializedVersion: 2
+        x: 655
+        y: 310
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5605f1c2cbd225c00800000000000000
+      internalID: 887822362762760293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_Black_White_67
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 304
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b08baa1c1ba15c110800000000000000
+      internalID: 1280459019817498635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_Black_White_68
+      rect:
+        serializedVersion: 2
+        x: 913
+        y: 309
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfef40fac29c5fa20800000000000000
+      internalID: 3095601512639168253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_Black_White_69
+      rect:
+        serializedVersion: 2
+        x: 943
+        y: 303
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7d5f76954e018130800000000000000
+      internalID: 3567148071894605182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_Black_White_70
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 309
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62a8de7dbeb8f7b60800000000000000
+      internalID: 7746063729156786726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_Black_White_71
+      rect:
+        serializedVersion: 2
+        x: 1427
+        y: 308
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5bfe10f162261120800000000000000
+      internalID: 2384130856774990685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_Black_White_72
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 287
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02c3beb15dc4ddd60800000000000000
+      internalID: 7916568198167346208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_Black_White_73
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 275
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66c6af6b9b2c22430800000000000000
+      internalID: 3756779142075018342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_Black_White_74
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 285
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd745497f70a461b0800000000000000
+      internalID: -5664225961969367077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_Black_White_75
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 272
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21c86a7b25359d850800000000000000
+      internalID: 6402239960017439762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_Black_White_76
+      rect:
+        serializedVersion: 2
+        x: 602
+        y: 283
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d730c2e076c4c8dd0800000000000000
+      internalID: -2482525289084877955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_Black_White_77
+      rect:
+        serializedVersion: 2
+        x: 639
+        y: 270
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96fb974ad55019b40800000000000000
+      internalID: 5445139324217180009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_Black_White_78
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 281
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbffa87b543a5fff0800000000000000
+      internalID: -2916704916406339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_Black_White_79
+      rect:
+        serializedVersion: 2
+        x: 1114
+        y: 279
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98760bcee09701240800000000000000
+      internalID: 4760437911138101129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_Black_White_80
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 267
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe7691a2b7e617d70800000000000000
+      internalID: 9039127402375636975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_Black_White_81
+      rect:
+        serializedVersion: 2
+        x: 1153
+        y: 265
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cded410c5ead71b00800000000000000
+      internalID: 799348139186511580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_Black_White_82
+      rect:
+        serializedVersion: 2
+        x: 1410
+        y: 262
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08ba73fdfe9c3b700800000000000000
+      internalID: 555009211176037248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_Black_White_83
+      rect:
+        serializedVersion: 2
+        x: 958
+        y: 160
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a16935442d47ce1f0800000000000000
+      internalID: -1014307369626921446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_Black_White_84
+      rect:
+        serializedVersion: 2
+        x: 1217
+        y: 164
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f326c57bc8e70570800000000000000
+      internalID: 8432964787826467832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_Black_White_85
+      rect:
+        serializedVersion: 2
+        x: 1477
+        y: 167
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54c3479f38e6ee600800000000000000
+      internalID: 499458121789619269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_Black_White_86
+      rect:
+        serializedVersion: 2
+        x: 916
+        y: 52
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1e85d77c882cd2d0800000000000000
+      internalID: -3252680247097324003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_Black_White_87
+      rect:
+        serializedVersion: 2
+        x: 1174
+        y: 52
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5250cd1a3554595f0800000000000000
+      internalID: -750617537387166427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_Black_White_88
+      rect:
+        serializedVersion: 2
+        x: 899
+        y: 4
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34503f14c1a2e2ad0800000000000000
+      internalID: -2725194423658674877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_Black_White_89
+      rect:
+        serializedVersion: 2
+        x: 1157
+        y: 2
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a65e8533cc33ad2b0800000000000000
+      internalID: -5559073837907647126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
