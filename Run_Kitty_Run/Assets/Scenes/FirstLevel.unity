@@ -346,6 +346,9 @@ MonoBehaviour:
   levels: []
   currentLevel: {fileID: 11400000, guid: ab7231b7acd716b4c8c3279e630f6a63, type: 2}
   abilitiesEnabled: 1
+  selectedAbility1: 0
+  selectedAbility2: 1
+  highscoresScript: {fileID: 0}
 --- !u!4 &226395041
 Transform:
   m_ObjectHideFlags: 0
@@ -655,6 +658,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 739279647, guid: 55633d223e545cf45bdbead1b5e1c3b6, type: 3}
+      propertyPath: m_UseNormalMap
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 404812114921684729, guid: 55633d223e545cf45bdbead1b5e1c3b6,
         type: 3}
       propertyPath: m_Enabled
