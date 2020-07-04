@@ -28,7 +28,7 @@ public class ProjectileAbility : Ability
     {
         player.GetComponent<PlayerMovement>().enabled = false;
         PlayShootingAnimation();
-        launcher.Launch();
+        PlayerAbilities.instance.StartCoroutine(WaitCastPoint(castPoint));
     }
 
     private void PlayShootingAnimation()
@@ -53,17 +53,20 @@ public class ProjectileAbility : Ability
             player.transform.rotation = Quaternion.Euler(0, 180, 0);
             animator.SetTrigger("isShootingSide");
         }
-
-        float castTime = 0.517f;
+        
         PlayerAbilities.instance.StartCoroutine(WaitingTime(castTime));
+    }
+
+    IEnumerator WaitCastPoint(float Float)
+    {
+        yield return new WaitForSeconds(Float);
+        launcher.Launch();
     }
 
     IEnumerator WaitingTime(float Float)
     {
-        Debug.Log(Time.time + ": " + Float);
         yield return new WaitForSeconds(Float);
         player.GetComponent<PlayerMovement>().enabled = true;
-        Debug.Log(Time.time + ": movement enabled");
     }
 
     private void ClearMovementAnimations()

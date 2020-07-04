@@ -6,7 +6,6 @@ using System.Collections.Generic;
 public class Blink : Ability
 {
     public float aRange = 0f;
-    public LayerMask mylayerMask;
 
     private SelfCastTriggerable launcher;
     private ContactFilter2D filter = new ContactFilter2D();
@@ -69,7 +68,6 @@ public class Blink : Ability
     void PlayAnimation ()
     {
         // trigger blink animation and wait for it to finish
-        float castTime = 0.6f;
         animator.SetTrigger("isBlinking");
         PlayerAbilities.instance.StartCoroutine(WaitingTime(castTime));
     }
