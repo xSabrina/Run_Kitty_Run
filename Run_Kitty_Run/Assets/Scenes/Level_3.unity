@@ -4820,6 +4820,7 @@ MonoBehaviour:
   abilitiesEnabled: 1
   selectedAbility1: 0
   selectedAbility2: 1
+  highscoresScript: {fileID: 0}
 --- !u!4 &1361598502
 Transform:
   m_ObjectHideFlags: 0
