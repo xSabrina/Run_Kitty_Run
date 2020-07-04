@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: -1790610348660572385}
   - component: {fileID: -2304776344353252525}
   - component: {fileID: -7458055515320400881}
+  - component: {fileID: 7133428174017124480}
   m_Layer: 9
   m_Name: Bullet
   m_TagString: Enemy
@@ -140,6 +141,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lifeTime: 3
   rb: {fileID: -7458055515320400881}
+  bulletAnim: {fileID: 7133428174017124480}
+  bulletAnimClip: {fileID: 7400000, guid: 8eefbc053ee1d144d9dd74fa73b16dd5, type: 2}
 --- !u!58 &-2304776344353252525
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -177,3 +180,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!111 &7133428174017124480
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 490058435353429218}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 8eefbc053ee1d144d9dd74fa73b16dd5, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 8eefbc053ee1d144d9dd74fa73b16dd5, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
