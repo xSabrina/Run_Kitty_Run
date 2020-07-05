@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3676565106280656144}
   - component: {fileID: 5438563127702778444}
   - component: {fileID: 3388882246044283589}
+  - component: {fileID: 8482400365134570247}
   m_Layer: 9
   m_Name: SpreadBullet
   m_TagString: Enemy
@@ -177,3 +178,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lifeTime: 5
   rb: {fileID: 5438563127702778444}
+  animation: {fileID: 8482400365134570247}
+  animationClip: {fileID: 7400000, guid: bf1f986feb9c1ed48a84b6a7b3a589cb, type: 2}
+--- !u!111 &8482400365134570247
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6182047903809368737}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: bf1f986feb9c1ed48a84b6a7b3a589cb, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: bf1f986feb9c1ed48a84b6a7b3a589cb, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0

@@ -117,4 +117,4 @@ MonoBehaviour:
   bulletPrefab: {fileID: 6182047903809368737, guid: 57a585b7a4373264c9e766aa69fac576,
     type: 3}
   spreadMagnitude: 20
-  bulletNumber: 3
+  bulletNumber: 18

@@ -48,7 +48,7 @@ public class EnemySpreadShoot : MonoBehaviour
         float angle = Mathf.Atan2(y, x) * Mathf.Rad2Deg-(bulletNumber/2*spreadMagnitude);
        for (int i = 0; i <= bulletNumber-1; i++)
         {
-            bullet = Instantiate(bulletPrefab, transform.position, transform.rotation);
+            bullet = Instantiate(bulletPrefab, transform.position + new Vector3(0,1f), transform.rotation);
             bullet.GetComponent<SpreadBulletScript>().FireBullet(angle, bulletSpeed);
             angle += spreadMagnitude;
         }

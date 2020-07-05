@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class SpreadBulletScript : MonoBehaviour
 {
-    public float lifeTime = 3f;
+    public float lifeTime = 5f;
     public Rigidbody2D rb;
+    public Animation animation;
+    public AnimationClip animationClip;
+    private float speed;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,8 +20,16 @@ public class SpreadBulletScript : MonoBehaviour
 
     public void FireBullet(float angle, float speed)
     {
-      
+
+        this.speed = speed;
         gameObject.transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+        gameObject.transform.position += transform.right*1;
+        animation.Play();
+        Invoke("BulletFired", animationClip.length);
+
+    }
+    public void BulletFired()
+    {
         rb.velocity = transform.right * speed;
     }
 
