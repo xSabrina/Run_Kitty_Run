@@ -40,7 +40,7 @@ public class EnemyShoot : MonoBehaviour
     private void LaunchBullet()
     {
        
-        bullet = Instantiate(bulletPrefab, transform.position,transform.rotation);
+        bullet = Instantiate(bulletPrefab, transform.position+new Vector3(0, 1.7f),transform.rotation);
         bullet.GetComponent<BulletScript>().FireBullet(player.position,bulletSpeed);
         
     }

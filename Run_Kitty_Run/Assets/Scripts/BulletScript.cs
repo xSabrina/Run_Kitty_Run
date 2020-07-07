@@ -4,8 +4,14 @@ using UnityEngine;
 
 public class BulletScript : MonoBehaviour
 {
+
     public float lifeTime = 3f;
     public Rigidbody2D rb;
+    public Animation bulletAnim;
+    public AnimationClip bulletAnimClip;
+    private Vector3 target;
+    private float speed;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,10 +22,18 @@ public class BulletScript : MonoBehaviour
     // Update is called once per frame
     public void FireBullet(Vector3 target, float speed)
     {
+        bulletAnim.Play();
+        this.target = target;
+        this.speed = speed;
+        Invoke("BulletFired", bulletAnimClip.length);
+    }
+
+    public void BulletFired()
+    {
         rb.velocity = (target - gameObject.transform.position).normalized * speed;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+        private void OnCollisionEnter2D(Collision2D collision)
     {
         Destroy(gameObject, 0.03f);
     }
