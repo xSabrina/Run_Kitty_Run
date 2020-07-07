@@ -6,19 +6,20 @@ using System.Collections.Generic;
 public class Blink : Ability
 {
     public float aRange = 0f;
-    public LayerMask mylayerMask;
 
     private SelfCastTriggerable launcher;
     private ContactFilter2D filter = new ContactFilter2D();
     private List<RaycastHit2D> res = new List<RaycastHit2D>();
     private Transform playerTransform;
     private CapsuleCollider2D playerCollider;
+    private Animator animator;
 
     public override void Initialize(GameObject obj)
     {
         launcher = obj.GetComponent<SelfCastTriggerable>();
         playerTransform = launcher.player.GetComponent<Transform>();
         playerCollider = launcher.player.GetComponent<CapsuleCollider2D>();
+        animator = launcher.player.GetComponent<Animator>();
     }
 
     public override void TriggerAbility()
@@ -59,5 +60,28 @@ public class Blink : Ability
         {
             playerTransform.position += launcher.spawnPoint.transform.up.normalized * aRange;
         }
+
+        launcher.player.GetComponent<PlayerMovement>().enabled = false;
+        PlayAnimation();
+    }
+
+    void PlayAnimation ()
+    {
+        // trigger blink animation and wait for it to finish
+        animator.SetTrigger("isBlinking");
+        PlayerAbilities.instance.StartCoroutine(WaitingTime(castTime));
+    }
+
+    IEnumerator WaitingTime(float Float)
+    {
+        yield return new WaitForSeconds(Float);
+        launcher.player.GetComponent<PlayerMovement>().enabled = true;
+    }
+
+    private void ClearMovementAnimations()
+    {
+        animator.SetBool("isWalkingSide", false);
+        animator.SetBool("isWalkingUp", false);
+        animator.SetBool("isWalkingDown", false);
     }
 }
