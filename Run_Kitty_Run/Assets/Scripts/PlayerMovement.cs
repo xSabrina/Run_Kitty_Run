@@ -105,8 +105,6 @@ public class PlayerMovement : MonoBehaviour
     private void OnEnable()
     {
         inputAction.Enable();
-        Awake();
-        Debug.Log("PlayerMovementEnabled");
     }
 
     private void OnDisable()
