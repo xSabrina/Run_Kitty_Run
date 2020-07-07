@@ -7,6 +7,8 @@ using UnityEngine.UI;
 
 public class PlayerAbilities : MonoBehaviour
 {
+    public static PlayerAbilities instance;
+
     // contains all available abilities
     [SerializeField] public Ability[] allAbilities;
 
@@ -43,6 +45,7 @@ public class PlayerAbilities : MonoBehaviour
 
     void Start()
     {
+        PlayerAbilities.instance = this;
         Initialize();
     }    
 
