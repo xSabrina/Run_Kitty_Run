@@ -4,6 +4,8 @@ public class EnemyRotation : MonoBehaviour
 {
     public Rigidbody2D rb;
 
+    public float angle;
+
     Animator animator;
 
     private void Start()
@@ -14,7 +16,7 @@ public class EnemyRotation : MonoBehaviour
     void LateUpdate()
     {
         var direction = rb.velocity;
-        var angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         if (animator.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
         {
             if (angle == 0)
@@ -24,6 +26,7 @@ public class EnemyRotation : MonoBehaviour
             }
             else if (angle < -225 && angle > -315 || angle < 135 && angle > 45)
             {
+                transform.rotation = Quaternion.Euler(Vector3.zero);
                 animator.SetBool("isWalkingUp", true);
             }
             else if (angle >= -45 && angle <= 45)
@@ -31,8 +34,9 @@ public class EnemyRotation : MonoBehaviour
                 transform.rotation = Quaternion.Euler(Vector3.zero);
                 animator.SetBool("isWalkingSide", true);
             }
-            else if (angle < -45 && angle > -125)
+            else if (angle < -45 && angle > -135)
             {
+                transform.rotation = Quaternion.Euler(Vector3.zero);
                 animator.SetBool("isWalkingDown", true);
             }
             else

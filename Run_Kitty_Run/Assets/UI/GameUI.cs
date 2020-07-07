@@ -13,6 +13,9 @@ public class GameUI : MonoBehaviour {
     public Text TimeText;
     public Text Level;
     public GameObject InGameMenu;
+    public Image MenuResumeButton;
+    public Image MenuOptionsButton;
+    public Image MenuCancelButton;
     PlayerInputActions inputAction;
     
 

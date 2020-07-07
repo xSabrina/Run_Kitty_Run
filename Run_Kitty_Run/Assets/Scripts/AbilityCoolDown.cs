@@ -1,14 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using System.Reflection;
 
 
 public class AbilityCoolDown : MonoBehaviour
 {
 
     public string abilityButtonAxisName = "Fire1";
-    //public Image darkMask;
     public Text coolDownTextDisplay;
+    public Image cooldownOverlay;
 
     [SerializeField] private Ability ability;
     private GameObject player;
@@ -82,15 +83,15 @@ public class AbilityCoolDown : MonoBehaviour
     private void AbilityReady()
     {
         coolDownTextDisplay.enabled = false;
-        //darkMask.enabled = false;
+        cooldownOverlay.fillAmount = 0;
     }
 
     private void CoolDown()
     {
         coolDownTimeLeft -= Time.deltaTime;
-        float roundedCd = Mathf.Round(coolDownTimeLeft);
-        coolDownTextDisplay.text = coolDownTimeLeft.ToString("F1");
-        //darkMask.fillAmount = (coolDownTimeLeft / coolDownDuration);
+        //float roundedCd = Mathf.Round(coolDownTimeLeft);
+        //coolDownTextDisplay.text = coolDownTimeLeft.ToString("F1");
+        cooldownOverlay.fillAmount = coolDownTimeLeft/coolDownDuration;
 
     }
 
