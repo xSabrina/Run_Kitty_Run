@@ -20,6 +20,7 @@ public class GameManagerScript : MonoBehaviour
     // Use this for initialization
     void Awake()
     {
+        
        if (highscoresScript == null)
         {
             gameObject.GetComponent<Highscores>();
