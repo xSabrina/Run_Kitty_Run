@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelName: Level_3
   levelImg: {fileID: 0}
-  levelTime: 
-  levelNr: 4
+  levelTime: 0
+  levelNr: 3
