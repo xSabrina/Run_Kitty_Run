@@ -10,7 +10,8 @@ public class FirePointRotation : MonoBehaviour
     Vector3 direction;
     float angle;
 
-    Vector2 firePointYOffset = new Vector2(0, -0.2f);
+
+    Vector2 firePointYOffset = new Vector2(0, -1f);
 
     // Update is called once per frame
     void Update()
