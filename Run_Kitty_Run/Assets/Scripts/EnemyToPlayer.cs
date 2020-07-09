@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Experimental.Rendering.Universal;
+using Pathfinding;
 
 public class EnemyToPlayer : MonoBehaviour
 {
@@ -39,6 +40,10 @@ public class EnemyToPlayer : MonoBehaviour
                 GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
                 GetComponent<EnemyMovement>().enabled = true;
                 GetComponent<EnemyRotation>().enabled = true;
+                GetComponent<CapsuleCollider2D>().offset = new Vector2(0, -0.005f);
+                GetComponent<CapsuleCollider2D>().size = new Vector2(0.115f, 0.195f);
+                GetComponent<AIPath>().enabled = false;
+                GetComponent<AIDestinationSetter>().enabled = false;
             }
         }
     }
@@ -49,8 +54,18 @@ public class EnemyToPlayer : MonoBehaviour
         {
             GetComponent<EnemyMovement>().enabled = false;
             GetComponent<EnemyRotation>().enabled = false;
+            GetComponent<CapsuleCollider2D>().offset = new Vector2(0, 0);
+            GetComponent<CapsuleCollider2D>().size = new Vector2(0.02f, 0.02f);
         }
-        GetComponent<Rigidbody2D>().velocity = Vector3.Normalize(player.transform.position - transform.position) * speed;
+        //GetComponent<Rigidbody2D>().velocity = Vector3.Normalize(player.transform.position - transform.position) * speed;
+
+        GetComponent<AIPath>().maxSpeed = speed;
+
+        if (GetComponent<AIPath>().enabled == false && GetComponent<AIDestinationSetter>().enabled == false)
+        {
+            GetComponent<AIPath>().enabled = true;
+            GetComponent<AIDestinationSetter>().enabled = true;
+        }
 
         angle = Mathf.Atan2((player.transform.position - transform.position).y, (player.transform.position - transform.position).x) * Mathf.Rad2Deg;
         if ((angle <= 135 && angle > 45) && !animator.GetBool("isWalkingUp"))
