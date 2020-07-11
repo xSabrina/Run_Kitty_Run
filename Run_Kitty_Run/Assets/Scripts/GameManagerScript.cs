@@ -94,8 +94,7 @@ public class GameManagerScript : MonoBehaviour
         {
 
             AddHighscore(PlayerPrefs.GetString("Username", "DefaultUser"));
-
-            //SceneManager.LoadScene("MainMenu");
+            SceneManager.LoadScene("EndScreen");
         }
 
     }

@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Timers;
 using UnityEngine.InputSystem;
+using System.Runtime.InteropServices.ComTypes;
 
 public class GameUI : MonoBehaviour {
     private const int MainMenuScene = 0;
@@ -27,6 +28,7 @@ public class GameUI : MonoBehaviour {
     void Awake() {
         inputAction = new PlayerInputActions();
         inputAction.PlayerControls.Menu.performed += ctx => ToggleMenu();
+        inputAction.PlayerControls.Blink.performed += ctx => Debug.Log(ctx);
     }
 
     void Update() {
@@ -39,17 +41,30 @@ public class GameUI : MonoBehaviour {
         Level.text = "Level " + LevelNumber.ToString();
     }
 
-    //Open menu
+    //Toggle menu
     public void ToggleMenu() {
+        Debug.Log("MENU TOGGLE");
         if (InGameMenu.activeSelf) {
+            Debug.Log("Closing Menu...");
             InGameMenu.SetActive(false);
             Time.timeScale = 1;
             GameManagerScript.instance.abilitiesEnabled = true;
+            Debug.Log("Menu closed.");
         } else {
+            Debug.Log("Opening Menu...");
             InGameMenu.SetActive(true);
             Time.timeScale = 0;
             GameManagerScript.instance.abilitiesEnabled = false;
+            Debug.Log("Menu opened.");
         }
+    }
+
+    //Close Menu
+    public void CloseMenu()
+    {
+        InGameMenu.SetActive(false);
+        Time.timeScale = 1;
+        GameManagerScript.instance.abilitiesEnabled = true;
     }
 
     //Back to main menu
