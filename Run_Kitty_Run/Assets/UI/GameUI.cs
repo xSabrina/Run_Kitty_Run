@@ -37,7 +37,7 @@ public class GameUI : MonoBehaviour {
 
     //Start next level
     private void StartLevel() {
-        LevelNumber = SceneManager.GetActiveScene().buildIndex;
+        LevelNumber = GameManagerScript.instance.currentLevel.levelNr;
         Level.text = "Level " + LevelNumber.ToString();
     }
 
