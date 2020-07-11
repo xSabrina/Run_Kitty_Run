@@ -28,7 +28,6 @@ public class GameUI : MonoBehaviour {
     void Awake() {
         inputAction = new PlayerInputActions();
         inputAction.PlayerControls.Menu.performed += ctx => ToggleMenu();
-        inputAction.PlayerControls.Blink.performed += ctx => Debug.Log(ctx);
     }
 
     void Update() {

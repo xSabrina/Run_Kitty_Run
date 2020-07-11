@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1533,6 +1533,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 307a4be94ca1a5549835aecb318b1775, type: 3}
+--- !u!114 &427640323 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7800655166115865187, guid: 307a4be94ca1a5549835aecb318b1775,
+    type: 3}
+  m_PrefabInstance: {fileID: 427640322}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9eadff556b4cd994c8e13c847535fff9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &455407945
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6922,6 +6934,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4231074751462882591, guid: 979f631195844b24abcab47b3702f94e,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 427640323}
+    - target: {fileID: 4231074751462882591, guid: 979f631195844b24abcab47b3702f94e,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: GoHome
+      objectReference: {fileID: 0}
     - target: {fileID: 4606557639976373041, guid: 979f631195844b24abcab47b3702f94e,
         type: 3}
       propertyPath: m_Name
@@ -7036,6 +7058,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5220094480264173596, guid: 979f631195844b24abcab47b3702f94e,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 427640323}
+    - target: {fileID: 5220094480264173596, guid: 979f631195844b24abcab47b3702f94e,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ToggleMenu
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 979f631195844b24abcab47b3702f94e, type: 3}
