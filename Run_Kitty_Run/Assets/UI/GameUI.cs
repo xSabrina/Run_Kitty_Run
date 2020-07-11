@@ -14,15 +14,11 @@ public class GameUI : MonoBehaviour {
     public Text TimeText;
     public Text Level;
     public GameObject InGameMenu;
-    public Image MenuResumeButton;
-    public Image MenuOptionsButton;
-    public Image MenuCancelButton;
     PlayerInputActions inputAction;
     
 
     private void Start() {
         StartLevel();
-        ToggleMenu();
     }
 
     void Awake() {
@@ -36,25 +32,22 @@ public class GameUI : MonoBehaviour {
 
     //Start next level
     private void StartLevel() {
+        Time.timeScale = 1;
+        GameManagerScript.instance.abilitiesEnabled = true;
         LevelNumber = GameManagerScript.instance.currentLevel.levelNr;
         Level.text = "Level " + LevelNumber.ToString();
     }
 
     //Toggle menu
     public void ToggleMenu() {
-        Debug.Log("MENU TOGGLE");
         if (InGameMenu.activeSelf) {
-            Debug.Log("Closing Menu...");
             InGameMenu.SetActive(false);
             Time.timeScale = 1;
             GameManagerScript.instance.abilitiesEnabled = true;
-            Debug.Log("Menu closed.");
         } else {
-            Debug.Log("Opening Menu...");
             InGameMenu.SetActive(true);
             Time.timeScale = 0;
             GameManagerScript.instance.abilitiesEnabled = false;
-            Debug.Log("Menu opened.");
         }
     }
 

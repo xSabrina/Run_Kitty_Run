@@ -14,11 +14,10 @@ public class LevelEndScript : MonoBehaviour
         Debug.Log(other.name);
         if (other.tag == "Player")
         {
-            //Time.timeScale = 0;
-            //levelEndScreen.SetActive(true);
-            //levelTimeText.text = GameManagerScript.instance.timer;
-            //GameManagerScript.instance.abilitiesEnabled = false;
-            endLevel();
+            Time.timeScale = 0;
+            levelEndScreen.SetActive(true);
+            levelTimeText.text = GameManagerScript.instance.timer;
+            GameManagerScript.instance.abilitiesEnabled = false;
         }
 
     }
