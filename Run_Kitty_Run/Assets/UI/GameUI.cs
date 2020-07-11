@@ -34,8 +34,14 @@ public class GameUI : MonoBehaviour {
     private void StartLevel() {
         Time.timeScale = 1;
         GameManagerScript.instance.abilitiesEnabled = true;
-        LevelNumber = GameManagerScript.instance.currentLevel.levelNr;
-        Level.text = "Level " + LevelNumber.ToString();
+        if (SceneManager.GetActiveScene().name == "TutorialLevel")
+        {
+            Level.text = "Tutorial";
+        } else
+        {
+            LevelNumber = GameManagerScript.instance.currentLevel.levelNr;
+            Level.text = "Level " + LevelNumber.ToString();
+        }
     }
 
     //Toggle menu

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using System.Timers;
 
 public class LevelEndScript : MonoBehaviour
@@ -14,10 +15,17 @@ public class LevelEndScript : MonoBehaviour
         Debug.Log(other.name);
         if (other.tag == "Player")
         {
-            Time.timeScale = 0;
-            levelEndScreen.SetActive(true);
-            levelTimeText.text = GameManagerScript.instance.timer;
-            GameManagerScript.instance.abilitiesEnabled = false;
+            if (SceneManager.GetActiveScene().name == "TutorialLevel")
+            {
+                SceneManager.LoadScene("MainMenu");
+            }
+            else
+            {
+                Time.timeScale = 0;
+                levelEndScreen.SetActive(true);
+                levelTimeText.text = GameManagerScript.instance.timer;
+                GameManagerScript.instance.abilitiesEnabled = false;
+            }
         }
 
     }
