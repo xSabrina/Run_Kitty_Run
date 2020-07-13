@@ -38,14 +38,23 @@ public class GameEnd : MonoBehaviour
     }
 
     //Update highscores
-    public void UpdateHighscores()
+    IEnumerator UpdateHighscores()
     {
         //Add Highscore
         if (GameManagerScript.instance.username == "")
         {
             GameManagerScript.instance.username = "DefaultUser";
         }
-        StartCoroutine(GameManagerScript.instance.highscoresScript.UploadHighscore(GameManagerScript.instance.username, completeTime));
+        if (PlayerPrefs.HasKey("Score") == false)
+        {
+            PlayerPrefs.SetInt("Score", completeTime);
+        }
+        else if (PlayerPrefs.GetInt("Score") > completeTime)
+        {
+            yield return StartCoroutine(GameManagerScript.instance.highscoresScript.DeleteHighscore(GameManagerScript.instance.username));
+            PlayerPrefs.SetInt("Score", completeTime);
+        }
+        yield return StartCoroutine(GameManagerScript.instance.highscoresScript.UploadHighscore(GameManagerScript.instance.username, completeTime));
         //Show Highscores
         GameManagerScript.instance.GetHighscores();
         StartCoroutine(ShowHighscores());
@@ -54,7 +63,7 @@ public class GameEnd : MonoBehaviour
     //Open Highscores
     public void OpenHighscores()
     {
-        UpdateHighscores();
+        StartCoroutine(UpdateHighscores());
         highscoresUI.SetActive(true);
     }
 

@@ -23,7 +23,6 @@ public class GameManagerScript : MonoBehaviour
     // Use this for initialization
     void Awake()
     {
-        
        if (highscoresScript == null)
         {
             gameObject.GetComponent<Highscores>();
@@ -103,36 +102,6 @@ public class GameManagerScript : MonoBehaviour
         }
 
     }
-    public void AddHighscore(string username)
-    {
-        StartCoroutine(AddHighscoreCoroutine(username));
-    }
-
-
-    IEnumerator AddHighscoreCoroutine(string username)
-    {
-        int score = 0;
-        Debug.Log("Levels: "+ levels.Count);
-        foreach (Level lvl in levels)
-        {
-            Debug.Log("Leveltime: "+lvl.levelTime);
-            score += lvl.levelTime;
-            Debug.Log("score: "+score);
-        }
-
-        if (PlayerPrefs.GetInt("Score") > score|| PlayerPrefs.HasKey("Score")==false)
-        {
-            yield return StartCoroutine(highscoresScript.DeleteHighscore(username));
-            PlayerPrefs.SetInt("Score", score);
-            yield return StartCoroutine(highscoresScript.UploadHighscore(username, score));
-
-        }
-        
-        GetHighscores();
-        Debug.Log("Added and loaded scores");
-        
-    }
-
    
     public void GetHighscores()
     {
