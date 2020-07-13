@@ -8,6 +8,7 @@ public class GameManagerScript : MonoBehaviour
     public string timer;
     private float seconds;
     private int minutes;
+    public string username;
     public bool countTime = true;
     public static GameManagerScript instance = null;
     public List<Level> levels = new List<Level>();

@@ -18,8 +18,19 @@ public class GameEnd : MonoBehaviour
     private int completeMinutes = 0;
     private int completeSeconds = 0;
 
-    // Start is called before the first frame update
-    void Start()
+    void Awake()
+    {
+        ShowTime();   
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
+    //Show complete time
+    public void ShowTime()
     {
         //Calculate complete time
         for (int i = 0; i < GameManagerScript.instance.levels.Count; i++)
@@ -30,22 +41,22 @@ public class GameEnd : MonoBehaviour
         completeSeconds = completeTime % 60;
         //Show complete time
         timeText.text = completeMinutes.ToString("00") + ":" + completeSeconds.ToString("00.00");
+    }
+
+    //Update highscores
+    public void UpdateHighscores()
+    {
         //Add Highscore
-        StartCoroutine(GameManagerScript.instance.highscoresScript.UploadHighscore("DefaultUser", completeTime));
+        StartCoroutine(GameManagerScript.instance.highscoresScript.UploadHighscore(GameManagerScript.instance.username, completeTime));
         //Show Highscores
         GameManagerScript.instance.GetHighscores();
         StartCoroutine(ShowHighscores());
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     //Open Highscores
     public void OpenHighscores()
     {
+        UpdateHighscores();
         highscoresUI.SetActive(true);
     }
 

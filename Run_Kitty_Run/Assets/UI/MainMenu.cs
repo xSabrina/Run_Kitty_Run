@@ -7,10 +7,13 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour {
     
     private int lastLevel = 0;
-    
+    public InputField usernameInput;
+    public GameObject usernameUI;
+
     //Starts Game from GameManager
     //lastLevel should be set to last level played at the start of the game (can be saved with player prefabs)
     public void StartGame() {
+        GameManagerScript.instance.username = usernameInput.text;
         GameManagerScript.instance.SetCurrentLevel(lastLevel);
         GameManagerScript.instance.StartLevel();
     }
@@ -26,4 +29,15 @@ public class MainMenu : MonoBehaviour {
         Application.Quit();
     }
 
+    //Open username input
+    public void OpenUsername()
+    {
+        usernameUI.SetActive(true);
+    }
+
+    //Close username input 
+    public void CloseUsername()
+    {
+        usernameUI.SetActive(false);
+    }
 }

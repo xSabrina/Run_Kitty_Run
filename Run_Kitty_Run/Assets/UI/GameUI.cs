@@ -19,6 +19,7 @@ public class GameUI : MonoBehaviour {
 
     private void Start() {
         StartLevel();
+        Debug.Log(GameManagerScript.instance.username);
     }
 
     void Awake() {
