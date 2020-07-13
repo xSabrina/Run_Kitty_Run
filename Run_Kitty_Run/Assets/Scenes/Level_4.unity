@@ -8606,6 +8606,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelScreen
       objectReference: {fileID: 0}
+    - target: {fileID: 5377055918318566509, guid: 2b7c8f7308ac48b43b2dda7aa8121b23,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5377055918318566515, guid: 2b7c8f7308ac48b43b2dda7aa8121b23,
         type: 3}
       propertyPath: m_LocalPosition.x

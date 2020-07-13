@@ -23,12 +23,6 @@ public class GameEnd : MonoBehaviour
         ShowTime();   
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     //Show complete time
     public void ShowTime()
     {
@@ -47,6 +41,10 @@ public class GameEnd : MonoBehaviour
     public void UpdateHighscores()
     {
         //Add Highscore
+        if (GameManagerScript.instance.username == "")
+        {
+            GameManagerScript.instance.username = "DefaultUser";
+        }
         StartCoroutine(GameManagerScript.instance.highscoresScript.UploadHighscore(GameManagerScript.instance.username, completeTime));
         //Show Highscores
         GameManagerScript.instance.GetHighscores();

@@ -33,7 +33,6 @@ public class GameUI : MonoBehaviour {
 
     //Start next level
     private void StartLevel() {
-        Time.timeScale = 1;
         GameManagerScript.instance.abilitiesEnabled = true;
         if (SceneManager.GetActiveScene().name == "TutorialLevel")
         {

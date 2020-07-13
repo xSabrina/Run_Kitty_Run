@@ -978,6 +978,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelScreen
       objectReference: {fileID: 0}
+    - target: {fileID: 5377055918318566509, guid: 2b7c8f7308ac48b43b2dda7aa8121b23,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5377055918318566515, guid: 2b7c8f7308ac48b43b2dda7aa8121b23,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1834,12 +1839,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: 
+  username: 
   countTime: 1
   levels: []
   currentLevel: {fileID: 11400000, guid: 1c8f9f9fa9f34524c88b9ce6c21cc75d, type: 2}
   abilitiesEnabled: 1
   selectedAbility1: 0
   selectedAbility2: 1
+  highscoreWaiter: 1
   highscoresScript: {fileID: 0}
 --- !u!4 &1361598502
 Transform:

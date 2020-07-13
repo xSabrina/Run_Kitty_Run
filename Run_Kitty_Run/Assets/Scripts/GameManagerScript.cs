@@ -92,12 +92,14 @@ public class GameManagerScript : MonoBehaviour
         {
             currentLevel = levels[currentLevel.levelNr];
             StartLevel();
+            Time.timeScale = 1;
         }
         else
         {
 
             //AddHighscore(PlayerPrefs.GetString("Username", "DefaultUser"));
             SceneManager.LoadScene("EndScreen");
+            Time.timeScale = 1;
         }
 
     }
