@@ -855,6 +855,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &253594630 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5377055918318566509, guid: 2b7c8f7308ac48b43b2dda7aa8121b23,
+    type: 3}
+  m_PrefabInstance: {fileID: 253594628}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &287926462
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1223,6 +1229,11 @@ PrefabInstance:
       propertyPath: levelTimeText
       value: 
       objectReference: {fileID: 253594629}
+    - target: {fileID: 7695946720788104572, guid: c6144fd4cdabad647891cae666b4f040,
+        type: 3}
+      propertyPath: levelEndScreen
+      value: 
+      objectReference: {fileID: 253594630}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6144fd4cdabad647891cae666b4f040, type: 3}
 --- !u!114 &369796727 stripped
