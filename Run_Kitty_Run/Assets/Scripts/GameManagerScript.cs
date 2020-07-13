@@ -15,6 +15,8 @@ public class GameManagerScript : MonoBehaviour
     public bool abilitiesEnabled = true;
     public int selectedAbility1 = 0;
     public int selectedAbility2 = 1;
+    public bool highscoreWaiter = true;
+    public Highscore[] highscores;
     public Highscores highscoresScript;
 
     // Use this for initialization
@@ -93,7 +95,7 @@ public class GameManagerScript : MonoBehaviour
         else
         {
 
-            AddHighscore(PlayerPrefs.GetString("Username", "DefaultUser"));
+            //AddHighscore(PlayerPrefs.GetString("Username", "DefaultUser"));
             SceneManager.LoadScene("EndScreen");
         }
 
@@ -136,12 +138,14 @@ public class GameManagerScript : MonoBehaviour
     }
     IEnumerator GetHighscoreCoroutine()
     {
+        highscoreWaiter = true;
         yield return StartCoroutine(highscoresScript.DownloadHighscores());
-        Highscore[] highscores = highscoresScript.highscoresList;
+        highscores = highscoresScript.highscoresList;
         for (int i = highscores.Length-1; i >= 0; i--)
         {
             Debug.Log("username: " + highscores[i].userName + " score: " + highscores[i].score);
         }
+        highscoreWaiter = false;
     }
 }
 
