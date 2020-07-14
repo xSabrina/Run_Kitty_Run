@@ -11,6 +11,7 @@ public class ProjectileAbility : Ability
 
     private GameObject player;
     private Animator animator;
+    private AudioSource audioSource;
 
     private ProjectileShootTriggerable launcher;
 
@@ -22,6 +23,7 @@ public class ProjectileAbility : Ability
         launcher.projectileRange = projectileRange;
         player = GameObject.FindGameObjectWithTag("Player");
         animator = player.GetComponent<Animator>();
+        audioSource = player.GetComponent<AudioSource>();
     }
 
     public override void TriggerAbility()
@@ -61,6 +63,7 @@ public class ProjectileAbility : Ability
     {
         yield return new WaitForSeconds(Float);
         launcher.Launch();
+        audioSource.PlayOneShot(abilitySound, 0.1f);
     }
 
     IEnumerator WaitingTime(float Float)

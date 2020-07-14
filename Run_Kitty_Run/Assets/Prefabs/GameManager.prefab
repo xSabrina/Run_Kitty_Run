@@ -47,8 +47,13 @@ MonoBehaviour:
   timer: 
   countTime: 1
   levels:
+  - {fileID: 11400000, guid: ab7231b7acd716b4c8c3279e630f6a63, type: 2}
+  - {fileID: 11400000, guid: fcd4b57fdf3d52f4486a6c3372cfe11b, type: 2}
   - {fileID: 11400000, guid: 1517f21fd291de44588c2a0860640169, type: 2}
-  currentLevel: {fileID: 11400000, guid: 1517f21fd291de44588c2a0860640169, type: 2}
+  - {fileID: 11400000, guid: 1c8f9f9fa9f34524c88b9ce6c21cc75d, type: 2}
+  - {fileID: 11400000, guid: 5b3153a8ec7f7f541afcf5c5723b24c0, type: 2}
+  - {fileID: 11400000, guid: 27fa43c7ba530a64d881731af254ce6e, type: 2}
+  currentLevel: {fileID: 11400000, guid: 5b3153a8ec7f7f541afcf5c5723b24c0, type: 2}
   abilitiesEnabled: 1
   selectedAbility1: 0
   selectedAbility2: 1
@@ -65,4 +70,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7efdc6a759e42e741bfcb21b280c4a79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  highscoresList: []

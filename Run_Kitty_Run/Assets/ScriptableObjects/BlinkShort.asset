@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: BlinkShort
   m_EditorClassIdentifier: 
   aName: BlinkShort
-  aBaseCoolDown: 8
+  abilitySound: {fileID: 8300000, guid: e6f338a74b89ad94bbdc6c8aeb2595a7, type: 3}
+  aBaseCoolDown: 5
   castTime: 0.6
   castPoint: 0
   aRange: 6

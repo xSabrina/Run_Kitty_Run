@@ -8,6 +8,7 @@ public class GameManagerScript : MonoBehaviour
     public string timer;
     private float seconds;
     private int minutes;
+    public string username;
     public bool countTime = true;
     public static GameManagerScript instance = null;
     public List<Level> levels = new List<Level>();
@@ -15,6 +16,8 @@ public class GameManagerScript : MonoBehaviour
     public bool abilitiesEnabled = true;
     public int selectedAbility1 = 0;
     public int selectedAbility2 = 1;
+    public bool highscoreWaiter = true;
+    public Highscore[] highscores;
     public Highscores highscoresScript;
 
     // Use this for initialization
@@ -88,46 +91,17 @@ public class GameManagerScript : MonoBehaviour
         {
             currentLevel = levels[currentLevel.levelNr];
             StartLevel();
+            Time.timeScale = 1;
         }
         else
         {
 
-            AddHighscore(PlayerPrefs.GetString("Username", "DefaultUser"));
-
-            //SceneManager.LoadScene("MainMenu");
+            //AddHighscore(PlayerPrefs.GetString("Username", "DefaultUser"));
+            SceneManager.LoadScene("EndScreen");
+            Time.timeScale = 1;
         }
 
     }
-    public void AddHighscore(string username)
-    {
-        StartCoroutine(AddHighscoreCoroutine(username));
-    }
-
-
-    IEnumerator AddHighscoreCoroutine(string username)
-    {
-        int score = 0;
-        Debug.Log("Levels: "+ levels.Count);
-        foreach (Level lvl in levels)
-        {
-            Debug.Log("Leveltime: "+lvl.levelTime);
-            score += lvl.levelTime;
-            Debug.Log("score: "+score);
-        }
-
-        if (PlayerPrefs.GetInt("Score") > score|| PlayerPrefs.HasKey("Score")==false)
-        {
-            yield return StartCoroutine(highscoresScript.DeleteHighscore(username));
-            PlayerPrefs.SetInt("Score", score);
-            yield return StartCoroutine(highscoresScript.UploadHighscore(username, score));
-
-        }
-        
-        GetHighscores();
-        Debug.Log("Added and loaded scores");
-        
-    }
-
    
     public void GetHighscores()
     {
@@ -136,12 +110,14 @@ public class GameManagerScript : MonoBehaviour
     }
     IEnumerator GetHighscoreCoroutine()
     {
+        highscoreWaiter = true;
         yield return StartCoroutine(highscoresScript.DownloadHighscores());
-        Highscore[] highscores = highscoresScript.highscoresList;
+        highscores = highscoresScript.highscoresList;
         for (int i = highscores.Length-1; i >= 0; i--)
         {
             Debug.Log("username: " + highscores[i].userName + " score: " + highscores[i].score);
         }
+        highscoreWaiter = false;
     }
 }
 
