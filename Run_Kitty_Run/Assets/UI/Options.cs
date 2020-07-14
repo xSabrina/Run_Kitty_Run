@@ -20,6 +20,27 @@ public class Options : MonoBehaviour
     public void OpenMenu()
     {
         optionsMenu.SetActive(true);
+
+        //Show selected quality
+        if (QualitySettings.GetQualityLevel() == 0)
+        {
+            lowButton.GetComponent<Image>().sprite = buttonActive;
+        } else if (QualitySettings.GetQualityLevel() == 1)
+        {
+            midButton.GetComponent<Image>().sprite = buttonActive;
+        } else if (QualitySettings.GetQualityLevel() == 2)
+        {
+            highButton.GetComponent<Image>().sprite = buttonActive;
+        }
+
+        //Show selected fullscreen
+        if (Screen.fullScreen)
+        {
+            fullscreenButton.GetComponent<Image>().sprite = buttonActive;
+        } else
+        {
+            fullscreenButton.GetComponent<Image>().sprite = buttonInactive;
+        }
     }
 
     //Close Menu
