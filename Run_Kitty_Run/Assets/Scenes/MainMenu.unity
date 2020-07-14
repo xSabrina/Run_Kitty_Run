@@ -517,7 +517,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1210443118}
+      - m_Target: {fileID: 954573960}
         m_MethodName: CloseUsername
         m_Mode: 1
         m_Arguments:
