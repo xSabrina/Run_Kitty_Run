@@ -20,6 +20,8 @@ public class PlayerMovement : MonoBehaviour
     void Start(){
         spriteRenderer = GetComponent<SpriteRenderer>();
         playerAnimator = GetComponent<Animator>();
+        DontDestroyOnLoad(gameObject);
+        Destroy(GameObject.FindGameObjectsWithTag("Player")[1]);
     }
 
     void Awake() {
@@ -35,6 +37,7 @@ public class PlayerMovement : MonoBehaviour
         inputDirection = Vector3.Lerp(inputDirection, targetInput, Time.deltaTime*20f);
         MoveThePlayer(inputDirection);
         AnimateThePlayer(inputDirection);
+        
     }
 
     void MoveThePlayer(Vector3 desiredDirection) 
@@ -105,7 +108,6 @@ public class PlayerMovement : MonoBehaviour
     private void OnEnable()
     {
         inputAction.Enable();
-        Awake();
         Debug.Log("PlayerMovementEnabled");
     }
 
@@ -113,5 +115,6 @@ public class PlayerMovement : MonoBehaviour
     {
         inputAction.Disable();
     }
+
 
 }
