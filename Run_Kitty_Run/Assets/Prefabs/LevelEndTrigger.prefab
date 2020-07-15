@@ -4794,3 +4794,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ef94e0df85ebfe408bbf88b47c8b569, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelEndScreen: {fileID: 5377055918318566509, guid: 2b7c8f7308ac48b43b2dda7aa8121b23,
+    type: 3}
+  levelTimeText: {fileID: 0}

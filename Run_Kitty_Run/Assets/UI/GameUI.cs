@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Timers;
 using UnityEngine.InputSystem;
+using System.Runtime.InteropServices.ComTypes;
 
 public class GameUI : MonoBehaviour {
     private const int MainMenuScene = 0;
@@ -13,15 +14,12 @@ public class GameUI : MonoBehaviour {
     public Text TimeText;
     public Text Level;
     public GameObject InGameMenu;
-    public Image MenuResumeButton;
-    public Image MenuOptionsButton;
-    public Image MenuCancelButton;
     PlayerInputActions inputAction;
     
 
     private void Start() {
         StartLevel();
-        ToggleMenu();
+        Debug.Log(GameManagerScript.instance.username);
     }
 
     void Awake() {
@@ -35,11 +33,18 @@ public class GameUI : MonoBehaviour {
 
     //Start next level
     private void StartLevel() {
-        LevelNumber = SceneManager.GetActiveScene().buildIndex;
-        Level.text = "Level " + LevelNumber.ToString();
+        GameManagerScript.instance.abilitiesEnabled = true;
+        if (SceneManager.GetActiveScene().name == "TutorialLevel")
+        {
+            Level.text = "Tutorial";
+        } else
+        {
+            LevelNumber = GameManagerScript.instance.currentLevel.levelNr;
+            Level.text = "Level " + LevelNumber.ToString();
+        }
     }
 
-    //Open menu
+    //Toggle menu
     public void ToggleMenu() {
         if (InGameMenu.activeSelf) {
             InGameMenu.SetActive(false);
@@ -50,6 +55,14 @@ public class GameUI : MonoBehaviour {
             Time.timeScale = 0;
             GameManagerScript.instance.abilitiesEnabled = false;
         }
+    }
+
+    //Close Menu
+    public void CloseMenu()
+    {
+        InGameMenu.SetActive(false);
+        Time.timeScale = 1;
+        GameManagerScript.instance.abilitiesEnabled = true;
     }
 
     //Back to main menu

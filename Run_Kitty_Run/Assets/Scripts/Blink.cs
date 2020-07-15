@@ -13,6 +13,7 @@ public class Blink : Ability
     private Transform playerTransform;
     private CapsuleCollider2D playerCollider;
     private Animator animator;
+    private AudioSource audioSource;
 
     public override void Initialize(GameObject obj)
     {
@@ -20,6 +21,7 @@ public class Blink : Ability
         playerTransform = launcher.player.GetComponent<Transform>();
         playerCollider = launcher.player.GetComponent<CapsuleCollider2D>();
         animator = launcher.player.GetComponent<Animator>();
+        audioSource = launcher.player.GetComponent<AudioSource>();
     }
 
     public override void TriggerAbility()
@@ -69,6 +71,7 @@ public class Blink : Ability
     {
         // trigger blink animation and wait for it to finish
         animator.SetTrigger("isBlinking");
+        audioSource.PlayOneShot(abilitySound, 0.05f);
         PlayerAbilities.instance.StartCoroutine(WaitingTime(castTime));
     }
 
