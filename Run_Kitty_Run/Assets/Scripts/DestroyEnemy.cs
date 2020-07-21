@@ -17,7 +17,7 @@ public class DestroyEnemy : MonoBehaviour
         if (!(collision.transform.tag == "Player"))
         {
             Destroy(gameObject);
-            DeathAnimation(collision.gameObject);
+            //DeathAnimation(collision.gameObject);
         }
         if (collision.transform.tag == "Enemy")
         {

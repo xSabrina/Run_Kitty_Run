@@ -56,7 +56,7 @@ public class ProjectileAbility : Ability
             animator.SetTrigger("isShootingSide");
         }
         
-        PlayerAbilities.instance.StartCoroutine(WaitingTime(castTime));
+        PlayerAbilities.instance.StartCoroutine(WaitingTime(animator.GetCurrentAnimatorStateInfo(0).length));
     }
 
     IEnumerator WaitCastPoint(float Float)
