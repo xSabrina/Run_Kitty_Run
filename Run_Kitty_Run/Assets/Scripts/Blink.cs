@@ -45,6 +45,7 @@ public class Blink : Ability
                     // times 10 because player is scaled by 10
                     // devided by 2 because origin of collider is in the middle of the collider
                     adjustedBlinkRange = hit.distance - (playerCollider.size.y * 10) / 2;
+                    
                     playerTransform.position += launcher.spawnPoint.transform.up.normalized * adjustedBlinkRange;
                 }
                 else
@@ -72,7 +73,7 @@ public class Blink : Ability
         // trigger blink animation and wait for it to finish
         animator.SetTrigger("isBlinking");
         audioSource.PlayOneShot(abilitySound, 0.05f);
-        PlayerAbilities.instance.StartCoroutine(WaitingTime(animator.GetCurrentAnimatorStateInfo(0).length));
+        PlayerAbilities.instance.StartCoroutine(WaitingTime(0.5F));
     }
 
     IEnumerator WaitingTime(float Float)

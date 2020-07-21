@@ -16,6 +16,7 @@ public class PlayerCollision : MonoBehaviour
         if (collision.gameObject.tag == "Enemy")
         {
             animator.SetBool("isDead", true);
+            GetComponent<Collider2D>().enabled = false;
             float animTime = animator.GetCurrentAnimatorClipInfo(0).Length;
             StartCoroutine(WaitingTime(animTime));
             GetComponent<PlayerMovement>().enabled = false;
@@ -28,6 +29,7 @@ public class PlayerCollision : MonoBehaviour
         GetComponent<PlayerMovement>().enabled = true;
         animator.SetBool("isDead", false);
         GameManagerScript.instance.RestartLevel();
+        GetComponent<Collider2D>().enabled = true;
     }
 
 }
