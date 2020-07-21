@@ -1,21 +1,24 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class FirePointRotation : MonoBehaviour
 {
-    Rigidbody2D rbPlayer;
+    public Rigidbody2D rbPlayer;
 
     Vector3 direction;
     float angle;
 
-    Vector2 firePointYOffset = new Vector2(0, -0.2f);
+    Vector2 firePointYOffset = new Vector2(0, -0.9f);
 
     // Update is called once per frame
     void Update()
     {
-        rbPlayer = GameObject.Find("Player").GetComponent<Rigidbody2D>();
-        direction = Input.mousePosition - Camera.main.WorldToScreenPoint(rbPlayer.position);
+        Vector2 direction = Mouse.current.position.ReadValue();
+        Vector2 objectPos = Camera.main.WorldToScreenPoint(transform.position);
+        direction.x = direction.x - objectPos.x;
+        direction.y = direction.y - objectPos.y;
         angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90f;
         UpdatePosition();
     }

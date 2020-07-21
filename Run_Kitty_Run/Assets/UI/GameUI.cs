@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Timers;
+using UnityEngine.InputSystem;
+using System.Runtime.InteropServices.ComTypes;
 
 public class GameUI : MonoBehaviour {
     private const int MainMenuScene = 0;
@@ -12,26 +14,37 @@ public class GameUI : MonoBehaviour {
     public Text TimeText;
     public Text Level;
     public GameObject InGameMenu;
+    PlayerInputActions inputAction;
+    
 
     private void Start() {
         StartLevel();
-        ToggleMenu();
+        Debug.Log(GameManagerScript.instance.username);
+    }
+
+    void Awake() {
+        inputAction = new PlayerInputActions();
+        inputAction.PlayerControls.Menu.performed += ctx => ToggleMenu();
     }
 
     void Update() {
         UpdateTimer();
-        if (Input.GetKeyDown(KeyCode.Escape)) {
-            ToggleMenu();
-        }
     }
 
     //Start next level
     private void StartLevel() {
-        LevelNumber = SceneManager.GetActiveScene().buildIndex;
-        Level.text = "Level " + LevelNumber.ToString();
+        GameManagerScript.instance.abilitiesEnabled = true;
+        if (SceneManager.GetActiveScene().name == "TutorialLevel")
+        {
+            Level.text = "Tutorial";
+        } else
+        {
+            LevelNumber = GameManagerScript.instance.currentLevel.levelNr;
+            Level.text = "Level " + LevelNumber.ToString();
+        }
     }
 
-    //Open menu
+    //Toggle menu
     public void ToggleMenu() {
         if (InGameMenu.activeSelf) {
             InGameMenu.SetActive(false);
@@ -44,6 +57,14 @@ public class GameUI : MonoBehaviour {
         }
     }
 
+    //Close Menu
+    public void CloseMenu()
+    {
+        InGameMenu.SetActive(false);
+        Time.timeScale = 1;
+        GameManagerScript.instance.abilitiesEnabled = true;
+    }
+
     //Back to main menu
     public void GoHome() {
         SceneManager.LoadScene(sceneBuildIndex: MainMenuScene);
@@ -52,6 +73,16 @@ public class GameUI : MonoBehaviour {
     //Update the timer
     private void UpdateTimer() {
         TimeText.text = GameManagerScript.instance.timer;
+    }
+
+    private void OnEnable()
+    {
+        inputAction.Enable();
+    }
+
+    private void OnDisable()
+    {
+        inputAction.Disable();
     }
 
 }

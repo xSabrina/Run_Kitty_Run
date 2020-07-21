@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68bcf70a9b9944046ab5c9fec8fd4282, type: 3}
   m_Name: TutorialLevel
   m_EditorClassIdentifier: 
-  levelName: TutorialScene
+  levelName: TutorialLevel
   levelImg: {fileID: 0}
-  levelTime: 
+  levelTime: 0
   levelNr: 1
