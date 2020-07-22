@@ -111,6 +111,7 @@ public class PlayerMovement : MonoBehaviour
     private void OnEnable()
     {
         inputAction.Enable();
+        Awake();
     }
 
     private void OnDisable()
