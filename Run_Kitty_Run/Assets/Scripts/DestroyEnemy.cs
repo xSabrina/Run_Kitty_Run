@@ -21,7 +21,7 @@ public class DestroyEnemy : MonoBehaviour
         if (collision.transform.tag == "Enemy")
         {
             Destroy(collision.gameObject);
-            Instantiate(death, gameObject.transform.position, gameObject.transform.rotation);
+            Instantiate(death, collision.transform.position, collision.transform.rotation);
         }
     }
 
