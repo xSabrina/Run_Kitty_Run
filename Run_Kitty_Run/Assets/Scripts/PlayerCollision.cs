@@ -17,8 +17,7 @@ public class PlayerCollision : MonoBehaviour
         {
             animator.SetBool("isDead", true);
             GetComponent<Collider2D>().enabled = false;
-            float animTime = animator.GetCurrentAnimatorClipInfo(0).Length;
-            StartCoroutine(WaitingTime(animTime));
+            StartCoroutine(WaitingTime(1.3f));
             GetComponent<PlayerMovement>().enabled = false;
         }
     }
