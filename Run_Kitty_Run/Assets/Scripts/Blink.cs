@@ -45,6 +45,7 @@ public class Blink : Ability
                     // times 10 because player is scaled by 10
                     // devided by 2 because origin of collider is in the middle of the collider
                     adjustedBlinkRange = hit.distance - (playerCollider.size.y * 10) / 2;
+                    
                     playerTransform.position += launcher.spawnPoint.transform.up.normalized * adjustedBlinkRange;
                 }
                 else

@@ -16,15 +16,19 @@ public class PlayerMovement : MonoBehaviour
     Vector2 movementInput;
     Vector3 movement;
     Vector3 inputDirection;
+
+    private bool activation;
     
     void Start(){
         spriteRenderer = GetComponent<SpriteRenderer>();
         playerAnimator = GetComponent<Animator>();
+        activation = false;
     }
 
     void Awake() {
         inputAction = new PlayerInputActions();
         inputAction.PlayerControls.Move.performed += ctx => movementInput = ctx.ReadValue<Vector2>();
+        inputAction.PlayerControls.Move.performed += ctx => activation = true;
     }
 
     void FixedUpdate() 
@@ -34,7 +38,7 @@ public class PlayerMovement : MonoBehaviour
         var targetInput = new Vector3(h,v,0);
         inputDirection = Vector3.Lerp(inputDirection, targetInput, Time.deltaTime*20f);
         MoveThePlayer(inputDirection);
-        AnimateThePlayer(inputDirection);
+        AnimateThePlayer();
     }
 
     void MoveThePlayer(Vector3 desiredDirection) 
@@ -44,19 +48,21 @@ public class PlayerMovement : MonoBehaviour
         playerRigidbody.MovePosition(transform.position + movement);
     }
     
-    void AnimateThePlayer(Vector3 desiredDirection)
+    void AnimateThePlayer()
     {
-        ClearAnimations();
-        if(Keyboard.current.wKey.isPressed){
-            playerAnimator.SetBool("isWalkingUp", true);
-        } else  if(Keyboard.current.sKey.isPressed){
-            playerAnimator.SetBool("isWalkingDown", true);
-        } else  if(Keyboard.current.aKey.isPressed){
-            playerAnimator.SetBool("isWalkingSide", true);
-              transform.rotation = Quaternion.Euler(0, 180, 0);
-        } else if (Keyboard.current.dKey.isPressed){
-            playerAnimator.SetBool("isWalkingSide", true);
-             transform.rotation = Quaternion.Euler(0, 0, 0);
+        if(activation){
+            ClearAnimations();
+            if(Keyboard.current.wKey.isPressed){
+                playerAnimator.SetBool("isWalkingUp", true);
+            } else  if(Keyboard.current.sKey.isPressed){
+                playerAnimator.SetBool("isWalkingDown", true);      
+            } else  if(Keyboard.current.aKey.isPressed){
+                playerAnimator.SetBool("isWalkingSide", true);    
+                transform.rotation = Quaternion.Euler(0, 180, 0);
+            } else if (Keyboard.current.dKey.isPressed){
+                playerAnimator.SetBool("isWalkingSide", true);
+                transform.rotation = Quaternion.Euler(0, 0, 0);
+            }
         }
     }
 
@@ -106,12 +112,12 @@ public class PlayerMovement : MonoBehaviour
     {
         inputAction.Enable();
         Awake();
-        Debug.Log("PlayerMovementEnabled");
     }
 
     private void OnDisable()
     {
         inputAction.Disable();
     }
+
 
 }

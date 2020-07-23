@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DestroyEnemy : MonoBehaviour
 {
+    public GameObject death;
     private void Start()
     {
         var player = GameObject.FindGameObjectWithTag("Player");
@@ -17,11 +18,11 @@ public class DestroyEnemy : MonoBehaviour
         {
             Destroy(gameObject);
         }
-
         if (collision.transform.tag == "Enemy")
         {
             Destroy(collision.gameObject);
-            
+            Instantiate(death, collision.transform.position, collision.transform.rotation);
         }
     }
+
 }

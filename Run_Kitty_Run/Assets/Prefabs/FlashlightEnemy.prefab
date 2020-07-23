@@ -435,6 +435,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 4446361425297181311}
+  death: {fileID: 8111991961498652349, guid: 399f26517306b8141a73b46db112c9b7, type: 3}
   speed: 1.5
   movementStartTimeInterval:
   - 2
