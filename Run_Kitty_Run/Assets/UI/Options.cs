@@ -21,8 +21,8 @@ public class Options : MonoBehaviour
     //Open Menu
     public void OpenMenu()
     {
-        audioSource.PlayOneShot(clickSound);
         optionsMenu.SetActive(true);
+        audioSource.PlayOneShot(clickSound);
 
         //Show selected quality
         if (QualitySettings.GetQualityLevel() == 0)

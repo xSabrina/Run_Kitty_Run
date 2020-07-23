@@ -9,6 +9,8 @@ public class LevelEndScript : MonoBehaviour
 {
     public GameObject levelEndScreen;
     public Text levelTimeText;
+    public AudioSource audioSource;
+    public AudioClip clickSound;
 
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -32,6 +34,7 @@ public class LevelEndScript : MonoBehaviour
 
     public void endLevel()
     {
+        audioSource.PlayOneShot(clickSound);
         GameManagerScript.instance.EndLevel();
     }
 }
