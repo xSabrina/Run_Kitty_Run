@@ -14,6 +14,8 @@ public class GameUI : MonoBehaviour {
     public Text TimeText;
     public Text Level;
     public GameObject InGameMenu;
+    public AudioSource audioSource;
+    public AudioClip clickSound;
     PlayerInputActions inputAction;
     
 
@@ -46,6 +48,7 @@ public class GameUI : MonoBehaviour {
 
     //Toggle menu
     public void ToggleMenu() {
+        audioSource.PlayOneShot(clickSound);
         if (InGameMenu.activeSelf) {
             InGameMenu.SetActive(false);
             Time.timeScale = 1;
@@ -60,6 +63,7 @@ public class GameUI : MonoBehaviour {
     //Close Menu
     public void CloseMenu()
     {
+        audioSource.PlayOneShot(clickSound);
         InGameMenu.SetActive(false);
         Time.timeScale = 1;
         GameManagerScript.instance.abilitiesEnabled = true;
@@ -67,6 +71,9 @@ public class GameUI : MonoBehaviour {
 
     //Back to main menu
     public void GoHome() {
+        audioSource.PlayOneShot(clickSound);
+        Time.timeScale = 1;
+        GameManagerScript.instance.abilitiesEnabled = true;
         SceneManager.LoadScene(sceneBuildIndex: MainMenuScene);
     }
 

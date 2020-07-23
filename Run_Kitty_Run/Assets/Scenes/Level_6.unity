@@ -460,7 +460,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 82
+  m_RootOrder: 83
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &170137395
 PrefabInstance:
@@ -2267,6 +2267,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5512814390332547785, guid: 55633d223e545cf45bdbead1b5e1c3b6,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 5812db1ac676f0c4bbb45d75e441fa18, type: 3}
+    - target: {fileID: 5512814390332547785, guid: 55633d223e545cf45bdbead1b5e1c3b6,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5512814390332547785, guid: 55633d223e545cf45bdbead1b5e1c3b6,
+        type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: 7041304670724034b8c203e8673a054a,
+        type: 2}
     - target: {fileID: 5564521833680093784, guid: 55633d223e545cf45bdbead1b5e1c3b6,
         type: 3}
       propertyPath: m_LocalPosition.x

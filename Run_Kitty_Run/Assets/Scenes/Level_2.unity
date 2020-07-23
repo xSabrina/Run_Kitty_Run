@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -280,7 +280,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 40
+  m_RootOrder: 41
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &243748213
 PrefabInstance:
@@ -1116,6 +1116,22 @@ PrefabInstance:
       propertyPath: m_Intensity
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 5512814390332547785, guid: 55633d223e545cf45bdbead1b5e1c3b6,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: ca2b920a9385104419ef8ad9c16ba693, type: 3}
+    - target: {fileID: 5512814390332547785, guid: 55633d223e545cf45bdbead1b5e1c3b6,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 5512814390332547785, guid: 55633d223e545cf45bdbead1b5e1c3b6,
+        type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: 7041304670724034b8c203e8673a054a,
+        type: 2}
     - target: {fileID: 5564521833680093784, guid: 55633d223e545cf45bdbead1b5e1c3b6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1558,7 +1574,7 @@ PrefabInstance:
     - target: {fileID: 3993578416938362566, guid: 8afeb839be064514595e773a953e1a90,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.1744056
+      value: -0.17440513
       objectReference: {fileID: 0}
     - target: {fileID: 3993578416938362566, guid: 8afeb839be064514595e773a953e1a90,
         type: 3}
@@ -3140,7 +3156,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1958335374}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.1744056, y: 1.1643423, z: -10}
+  m_LocalPosition: {x: -0.17440513, y: 1.1643423, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

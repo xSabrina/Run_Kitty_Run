@@ -15,10 +15,13 @@ public class Options : MonoBehaviour
     public Sprite buttonActive;
     public Sprite buttonInactive;
     public AudioMixer audioMixer;
+    public AudioSource audioSource;
+    public AudioClip clickSound;
 
     //Open Menu
     public void OpenMenu()
     {
+        audioSource.PlayOneShot(clickSound);
         optionsMenu.SetActive(true);
 
         //Show selected quality
@@ -46,6 +49,7 @@ public class Options : MonoBehaviour
     //Close Menu
     public void CloseMenu()
     {
+        audioSource.PlayOneShot(clickSound);
         optionsMenu.SetActive(false);
     }
 
@@ -58,6 +62,7 @@ public class Options : MonoBehaviour
     //Set graphics quality
     public void SetQualityLow()
     {
+        audioSource.PlayOneShot(clickSound);
         QualitySettings.SetQualityLevel(0);
         lowButton.GetComponent<Image>().sprite = buttonActive;
         midButton.GetComponent<Image>().sprite = buttonInactive;
@@ -66,6 +71,7 @@ public class Options : MonoBehaviour
 
     public void SetQualityMid()
     {
+        audioSource.PlayOneShot(clickSound);
         QualitySettings.SetQualityLevel(1);
         midButton.GetComponent<Image>().sprite = buttonActive;
         lowButton.GetComponent<Image>().sprite = buttonInactive;
@@ -74,6 +80,7 @@ public class Options : MonoBehaviour
 
     public void SetQualityHigh()
     {
+        audioSource.PlayOneShot(clickSound);
         QualitySettings.SetQualityLevel(2);
         highButton.GetComponent<Image>().sprite = buttonActive;
         midButton.GetComponent<Image>().sprite = buttonInactive;
@@ -83,6 +90,7 @@ public class Options : MonoBehaviour
     //Set fullscreen
     public void ToggleFullscreen()
     {
+        audioSource.PlayOneShot(clickSound);
         if (Screen.fullScreen)
         {
             Screen.fullScreen = false;
