@@ -4,9 +4,11 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.Audio;
+using System.Threading;
 
 public class Options : MonoBehaviour
 {
+    private int volumeSoundCounter = 10;
     public GameObject optionsMenu;
     public Button fullscreenButton;
     public Button lowButton;
@@ -49,13 +51,29 @@ public class Options : MonoBehaviour
     //Close Menu
     public void CloseMenu()
     {
+        StartCoroutine(ClickClose());
+    }
+
+    //Close menu but with click sound
+    IEnumerator ClickClose()
+    {
         audioSource.PlayOneShot(clickSound);
+        Time.timeScale = 1; //has to be activated shortly to play the sound
+        yield return new WaitForSeconds(0.3f);
+        Time.timeScale = 0;
         optionsMenu.SetActive(false);
     }
 
     //Set volume 
     public void SetVolume(float volume)
     {
+        //Play sound with greater gaps between it
+        if (volumeSoundCounter > 10)
+        {
+            audioSource.PlayOneShot(clickSound);
+            volumeSoundCounter = 0;
+        }
+        volumeSoundCounter++;
         audioMixer.SetFloat("volume", volume);
     }
 

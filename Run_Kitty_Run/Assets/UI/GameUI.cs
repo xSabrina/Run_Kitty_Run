@@ -70,9 +70,16 @@ public class GameUI : MonoBehaviour {
     }
 
     //Back to main menu
-    public void GoHome() {
+    public void GoHome()
+    {
+        StartCoroutine(ClickHome());
+    }
+
+    //Go home but with click sound first
+    IEnumerator ClickHome() {
         audioSource.PlayOneShot(clickSound);
         Time.timeScale = 1;
+        yield return new WaitForSeconds(0.3f);
         GameManagerScript.instance.abilitiesEnabled = true;
         SceneManager.LoadScene(sceneBuildIndex: MainMenuScene);
     }
