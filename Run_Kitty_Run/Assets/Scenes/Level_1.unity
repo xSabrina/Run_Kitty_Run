@@ -753,6 +753,22 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5512814390332547785, guid: 55633d223e545cf45bdbead1b5e1c3b6,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 7203ddad04841f04d9b6223c3ee3010c, type: 3}
+    - target: {fileID: 5512814390332547785, guid: 55633d223e545cf45bdbead1b5e1c3b6,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 5512814390332547785, guid: 55633d223e545cf45bdbead1b5e1c3b6,
+        type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: 7041304670724034b8c203e8673a054a,
+        type: 2}
     - target: {fileID: 5564521833680093784, guid: 55633d223e545cf45bdbead1b5e1c3b6,
         type: 3}
       propertyPath: m_LocalPosition.x
