@@ -435,8 +435,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 4446361425297181311}
-  death: {fileID: 8111991961498652349, guid: 399f26517306b8141a73b46db112c9b7, type: 3}
-  speed: 1.5
+  speed: 2
   movementStartTimeInterval:
   - 2
   - 4
@@ -670,10 +669,10 @@ MonoBehaviour:
   version: 2
   radius: 0.1
   height: 2
-  repathRate: 0.5
+  repathRate: 0.01
   canSearch: 1
   canMove: 1
-  maxSpeed: 1
+  maxSpeed: 3.5
   gravity: {x: 0, y: 0, z: 0}
   groundMask:
     serializedVersion: 2
