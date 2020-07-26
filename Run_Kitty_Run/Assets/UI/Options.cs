@@ -60,7 +60,11 @@ public class Options : MonoBehaviour
         audioSource.PlayOneShot(clickSound);
         Time.timeScale = 1; //has to be activated shortly to play the sound
         yield return new WaitForSeconds(0.3f);
-        Time.timeScale = 0;
+        //Dont set time scale 0 in main menu (otherwise game will start paused)
+        Debug.Log(SceneManager.GetActiveScene().name);
+        if (SceneManager.GetActiveScene().name != "MainMenu") {
+            Time.timeScale = 0;
+        }
         optionsMenu.SetActive(false);
     }
 

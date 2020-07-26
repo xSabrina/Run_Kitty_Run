@@ -7,11 +7,30 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour {
     
     private int lastLevel = 0;
+    private AudioSource[] allAudioSources;
+    private AudioSource menuMusic;
     public InputField usernameInput;
     public GameObject usernameUI;
     public AudioSource audioSource;
     public AudioClip clickSound;
 
+    public void Awake()
+    {
+        //since MainMenu.cs sits on two gameObjects, do this only for the higher hierarchy one
+        if (gameObject.name == "UI")
+        {
+            //stop all playing music
+            allAudioSources = FindObjectsOfType(typeof(AudioSource)) as AudioSource[];
+            foreach (AudioSource audioS in allAudioSources)
+            {
+                audioS.Stop();
+            }
+            //start menu music
+            menuMusic = gameObject.GetComponent<AudioSource>();
+            menuMusic.loop = true;
+            menuMusic.Play();
+        }
+    }
     //Starts Game from GameManager
     //lastLevel should be set to last level played at the start of the game (can be saved with player prefabs)
     public void StartGame() {

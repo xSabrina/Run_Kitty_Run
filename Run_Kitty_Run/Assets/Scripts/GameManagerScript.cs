@@ -8,6 +8,7 @@ public class GameManagerScript : MonoBehaviour
     public string timer;
     private float seconds;
     private int minutes;
+    private AudioSource mainMusic;
     public string username;
     public bool countTime = true;
     public static GameManagerScript instance = null;
@@ -23,10 +24,14 @@ public class GameManagerScript : MonoBehaviour
     // Use this for initialization
     void Awake()
     {
-       if (highscoresScript == null)
+        //get main music
+        mainMusic = gameObject.GetComponent<AudioSource>();
+        //determine if highscores are needed
+        if (highscoresScript == null)
         {
             gameObject.GetComponent<Highscores>();
         }
+        //dont destroy on load
         if (instance)
         {
             DestroyImmediate(gameObject);
@@ -72,6 +77,16 @@ public class GameManagerScript : MonoBehaviour
         minutes = 0;
         seconds = 0;
         SceneManager.LoadScene(currentLevel.levelName);
+        if (currentLevel.levelName == "Level_1")
+        {
+            Debug.Log("Starting main music..");
+            mainMusic.loop = true;
+            mainMusic.Play();
+        } else if (currentLevel.levelName == "Level_6")
+        {
+            Debug.Log("Stopping main music..");
+            mainMusic.Stop();
+        }
     }
     public void RestartLevel()
     {
