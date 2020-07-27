@@ -435,7 +435,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 4446361425297181311}
-  speed: 2
+  speed: 1.5
   movementStartTimeInterval:
   - 2
   - 4
@@ -542,7 +542,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 149384e4fdcaa4378958133f270ce3ff, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.05
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -669,10 +669,10 @@ MonoBehaviour:
   version: 2
   radius: 0.1
   height: 2
-  repathRate: 0.01
+  repathRate: 0.5
   canSearch: 1
   canMove: 1
-  maxSpeed: 3.5
+  maxSpeed: 1
   gravity: {x: 0, y: 0, z: 0}
   groundMask:
     serializedVersion: 2

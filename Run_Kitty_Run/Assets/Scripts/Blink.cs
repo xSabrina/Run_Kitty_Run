@@ -72,7 +72,7 @@ public class Blink : Ability
     {
         // trigger blink animation and wait for it to finish
         animator.SetTrigger("isBlinking");
-        audioSource.PlayOneShot(abilitySound, 0.05f);
+        audioSource.PlayOneShot(abilitySound, 0.5f);
         PlayerAbilities.instance.StartCoroutine(WaitingTime(castTime));
     }
 
