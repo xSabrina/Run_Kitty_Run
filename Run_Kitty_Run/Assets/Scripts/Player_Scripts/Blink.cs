@@ -15,6 +15,8 @@ public class Blink : Ability
     private Animator animator;
     private AudioSource audioSource;
 
+    private float blinkDuration = 0.35F;
+
     public override void Initialize(GameObject obj)
     {
         launcher = obj.GetComponent<SelfCastTriggerable>();
@@ -28,7 +30,7 @@ public class Blink : Ability
     {
         launcher.player.GetComponent<PlayerMovement>().enabled = false;
         PlayAnimation();
-        PlayerAbilities.instance.StartCoroutine(BlinkingTime(0.15F));
+        PlayerAbilities.instance.StartCoroutine(BlinkingTime(blinkDuration/2));
     }
 
     void CalculateBlink(){
@@ -94,5 +96,5 @@ public class Blink : Ability
         animator.SetBool("isWalkingUp", false);
         animator.SetBool("isWalkingDown", false);
     }
-    
+
 }
