@@ -14,6 +14,9 @@ public class GameUI : MonoBehaviour {
     public Text TimeText;
     public Text Level;
     public GameObject InGameMenu;
+    public GameObject OptionsMenu;
+    public AudioSource audioSource;
+    public AudioClip clickSound;
     PlayerInputActions inputAction;
     
 
@@ -46,10 +49,17 @@ public class GameUI : MonoBehaviour {
 
     //Toggle menu
     public void ToggleMenu() {
-        if (InGameMenu.activeSelf) {
-            InGameMenu.SetActive(false);
-            Time.timeScale = 1;
-            GameManagerScript.instance.abilitiesEnabled = true;
+        audioSource.PlayOneShot(clickSound);
+        if (InGameMenu.active) { 
+            if (OptionsMenu.active) {
+                OptionsMenu.SetActive(false);
+            }
+            else
+            {
+                InGameMenu.SetActive(false);
+                Time.timeScale = 1;
+                GameManagerScript.instance.abilitiesEnabled = true;
+            }
         } else {
             InGameMenu.SetActive(true);
             Time.timeScale = 0;
@@ -60,13 +70,24 @@ public class GameUI : MonoBehaviour {
     //Close Menu
     public void CloseMenu()
     {
+        audioSource.PlayOneShot(clickSound);
         InGameMenu.SetActive(false);
         Time.timeScale = 1;
         GameManagerScript.instance.abilitiesEnabled = true;
     }
 
     //Back to main menu
-    public void GoHome() {
+    public void GoHome()
+    {
+        StartCoroutine(ClickHome());
+    }
+
+    //Go home but with click sound first
+    IEnumerator ClickHome() {
+        audioSource.PlayOneShot(clickSound);
+        Time.timeScale = 1;
+        yield return new WaitForSeconds(0.3f);
+        GameManagerScript.instance.abilitiesEnabled = true;
         SceneManager.LoadScene(sceneBuildIndex: MainMenuScene);
     }
 

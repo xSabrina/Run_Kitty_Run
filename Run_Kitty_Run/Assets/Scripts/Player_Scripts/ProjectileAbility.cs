@@ -63,7 +63,7 @@ public class ProjectileAbility : Ability
     {
         yield return new WaitForSeconds(Float);
         launcher.Launch();
-        audioSource.PlayOneShot(abilitySound, 0.1f);
+        audioSource.PlayOneShot(abilitySound, 0.5f);
     }
 
     IEnumerator WaitingTime(float Float)
