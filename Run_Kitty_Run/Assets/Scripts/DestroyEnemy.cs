@@ -4,17 +4,25 @@ using UnityEngine;
 
 public class DestroyEnemy : MonoBehaviour
 {
-    private void OnTriggerEnter2D(Collider2D collision)
+    public GameObject death;
+    private void Start()
     {
-        string collisionName = collision.gameObject.name;
-        if (!(collisionName == "Player" || collisionName == "LevelStartTrigger" || collisionName == "LevelEndTrigger"))
+        var player = GameObject.FindGameObjectWithTag("Player");
+        Physics2D.IgnoreCollision(player.GetComponent<Collider2D>(), GetComponent<Collider2D>());
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Debug.Log(collision.transform.name);
+        if (!(collision.transform.tag == "Player"))
         {
             Destroy(gameObject);
         }
-
-        if (collision.gameObject.name == "Enemy")
+        if (collision.transform.tag == "Enemy")
         {
             Destroy(collision.gameObject);
+            Instantiate(death, collision.transform.position, collision.transform.rotation);
         }
     }
+
 }

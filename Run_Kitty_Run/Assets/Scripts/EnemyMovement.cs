@@ -7,9 +7,6 @@ public class EnemyMovement : MonoBehaviour
 
     public Rigidbody2D rb;
 
-    public float x;
-    public float y;
-
     public float speed;
 
     public float[] movementStartTimeInterval = new float[2];
@@ -32,7 +29,6 @@ public class EnemyMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        PlaceEnemy();
         InitValues();
         animator = GetComponent<Animator>();
     }
@@ -41,38 +37,18 @@ public class EnemyMovement : MonoBehaviour
     void Update()
     {
         if (isVisible) {
-            UpdatePositionCoordinates();
             HandleMovement();
         }
-        if (Input.GetKey(KeyCode.A))
-        {
-            Camera.main.transform.Translate(new Vector3(-1, 0, 0)*Time.deltaTime);
-        } 
-        else if (Input.GetKey(KeyCode.D))
-        {
-            Camera.main.transform.Translate(new Vector3(1, 0, 0)*Time.deltaTime);
-        }
-    }
-
-    void PlaceEnemy()
-    {
-        this.transform.localPosition = new Vector3(x, y, 0);
     }
 
     void InitValues()
     {
         deltaTime = 0;
-        isMoving = true;
+        isMoving = false;
         invertXPos = false;
         invertXNeg = false;
         invertYPos = false;
         invertYNeg = false;
-    }
-
-    void UpdatePositionCoordinates()
-    {
-        x = this.transform.localPosition.x;
-        y = this.transform.localPosition.y;
     }
 
     void HandleMovement()
@@ -196,12 +172,24 @@ public class EnemyMovement : MonoBehaviour
     void OnBecameInvisible()
     {
         isVisible = false;
+        isMoving = false; 
         rb.velocity = new Vector3(0, 0, 0);
+        ClearMovementAnimations();
         deltaTime = 0;
     }
 
     void OnBecameVisible()
     {
         isVisible = true;
+        ClearMovementAnimations();
     }
+
+    private void OnDisable()
+    {
+        rb.velocity = new Vector3(0, 0, 0);
+        ClearMovementAnimations();
+        isMoving = false;
+        deltaTime = 0;
+    }
+
 }

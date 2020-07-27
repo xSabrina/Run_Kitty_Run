@@ -6,15 +6,38 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour {
     
-    //Start Game
+    private int lastLevel = 0;
+    public InputField usernameInput;
+    public GameObject usernameUI;
+
+    //Starts Game from GameManager
+    //lastLevel should be set to last level played at the start of the game (can be saved with player prefabs)
     public void StartGame() {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        GameManagerScript.instance.username = usernameInput.text;
+        GameManagerScript.instance.SetCurrentLevel(lastLevel);
+        GameManagerScript.instance.StartLevel();
+    }
+
+    //Start Tutorial
+    public void StartTutorial()
+    {
+        SceneManager.LoadScene("TutorialLevel");
     }
 
     //Quit Game
     public void QuitGame() {
-        Debug.Log("QUIT");
         Application.Quit();
     }
 
+    //Open username input
+    public void OpenUsername()
+    {
+        usernameUI.SetActive(true);
+    }
+
+    //Close username input 
+    public void CloseUsername()
+    {
+        usernameUI.SetActive(false);
+    }
 }

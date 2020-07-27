@@ -11,6 +11,7 @@ public class ProjectileAbility : Ability
 
     private GameObject player;
     private Animator animator;
+    private AudioSource audioSource;
 
     private ProjectileShootTriggerable launcher;
 
@@ -22,12 +23,14 @@ public class ProjectileAbility : Ability
         launcher.projectileRange = projectileRange;
         player = GameObject.FindGameObjectWithTag("Player");
         animator = player.GetComponent<Animator>();
+        audioSource = player.GetComponent<AudioSource>();
     }
 
     public override void TriggerAbility()
     {
+        player.GetComponent<PlayerMovement>().enabled = false;
         PlayShootingAnimation();
-        launcher.Launch();
+        PlayerAbilities.instance.StartCoroutine(WaitCastPoint(castPoint));
     }
 
     private void PlayShootingAnimation()
@@ -38,36 +41,35 @@ public class ProjectileAbility : Ability
         if (angle < -225 && angle > -315 || angle < 135 && angle > 45)
         {
             animator.SetTrigger("isShootingUp");
-            float animTime = animator.GetCurrentAnimatorStateInfo(0).length;
-            AbilityCoolDown.instance.StartCoroutine(WaitingTime(animTime));
         }
         else if (angle >= -45 && angle <= 45)
         {
             animator.SetTrigger("isShootingSide");
-            float animTime = animator.GetCurrentAnimatorStateInfo(0).length;
-            AbilityCoolDown.instance.StartCoroutine(WaitingTime(animTime));
         }
         else if (angle < -45 && angle > -125)
         {
             animator.SetTrigger("isShootingDown");
-            float animTime = animator.GetCurrentAnimatorStateInfo(0).length;
-            AbilityCoolDown.instance.StartCoroutine(WaitingTime(animTime));
         }
         else
         {
             player.transform.rotation = Quaternion.Euler(0, 180, 0);
             animator.SetTrigger("isShootingSide");
-            float animTime = animator.GetCurrentAnimatorStateInfo(0).length;
-            AbilityCoolDown.instance.StartCoroutine(WaitingTime(animTime));
         }
+        
+        PlayerAbilities.instance.StartCoroutine(WaitingTime(castTime));
+    }
+
+    IEnumerator WaitCastPoint(float Float)
+    {
+        yield return new WaitForSeconds(Float);
+        launcher.Launch();
+        audioSource.PlayOneShot(abilitySound, 0.1f);
     }
 
     IEnumerator WaitingTime(float Float)
     {
-        Debug.Log(Time.time + ": " + Float);
         yield return new WaitForSeconds(Float);
         player.GetComponent<PlayerMovement>().enabled = true;
-        Debug.Log(Time.time + ": movement enabled");
     }
 
     private void ClearMovementAnimations()
@@ -76,5 +78,4 @@ public class ProjectileAbility : Ability
         animator.SetBool("isWalkingUp", false);
         animator.SetBool("isWalkingDown", false);
     }
-
 }

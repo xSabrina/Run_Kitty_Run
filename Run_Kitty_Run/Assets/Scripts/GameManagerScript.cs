@@ -8,15 +8,25 @@ public class GameManagerScript : MonoBehaviour
     public string timer;
     private float seconds;
     private int minutes;
+    public string username;
     public bool countTime = true;
     public static GameManagerScript instance = null;
-    public List<Level> Levels = new List<Level>();
+    public List<Level> levels = new List<Level>();
     public Level currentLevel;
+    public bool abilitiesEnabled = true;
+    public int selectedAbility1 = 0;
+    public int selectedAbility2 = 1;
+    public bool highscoreWaiter = true;
+    public Highscore[] highscores;
+    public Highscores highscoresScript;
 
     // Use this for initialization
     void Awake()
     {
-       
+       if (highscoresScript == null)
+        {
+            gameObject.GetComponent<Highscores>();
+        }
         if (instance)
         {
             DestroyImmediate(gameObject);
@@ -40,7 +50,7 @@ public class GameManagerScript : MonoBehaviour
     }
 
 
-    //counts Time in minutes, second and milliseconds, should be called inj Update function
+    //counts Time in minutes, second and milliseconds, should be called in Update function
     private void CountTime()
     {
         seconds += Time.deltaTime;
@@ -53,13 +63,7 @@ public class GameManagerScript : MonoBehaviour
 
     }
 
-    //should be triggered through EndLevelPrefab
-    public void EndLevel()
-    {
-        currentLevel = Levels[currentLevel.levelNr];
-        StartLevel();
-        
-    }
+
 
     //for restarting Level or loading anew one
 
@@ -73,7 +77,48 @@ public class GameManagerScript : MonoBehaviour
     {
         SceneManager.LoadScene(currentLevel.levelName);
     }
- 
+
+    public void SetCurrentLevel(int i)
+    {
+        currentLevel = levels[i];
+    }
+
+    //should be triggered through EndLevelPrefab
+    public void EndLevel()
+    {
+        currentLevel.levelTime = minutes * 60 + (int)seconds;
+        if (currentLevel.levelNr < levels.Count)
+        {
+            currentLevel = levels[currentLevel.levelNr];
+            StartLevel();
+            Time.timeScale = 1;
+        }
+        else
+        {
+
+            //AddHighscore(PlayerPrefs.GetString("Username", "DefaultUser"));
+            SceneManager.LoadScene("EndScreen");
+            Time.timeScale = 1;
+        }
+
+    }
+   
+    public void GetHighscores()
+    {
+        StartCoroutine(GetHighscoreCoroutine());
+      
+    }
+    IEnumerator GetHighscoreCoroutine()
+    {
+        highscoreWaiter = true;
+        yield return StartCoroutine(highscoresScript.DownloadHighscores());
+        highscores = highscoresScript.highscoresList;
+        for (int i = highscores.Length-1; i >= 0; i--)
+        {
+            Debug.Log("username: " + highscores[i].userName + " score: " + highscores[i].score);
+        }
+        highscoreWaiter = false;
+    }
 }
 
 
