@@ -26,15 +26,19 @@ public class Blink : Ability
 
     public override void TriggerAbility()
     {
-        bool triggerd = false;
+        launcher.player.GetComponent<PlayerMovement>().enabled = false;
+        PlayAnimation();
+        PlayerAbilities.instance.StartCoroutine(BlinkingTime(0.15F));
+    }
+
+    void CalculateBlink(){
+        bool triggered = false;
         Transform playerTransform = launcher.player.GetComponent<Transform>();
         CapsuleCollider2D playerCollider = launcher.player.GetComponent<CapsuleCollider2D>();
-
         int hitint = Physics2D.Raycast(playerTransform.position, launcher.spawnPoint.transform.up, filter.NoFilter(), res, aRange);
         float adjustedBlinkRange;
         foreach(RaycastHit2D hit in res)
         {
-            
             if(hit.collider.tag == "Border")
             {
                 Debug.Log(hit.collider.name);
@@ -45,7 +49,7 @@ public class Blink : Ability
                     // times 10 because player is scaled by 10
                     // devided by 2 because origin of collider is in the middle of the collider
                     adjustedBlinkRange = hit.distance - (playerCollider.size.y * 10) / 2;
-                    
+
                     playerTransform.position += launcher.spawnPoint.transform.up.normalized * adjustedBlinkRange;
                 }
                 else
@@ -53,19 +57,15 @@ public class Blink : Ability
                     adjustedBlinkRange = hit.distance - (playerCollider.size.x * 10) / 2;
                     playerTransform.position += launcher.spawnPoint.transform.up.normalized * adjustedBlinkRange;
                 }
-                triggerd = true;
+                triggered = true;
                 break;
             }
         }
-
         // no border in blink direction
-        if (!triggerd)
+        if (!triggered)
         {
             playerTransform.position += launcher.spawnPoint.transform.up.normalized * aRange;
         }
-
-        launcher.player.GetComponent<PlayerMovement>().enabled = false;
-        PlayAnimation();
     }
 
     void PlayAnimation ()
@@ -82,10 +82,17 @@ public class Blink : Ability
         launcher.player.GetComponent<PlayerMovement>().enabled = true;
     }
 
+    IEnumerator BlinkingTime(float Float)
+    {
+        yield return new WaitForSeconds(Float);
+        CalculateBlink();
+    }
+
     private void ClearMovementAnimations()
     {
         animator.SetBool("isWalkingSide", false);
         animator.SetBool("isWalkingUp", false);
         animator.SetBool("isWalkingDown", false);
     }
+    
 }
