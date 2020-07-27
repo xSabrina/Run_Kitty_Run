@@ -77,11 +77,7 @@ public class Blink : Ability
     {
         // trigger blink animation and wait for it to finish
         animator.SetTrigger("isBlinking");
-<<<<<<< HEAD:Run_Kitty_Run/Assets/Scripts/Player_Scripts/Blink.cs
         audioSource.PlayOneShot(abilitySound, volume);
-=======
-        audioSource.PlayOneShot(abilitySound, 0.5f);
->>>>>>> dev:Run_Kitty_Run/Assets/Scripts/Blink.cs
         PlayerAbilities.instance.StartCoroutine(WaitingTime(castTime));
     }
 
