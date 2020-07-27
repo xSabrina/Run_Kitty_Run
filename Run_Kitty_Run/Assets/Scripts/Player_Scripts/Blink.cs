@@ -17,6 +17,8 @@ public class Blink : Ability
 
     private float blinkDuration = 0.35F;
 
+    private float volume = 0.05F;
+
     public override void Initialize(GameObject obj)
     {
         launcher = obj.GetComponent<SelfCastTriggerable>();
@@ -29,6 +31,7 @@ public class Blink : Ability
     public override void TriggerAbility()
     {
         launcher.player.GetComponent<PlayerMovement>().enabled = false;
+        launcher.player.GetComponent<Collider2D>().enabled = false;
         PlayAnimation();
         PlayerAbilities.instance.StartCoroutine(BlinkingTime(blinkDuration/2));
     }
@@ -74,14 +77,17 @@ public class Blink : Ability
     {
         // trigger blink animation and wait for it to finish
         animator.SetTrigger("isBlinking");
-        audioSource.PlayOneShot(abilitySound, 0.05f);
+        audioSource.PlayOneShot(abilitySound, volume);
         PlayerAbilities.instance.StartCoroutine(WaitingTime(castTime));
     }
 
     IEnumerator WaitingTime(float Float)
     {
         yield return new WaitForSeconds(Float);
-        launcher.player.GetComponent<PlayerMovement>().enabled = true;
+        if(!animator.GetCurrentAnimatorStateInfo(0).IsName("Die")){
+            launcher.player.GetComponent<PlayerMovement>().enabled = true;
+            launcher.player.GetComponent<Collider2D>().enabled = true;
+        }
     }
 
     IEnumerator BlinkingTime(float Float)
