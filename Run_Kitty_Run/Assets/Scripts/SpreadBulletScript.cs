@@ -14,7 +14,7 @@ public class SpreadBulletScript : MonoBehaviour
     void Start()
     {
 
-        Invoke("DestroyBullet", lifeTime);
+        Invoke("DestroyBullet", lifeTime-destroyClip.length);
     }
 
     // Update is called once per frame

@@ -6,15 +6,12 @@ public class EnemyShoot : MonoBehaviour
 {
     public float shootingInterval = 4f;
     public float bulletSpeed;
+    public AnimationClip bulletAnimClip;
     private Transform player;
     public GameObject bullet;
     public GameObject bulletPrefab;
     
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     //Launch if player entered collider
     private void OnTriggerEnter2D(Collider2D collision)
@@ -42,7 +39,11 @@ public class EnemyShoot : MonoBehaviour
        
         bullet = Instantiate(bulletPrefab, transform.position+new Vector3(0, 1.7f),transform.rotation);
         bullet.GetComponent<BulletScript>().FireBullet(player.position,bulletSpeed);
+        Invoke("PlaySound", bulletAnimClip.length);
         
+    }
+    void PlaySound() {
+        GetComponent<AudioSource>().Play();
     }
     
 }

@@ -9,13 +9,15 @@ public class BulletScript : MonoBehaviour
     public Rigidbody2D rb;
     public Animation bulletAnim;
     public AnimationClip bulletAnimClip;
+    public AnimationClip bulletDestroyClip;
     private Vector3 target;
     private float speed;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        Invoke("DestroyBullet", lifeTime - bulletDestroyClip.length);
+
         GameObject.Destroy(gameObject, lifeTime);
     }
 
@@ -31,6 +33,11 @@ public class BulletScript : MonoBehaviour
     public void BulletFired()
     {
         rb.velocity = (target - gameObject.transform.position).normalized * speed;
+    }
+    public void DestroyBullet()
+    {
+        bulletAnim.Play(bulletDestroyClip.name);
+        Destroy(gameObject, bulletDestroyClip.length);
     }
 
         private void OnCollisionEnter2D(Collision2D collision)

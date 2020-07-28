@@ -11,6 +11,7 @@ public class EnemySpreadShoot : MonoBehaviour
     public GameObject bulletPrefab;
     public float spreadMagnitude;
     public int bulletNumber;
+    public AnimationClip bulletAnimClip;
 
     // Start is called before the first frame update
     void Start()
@@ -52,6 +53,10 @@ public class EnemySpreadShoot : MonoBehaviour
             bullet.GetComponent<SpreadBulletScript>().FireBullet(angle, bulletSpeed);
             angle += spreadMagnitude;
         }
-
+        Invoke("PlaySound", bulletAnimClip.length);
+    }
+    void PlaySound()
+    {
+        GetComponent<AudioSource>().Play();
     }
 }
