@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Destroy
   m_EditorClassIdentifier: 
   aName: Destroy
-  abilitySound: {fileID: 8300000, guid: 841a8285baf47754c8be205b398e80a1, type: 3}
+  abilitySound: {fileID: 8300000, guid: 8ec6cb4b7e77a844680f2559e89315f1, type: 3}
   aBaseCoolDown: 10
   castTime: 0.2
   castPoint: 0.1
