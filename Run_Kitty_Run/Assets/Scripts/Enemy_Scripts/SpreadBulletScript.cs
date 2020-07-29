@@ -7,13 +7,14 @@ public class SpreadBulletScript : MonoBehaviour
     public float lifeTime = 5f;
     public Rigidbody2D rb;
     public Animation animation;
-    public AnimationClip animationClip;
+    public AnimationClip shootClip;
+    public AnimationClip destroyClip;
     private float speed;
     // Start is called before the first frame update
     void Start()
     {
 
-        GameObject.Destroy(gameObject, lifeTime);
+        Invoke("DestroyBullet", lifeTime-destroyClip.length);
     }
 
     // Update is called once per frame
@@ -24,14 +25,20 @@ public class SpreadBulletScript : MonoBehaviour
         this.speed = speed;
         gameObject.transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
         gameObject.transform.position += transform.right*1;
-        animation.Play();
-        Invoke("BulletFired", animationClip.length);
+        animation.Play(shootClip.name);
+        Invoke("BulletFired", shootClip.length);
 
     }
     public void BulletFired()
     {
         rb.velocity = transform.right * speed;
     }
+    private void DestroyBullet() {
+      
+        animation.Play(destroyClip.name);
+        Destroy(gameObject,destroyClip.length);
+    }
+
 
     private void OnCollisionEnter2D(Collision2D collision)
     {

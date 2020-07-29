@@ -143,6 +143,7 @@ MonoBehaviour:
   rb: {fileID: -7458055515320400881}
   bulletAnim: {fileID: 7133428174017124480}
   bulletAnimClip: {fileID: 7400000, guid: 8eefbc053ee1d144d9dd74fa73b16dd5, type: 2}
+  bulletDestroyClip: {fileID: 7400000, guid: cadca6721de42e441a51938850166701, type: 2}
 --- !u!58 &-2304776344353252525
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -192,6 +193,7 @@ Animation:
   m_Animation: {fileID: 7400000, guid: 8eefbc053ee1d144d9dd74fa73b16dd5, type: 2}
   m_Animations:
   - {fileID: 7400000, guid: 8eefbc053ee1d144d9dd74fa73b16dd5, type: 2}
+  - {fileID: 7400000, guid: cadca6721de42e441a51938850166701, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0

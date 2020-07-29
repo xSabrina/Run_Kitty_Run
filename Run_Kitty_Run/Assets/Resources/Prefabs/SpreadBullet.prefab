@@ -176,10 +176,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 100b74c61a5411d419bdccba52c497ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifeTime: 5
+  lifeTime: 4.5
   rb: {fileID: 5438563127702778444}
   animation: {fileID: 8482400365134570247}
-  animationClip: {fileID: 7400000, guid: bf1f986feb9c1ed48a84b6a7b3a589cb, type: 2}
+  shootClip: {fileID: 7400000, guid: bf1f986feb9c1ed48a84b6a7b3a589cb, type: 2}
+  destroyClip: {fileID: 7400000, guid: 4011dcc55066cd04da8baa79cd0e42b4, type: 2}
 --- !u!111 &8482400365134570247
 Animation:
   m_ObjectHideFlags: 0
@@ -192,6 +193,7 @@ Animation:
   m_Animation: {fileID: 7400000, guid: bf1f986feb9c1ed48a84b6a7b3a589cb, type: 2}
   m_Animations:
   - {fileID: 7400000, guid: bf1f986feb9c1ed48a84b6a7b3a589cb, type: 2}
+  - {fileID: 7400000, guid: 4011dcc55066cd04da8baa79cd0e42b4, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0
