@@ -12,7 +12,6 @@ public class Highscores : MonoBehaviour
     private void Awake()
     {
         //PlayerPrefs.DeleteAll();
-      
     }
 
     public void AddScore(string userName, int score)
