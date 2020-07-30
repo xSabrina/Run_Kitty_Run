@@ -13,6 +13,7 @@ public class MainMenu : MonoBehaviour {
     public GameObject usernameUI;
     public AudioSource audioSource;
     public AudioClip clickSound;
+    public Level tutorialLevel;
 
     public void Awake()
     {
@@ -44,6 +45,7 @@ public class MainMenu : MonoBehaviour {
     public void StartTutorial()
     {
         audioSource.PlayOneShot(clickSound);
+        GameManagerScript.instance.currentLevel = tutorialLevel;
         SceneManager.LoadScene("TutorialLevel");
     }
 
