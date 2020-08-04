@@ -77,6 +77,11 @@ public class EnemyToPlayer : MonoBehaviour
             {
                 transform.GetChild(1).localRotation = Quaternion.Euler(0, 0, 0);
                 transform.GetChild(1).localPosition = new Vector3(0.08f, 0.08f, 0);
+            } 
+            else
+            {
+                transform.GetChild(0).localRotation = Quaternion.Euler(0, 0, 0);
+                transform.GetChild(0).localPosition = new Vector3(0.1f, 0.1f, 0);
             }
         }
         else if ((angle >= -45 && angle <= 45) && !animator.GetBool("isWalkingSide"))
@@ -89,6 +94,11 @@ public class EnemyToPlayer : MonoBehaviour
                 transform.GetChild(1).localRotation = Quaternion.Euler(0, 0, 0);
                 transform.GetChild(1).localPosition = new Vector3(0.08f, 0.08f, 0);
             }
+            else
+            {
+                transform.GetChild(0).localRotation = Quaternion.Euler(0, 0, 0);
+                transform.GetChild(0).localPosition = new Vector3(0.1f, 0.1f, 0);
+            }
         }
         else if ((angle < -45 && angle >= -135) && !animator.GetBool("isWalkingDown"))
         {
@@ -100,6 +110,11 @@ public class EnemyToPlayer : MonoBehaviour
                 transform.GetChild(1).localRotation = Quaternion.Euler(0, 0, 0);
                 transform.GetChild(1).localPosition = new Vector3(0.08f, 0.08f, 0);
             }
+            else
+            {
+                transform.GetChild(0).localRotation = Quaternion.Euler(0, 0, 0);
+                transform.GetChild(0).localPosition = new Vector3(0.1f, 0.1f, 0);
+            }
         }
         else if((angle < -135 && angle >= -180 || angle <= 180 && angle > 135) && !animator.GetBool("isWalkingSide"))
         {
@@ -110,6 +125,11 @@ public class EnemyToPlayer : MonoBehaviour
             {
                 transform.GetChild(1).localRotation = Quaternion.Euler(0, -180, 0);
                 transform.GetChild(1).localPosition = new Vector3(-0.08f, 0.08f, 0);
+            }
+            else
+            {
+                transform.GetChild(0).localRotation = Quaternion.Euler(0, -180, 0);
+                transform.GetChild(0).localPosition = new Vector3(-0.1f, 0.1f, 0);
             }
         }
         
@@ -125,6 +145,10 @@ public class EnemyToPlayer : MonoBehaviour
                 GetComponentInChildren<Light2D>().color = new Color(1.0f,0.0f,0.0f,1.0f);
                 transform.GetChild(1).gameObject.SetActive(true);
                 GetComponent<AudioSource>().Play();
+            } 
+            else
+            {
+                transform.GetChild(0).gameObject.SetActive(true);
             }
             if(player == null)
             {
@@ -144,6 +168,10 @@ public class EnemyToPlayer : MonoBehaviour
                 GetComponentInChildren<EdgeCollider2D>().enabled = true;
                 GetComponentInChildren<Light2D>().color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
                 transform.GetChild(1).gameObject.SetActive(false);
+            }
+            else
+            {
+                transform.GetChild(0).gameObject.SetActive(false);
             }
             isInside = false;
             GetComponent<CircleCollider2D>().radius = monitoringRadius;
