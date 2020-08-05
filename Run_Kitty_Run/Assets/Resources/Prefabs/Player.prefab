@@ -339,6 +339,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65ec92ed42e2c9f4c9269434a1be321d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aimArrow: {fileID: 815580887}
 --- !u!114 &7719149590923740457
 MonoBehaviour:
   m_ObjectHideFlags: 0
