@@ -17,4 +17,4 @@ MonoBehaviour:
   aBaseCoolDown: 5
   castTime: 0.5
   castPoint: 0
-  aRange: 6
+  aRange: 7
