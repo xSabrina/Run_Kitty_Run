@@ -8,7 +8,8 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D playerRigidbody;
     public Sprite Up;
     public Sprite Down;
-    public Sprite Side;
+    public Sprite Right;
+    public Sprite Left;
     public float speed = 4.5f;
     SpriteRenderer spriteRenderer;
     Animator playerAnimator;
@@ -93,17 +94,15 @@ public class PlayerMovement : MonoBehaviour
             }
             else if (angle >= -45 && angle <= 45)
             {
-                spriteRenderer.sprite = Side;
-                transform.rotation = Quaternion.Euler(Vector3.zero);
+                spriteRenderer.sprite = Right;
             }
-            else if (angle < -45 && angle > -125)
+            else if (angle < -45 && angle > -135)
             {
                 spriteRenderer.sprite = Down;
             }
             else
             {
-                spriteRenderer.sprite = Side;
-                transform.rotation = Quaternion.Euler(0, 180, 0);
+                spriteRenderer.sprite = Left;
             }
         }
     }
