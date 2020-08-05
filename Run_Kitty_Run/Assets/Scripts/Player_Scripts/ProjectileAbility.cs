@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.InputSystem;
 
 [CreateAssetMenu(menuName = "Abilities/ProjectileAbility")]
 public class ProjectileAbility : Ability
@@ -36,9 +37,12 @@ public class ProjectileAbility : Ability
     private void PlayShootingAnimation()
     {
         ClearMovementAnimations();
-        Vector2 direction = launcher.spawnPoint.transform.up.normalized;
-        var angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        if (angle < -225 && angle > -315 || angle < 135 && angle > 45)
+        Vector2 mousePos = Mouse.current.position.ReadValue();
+        Vector2 objectPos = Camera.main.WorldToScreenPoint(player.transform.position);
+        mousePos.x = mousePos.x - objectPos.x;
+        mousePos.y = mousePos.y - objectPos.y;
+        var angle = Mathf.Atan2(mousePos.y, mousePos.x) * Mathf.Rad2Deg;
+        if (angle < 135 && angle > 45)
         {
             animator.SetTrigger("isShootingUp");
         }
@@ -46,14 +50,13 @@ public class ProjectileAbility : Ability
         {
             animator.SetTrigger("isShootingSide");
         }
-        else if (angle < -45 && angle > -125)
+        else if (angle < -45 && angle > -135)
         {
             animator.SetTrigger("isShootingDown");
         }
         else
         {
-            player.transform.rotation = Quaternion.Euler(0, 180, 0);
-            animator.SetTrigger("isShootingSide");
+            animator.SetTrigger("isShootingLeft");
         }
         
         PlayerAbilities.instance.StartCoroutine(WaitingTime(castTime));
@@ -77,5 +80,6 @@ public class ProjectileAbility : Ability
         animator.SetBool("isWalkingSide", false);
         animator.SetBool("isWalkingUp", false);
         animator.SetBool("isWalkingDown", false);
+        animator.SetBool("isWalkingLeft", false);
     }
 }
