@@ -8,7 +8,8 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D playerRigidbody;
     public Sprite Up;
     public Sprite Down;
-    public Sprite Side;
+    public Sprite Right;
+    public Sprite Left;
     public float speed = 4.5f;
     SpriteRenderer spriteRenderer;
     Animator playerAnimator;
@@ -57,11 +58,9 @@ public class PlayerMovement : MonoBehaviour
             } else  if(Keyboard.current.sKey.isPressed){
                 playerAnimator.SetBool("isWalkingDown", true);      
             } else  if(Keyboard.current.aKey.isPressed){
-                playerAnimator.SetBool("isWalkingSide", true);    
-                transform.rotation = Quaternion.Euler(0, 180, 0);
+                playerAnimator.SetBool("isWalkingLeft", true);
             } else if (Keyboard.current.dKey.isPressed){
                 playerAnimator.SetBool("isWalkingSide", true);
-                transform.rotation = Quaternion.Euler(0, 0, 0);
             }
         }
     }
@@ -70,6 +69,7 @@ public class PlayerMovement : MonoBehaviour
         playerAnimator.SetBool("isWalkingUp", false);
         playerAnimator.SetBool("isWalkingDown", false);
         playerAnimator.SetBool("isWalkingSide", false);
+        playerAnimator.SetBool("isWalkingLeft", false);
     }
 
     void LateUpdate()
@@ -87,23 +87,21 @@ public class PlayerMovement : MonoBehaviour
         if (playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("Idle") || GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("UseSkill"))
         {
             //Adjust player sprite depending on angle
-            if (angle < -225 && angle > -315 || angle < 135 && angle > 45)
+            if (angle < 135 && angle > 45)
             {
                 spriteRenderer.sprite = Up;
             }
             else if (angle >= -45 && angle <= 45)
             {
-                spriteRenderer.sprite = Side;
-                transform.rotation = Quaternion.Euler(Vector3.zero);
+                spriteRenderer.sprite = Right;
             }
-            else if (angle < -45 && angle > -125)
+            else if (angle < -45 && angle > -135)
             {
                 spriteRenderer.sprite = Down;
             }
             else
             {
-                spriteRenderer.sprite = Side;
-                transform.rotation = Quaternion.Euler(0, 180, 0);
+                spriteRenderer.sprite = Left;
             }
         }
     }
