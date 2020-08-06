@@ -6,7 +6,7 @@ public class Highscores : MonoBehaviour
 {
     const string privateCode = "abacLLCKrUObw9RV-oSc4AeOdUIHig6UiyLOoWzpKXRA";
     const string publicCode = "5ef9e938377eda0b6c8d9308";
-    const string webUrl = "https://dreamlo.com/lb/";
+    const string webUrl = "http://dreamlo.com/lb/";
     public Highscore[] highscoresList;
 
     private void Awake()
