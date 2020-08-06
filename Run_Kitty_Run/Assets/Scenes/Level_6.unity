@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -3471,6 +3471,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2704104829714056938, guid: a4a0179e65132f748814bbda698e17d6,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3590536068542385793, guid: a4a0179e65132f748814bbda698e17d6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4948,22 +4953,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5512814390332547785, guid: 55633d223e545cf45bdbead1b5e1c3b6,
-        type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 5812db1ac676f0c4bbb45d75e441fa18, type: 3}
-    - target: {fileID: 5512814390332547785, guid: 55633d223e545cf45bdbead1b5e1c3b6,
-        type: 3}
-      propertyPath: m_Volume
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5512814390332547785, guid: 55633d223e545cf45bdbead1b5e1c3b6,
-        type: 3}
-      propertyPath: OutputAudioMixerGroup
-      value: 
-      objectReference: {fileID: 24300002, guid: 7041304670724034b8c203e8673a054a,
-        type: 2}
     - target: {fileID: 5564521833680093784, guid: 55633d223e545cf45bdbead1b5e1c3b6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -15252,3 +15241,72 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e68c675a3febea341b86bd4de3639b1f, type: 3}
+--- !u!1001 &1474714458152995707
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5805201942301357714, guid: f4a520752c8184d40b43fbb9891ef0b4,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.011262
+      objectReference: {fileID: 0}
+    - target: {fileID: 5805201942301357714, guid: f4a520752c8184d40b43fbb9891ef0b4,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.0172186
+      objectReference: {fileID: 0}
+    - target: {fileID: 5805201942301357714, guid: f4a520752c8184d40b43fbb9891ef0b4,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -7.5898438
+      objectReference: {fileID: 0}
+    - target: {fileID: 5805201942301357714, guid: f4a520752c8184d40b43fbb9891ef0b4,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5805201942301357714, guid: f4a520752c8184d40b43fbb9891ef0b4,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5805201942301357714, guid: f4a520752c8184d40b43fbb9891ef0b4,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5805201942301357714, guid: f4a520752c8184d40b43fbb9891ef0b4,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5805201942301357714, guid: f4a520752c8184d40b43fbb9891ef0b4,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 194
+      objectReference: {fileID: 0}
+    - target: {fileID: 5805201942301357714, guid: f4a520752c8184d40b43fbb9891ef0b4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5805201942301357714, guid: f4a520752c8184d40b43fbb9891ef0b4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5805201942301357714, guid: f4a520752c8184d40b43fbb9891ef0b4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6744370721524282391, guid: f4a520752c8184d40b43fbb9891ef0b4,
+        type: 3}
+      propertyPath: m_Name
+      value: SoundNight
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f4a520752c8184d40b43fbb9891ef0b4, type: 3}
