@@ -17,8 +17,6 @@ public class Blink : Ability
 
     private float blinkDuration = 0.35F;
 
-    private float volume = 0.05F;
-
     public override void Initialize(GameObject obj)
     {
         launcher = obj.GetComponent<SelfCastTriggerable>();
@@ -77,7 +75,7 @@ public class Blink : Ability
     {
         // trigger blink animation and wait for it to finish
         animator.SetTrigger("isBlinking");
-        audioSource.PlayOneShot(abilitySound, 0.9f);
+        audioSource.PlayOneShot(abilitySound);
         PlayerAbilities.instance.StartCoroutine(WaitingTime(castTime));
     }
 
