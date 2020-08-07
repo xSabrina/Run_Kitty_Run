@@ -8,6 +8,7 @@ public class GameManagerScript : MonoBehaviour
     public string timer;
     private float seconds;
     private int minutes;
+    public AudioClip bossMusic;
     private AudioSource mainMusic;
     public string username;
     public bool countTime = true;
@@ -86,6 +87,8 @@ public class GameManagerScript : MonoBehaviour
         {
             Debug.Log("Stopping main music..");
             mainMusic.Stop();
+            mainMusic.clip = bossMusic;
+            mainMusic.Play();
         }
     }
     public void RestartLevel()
@@ -110,8 +113,8 @@ public class GameManagerScript : MonoBehaviour
         }
         else
         {
-
             //AddHighscore(PlayerPrefs.GetString("Username", "DefaultUser"));
+            mainMusic.Stop();
             SceneManager.LoadScene("EndScreen");
             Time.timeScale = 1;
         }
