@@ -104,7 +104,7 @@ MonoBehaviour:
   m_Color: {r: 0, g: 0.20616484, b: 1, a: 1}
   m_Intensity: 5.6
   m_LightVolumeOpacity: 0
-  m_ApplyToSortingLayers: 00000000fbc83c9e
+  m_ApplyToSortingLayers: 8372d14c00000000fbc83c9e
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 0
   m_LightOrder: 0
@@ -159,7 +159,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0.005785942, y: 0}
   serializedVersion: 2
-  m_Radius: 0.11238575
+  m_Radius: 0.1123857
 --- !u!50 &-7458055515320400881
 Rigidbody2D:
   serializedVersion: 4
