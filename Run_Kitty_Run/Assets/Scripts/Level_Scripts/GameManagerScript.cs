@@ -5,20 +5,28 @@ using UnityEngine.SceneManagement;
 
 public class GameManagerScript : MonoBehaviour
 {
+    //String for displaying leveltimer
     public string timer;
+    //Floats for counting leveltime
     private float seconds;
     private int minutes;
     public AudioClip bossMusic;
     private AudioSource mainMusic;
+    //string for username used for highscore
     public string username;
+    //bool that defines if timer is running or not
     public bool countTime = true;
     public static GameManagerScript instance = null;
+    //List of levelobjects
     public List<Level> levels = new List<Level>();
+    //Current level the player is in used for loading the correct scene
     public Level currentLevel;
+    //variables that define which abilities are being used and if they are currently usable
     public bool abilitiesEnabled = true;
     public int selectedAbility1 = 0;
     public int selectedAbility2 = 1;
     public bool highscoreWaiter = true;
+    //List of highscores
     public Highscore[] highscores;
     public Highscores highscoresScript;
 
@@ -27,12 +35,12 @@ public class GameManagerScript : MonoBehaviour
     {
         //get main music
         mainMusic = gameObject.GetComponent<AudioSource>();
-        //determine if highscores are needed
+        //determines if highscores script needs to beassigned
         if (highscoresScript == null)
         {
             gameObject.GetComponent<Highscores>();
         }
-        //dont destroy on load
+        //dont destroy on load for gamemanager singleton
         if (instance)
         {
             DestroyImmediate(gameObject);
@@ -71,8 +79,7 @@ public class GameManagerScript : MonoBehaviour
 
 
 
-    //for restarting Level or loading anew one
-
+    //for restarting Level or loading a new one
     public void StartLevel()
     {
         minutes = 0;
@@ -91,20 +98,24 @@ public class GameManagerScript : MonoBehaviour
             mainMusic.Play();
         }
     }
+
+    //function used to start or restart the current level
     public void RestartLevel()
     {
         SceneManager.LoadScene(currentLevel.levelName);
     }
 
+    //sets current level object through levels list
     public void SetCurrentLevel(int i)
     {
         currentLevel = levels[i];
     }
 
-    //should be triggered through EndLevelPrefab
+    //Fuction for finishing a level, should be triggered through EndLevelPrefab
     public void EndLevel()
     {
         currentLevel.levelTime = minutes * 60 + (int)seconds;
+        //checks if there is a next level, otherwise starts end screen
         if (currentLevel.levelNr < levels.Count)
         {
             currentLevel = levels[currentLevel.levelNr];
@@ -113,7 +124,6 @@ public class GameManagerScript : MonoBehaviour
         }
         else
         {
-            //AddHighscore(PlayerPrefs.GetString("Username", "DefaultUser"));
             mainMusic.Stop();
             SceneManager.LoadScene("EndScreen");
             Time.timeScale = 1;
@@ -121,11 +131,14 @@ public class GameManagerScript : MonoBehaviour
 
     }
    
+
     public void GetHighscores()
     {
         StartCoroutine(GetHighscoreCoroutine());
       
     }
+
+    //gets highscores through Highscores script
     IEnumerator GetHighscoreCoroutine()
     {
         highscoreWaiter = true;
