@@ -17,11 +17,9 @@ public class BulletScript : MonoBehaviour
     void Start()
     {
         Invoke("DestroyBullet", lifeTime - bulletDestroyClip.length);
-
-        GameObject.Destroy(gameObject, lifeTime);
     }
 
-    // Update is called once per frame
+    // Displays bullet animation and sets bullet speed and target
     public void FireBullet(Vector3 target, float speed)
     {
         bulletAnim.Play();
@@ -30,17 +28,21 @@ public class BulletScript : MonoBehaviour
         Invoke("BulletFired", bulletAnimClip.length);
     }
 
+    //shoots bullet at specified target with specified speed
     public void BulletFired()
     {
         rb.velocity = (target - gameObject.transform.position).normalized * speed;
     }
+
+    //destroys bullet after playing its destroy animation
     public void DestroyBullet()
     {
         bulletAnim.Play(bulletDestroyClip.name);
         Destroy(gameObject, bulletDestroyClip.length);
     }
 
-        private void OnCollisionEnter2D(Collision2D collision)
+    //Destroy Bullet when it hits the player (Bullet only collides with player collider)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         Destroy(gameObject, 0.03f);
     }

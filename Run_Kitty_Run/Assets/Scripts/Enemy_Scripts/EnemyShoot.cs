@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class EnemyShoot : MonoBehaviour
 {
+    //shooting interval
     public float shootingInterval = 4f;
+    //speed of bullet
     public float bulletSpeed;
     public AnimationClip bulletAnimClip;
     private Transform player;
     public GameObject bullet;
     public GameObject bulletPrefab;
     
-    // Start is called before the first frame update
 
     //Launch if player entered collider
     private void OnTriggerEnter2D(Collider2D collision)
