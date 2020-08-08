@@ -16,6 +16,7 @@ public class Options : MonoBehaviour
     public Button highButton;
     public Sprite buttonActive;
     public Sprite buttonInactive;
+    public Slider audioSlider;
     public AudioMixer audioMixer;
     public AudioSource audioSource;
     public AudioClip clickSound;
@@ -46,6 +47,11 @@ public class Options : MonoBehaviour
         {
             fullscreenButton.GetComponent<Image>().sprite = buttonInactive;
         }
+
+        //Set selected volume
+        float audioVolume;
+        audioMixer.GetFloat("volume", out audioVolume);
+        audioSlider.value = audioVolume * 2f;
     }
 
     //Close Menu
@@ -78,7 +84,7 @@ public class Options : MonoBehaviour
             volumeSoundCounter = 0;
         }
         volumeSoundCounter++;
-        audioMixer.SetFloat("volume", volume);
+        audioMixer.SetFloat("volume", volume * 0.5f);
     }
 
     //Set graphics quality

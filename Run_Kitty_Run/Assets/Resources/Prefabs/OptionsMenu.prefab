@@ -151,6 +151,7 @@ MonoBehaviour:
   highButton: {fileID: 1327592779105931622}
   buttonActive: {fileID: 21300000, guid: d6a1673a31851fd4395c287261da36e4, type: 3}
   buttonInactive: {fileID: 21300000, guid: 2be7b70e984b51444aca9c12ae4723a7, type: 3}
+  audioSlider: {fileID: 1327592778688148894}
   audioMixer: {fileID: 24100000, guid: 7041304670724034b8c203e8673a054a, type: 2}
   audioSource: {fileID: 8621216699235175679}
   clickSound: {fileID: 8300000, guid: 5c1037d898cd2134f9084aeb2db6b7f8, type: 3}
@@ -870,7 +871,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1327592779730646570}
   m_Direction: 0
   m_MinValue: -80
-  m_MaxValue: 0
+  m_MaxValue: 20
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
