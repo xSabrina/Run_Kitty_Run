@@ -55,7 +55,6 @@ public class EnemySpreadShoot : MonoBehaviour
         Invoke("PlaySound", bulletAnimClip.length);
     }
 
-    //plays bullet sound
     void PlaySound()
     {
         GetComponent<AudioSource>().Play();
