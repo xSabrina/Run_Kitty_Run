@@ -45,15 +45,6 @@ public class GameEnd : MonoBehaviour
         {
             GameManagerScript.instance.username = "DefaultUser";
         }
-        if (PlayerPrefs.HasKey("Score") == false)
-        {
-            PlayerPrefs.SetInt("Score", completeTime);
-        }
-        else if (PlayerPrefs.GetInt("Score") > completeTime)
-        {
-            yield return StartCoroutine(GameManagerScript.instance.highscoresScript.DeleteHighscore(GameManagerScript.instance.username));
-            PlayerPrefs.SetInt("Score", completeTime);
-        }
         yield return StartCoroutine(GameManagerScript.instance.highscoresScript.UploadHighscore(GameManagerScript.instance.username, completeTime));
         //Show Highscores
         GameManagerScript.instance.GetHighscores();
