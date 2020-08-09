@@ -1,72 +1,85 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
 public class Highscores : MonoBehaviour
 {
+    // public/private code and url fpr dreamlo tool
     const string privateCode = "abacLLCKrUObw9RV-oSc4AeOdUIHig6UiyLOoWzpKXRA";
     const string publicCode = "5ef9e938377eda0b6c8d9308";
     const string webUrl = "http://dreamlo.com/lb/";
     public Highscore[] highscoresList;
 
+    //used to delete playerprefs for testing, should be deleted in last build
     private void Awake()
     {
         //PlayerPrefs.DeleteAll();
     }
 
+    //adds highscore with username and score
     public void AddScore(string userName, int score)
     {
         StartCoroutine(UploadHighscore(userName, score));
     }
+
+    //uploads highscore to dreamlo
     public IEnumerator UploadHighscore(string userName, int score)
     {
-        WWW url = new WWW(webUrl + privateCode + "/add/" + WWW.EscapeURL(userName) + "/" + score);
-        yield return url;
-        if (string.IsNullOrEmpty(url.error))
+        UnityWebRequest url = UnityWebRequest.Get(webUrl + privateCode + "/add/" + UnityWebRequest.EscapeURL(userName) + "/" + score);
+        yield return url.SendWebRequest();
+        if (url.isNetworkError || url.isHttpError)
         {
-            Debug.Log("Uploaded "+ userName + "s score");
-            //DownloadScores();
+            
+            Debug.Log("Upload failed:" + url.error);
         }
+
         else
         {
-            Debug.Log("Upload failed:" + url.error);
+            Debug.Log("Uploaded " + userName + "s score");
         }
     }
 
 
-
+    //deletes highscore from dreamlo
     public IEnumerator DeleteHighscore(string userName)
     {
-        WWW url = new WWW(webUrl + privateCode + "/delete/" + WWW.EscapeURL(userName));
-        yield return url;
-        if (string.IsNullOrEmpty(url.error))
+
+
+        UnityWebRequest url = UnityWebRequest.Get(webUrl + privateCode + "/delete/" + UnityWebRequest.EscapeURL(userName));
+        yield return url.SendWebRequest();
+        if (url.isNetworkError || url.isHttpError)
         {
-            Debug.Log("Deleted " + userName + "s score");
+            Debug.Log("Deletion failed:" + url.error);
         }
         else
         {
-            Debug.Log("Deletion failed:" + url.error);
+            Debug.Log("Deleted " + userName + "s score");
+            
         }
     }
 
    
-
+    //downloads highscores from dreamlo
     public IEnumerator DownloadHighscores()
     {
         Debug.Log("start download");
-        WWW url = new WWW(webUrl + publicCode + "/pipe");
-        yield return url;
-        if (string.IsNullOrEmpty(url.error))
+        UnityWebRequest url = UnityWebRequest.Get(webUrl + publicCode + "/pipe");
+        yield return url.SendWebRequest();
+        if (url.isNetworkError||url.isHttpError)
         {
-            Debug.Log(url.text);
-            FormatHighscore(url.text);
+            Debug.Log("Download failed:" + url.error);
+           
+            
         }
         else
         {
-            Debug.Log("Download failed:" + url.error);
+            Debug.Log(url.downloadHandler.text);
+            FormatHighscore(url.downloadHandler.text);
         }
     }
 
+    //formats downloaded dreamlo highscores to be used for the end screen
     public void FormatHighscore(string textStream)
     {
         string[] scores = textStream.Split(new char[] {'\n'}, System.StringSplitOptions.RemoveEmptyEntries);

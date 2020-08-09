@@ -4,16 +4,17 @@ using UnityEngine;
 
 public class EnemyShoot : MonoBehaviour
 {
+    //shooting interval
     public float shootingInterval = 4f;
+    //speed of bullet
     public float bulletSpeed;
     public AnimationClip bulletAnimClip;
     private Transform player;
     public GameObject bullet;
     public GameObject bulletPrefab;
     
-    // Start is called before the first frame update
 
-    //Launch if player entered collider
+    //start launching bullets when player enters trigger
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.tag == "Player")
@@ -25,6 +26,8 @@ public class EnemyShoot : MonoBehaviour
         }
         
     }
+
+    //stop launching bullets when player exits trigger
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.tag == "Player")
@@ -32,8 +35,8 @@ public class EnemyShoot : MonoBehaviour
             CancelInvoke();
         }
     }
-    // Update is called once per frame
 
+    //launches bullet
     private void LaunchBullet()
     {
        
@@ -42,6 +45,7 @@ public class EnemyShoot : MonoBehaviour
         Invoke("PlaySound", bulletAnimClip.length);
         
     }
+
     void PlaySound() {
         GetComponent<AudioSource>().Play();
     }

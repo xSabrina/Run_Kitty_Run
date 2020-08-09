@@ -12,6 +12,7 @@ public class LevelEndScript : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip clickSound;
 
+    //shows endlevel ui, sets leveltime text, and disables time and abilities when player reaches the trigger
     void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log(other.name);
