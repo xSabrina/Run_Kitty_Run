@@ -26,7 +26,8 @@ public class Highscores : MonoBehaviour
     //uploads highscore to dreamlo
     public IEnumerator UploadHighscore(string userName, int score)
     {
-        UnityWebRequest url = UnityWebRequest.Get(webUrl + privateCode + "/add/" + UnityWebRequest.EscapeURL(userName) + "/" + score);
+        //multiplies score with -1 so same username gets overwritten with better highscores
+        UnityWebRequest url = UnityWebRequest.Get(webUrl + privateCode + "/add/" + UnityWebRequest.EscapeURL(userName) + "/" + (score*-1));
         yield return url.SendWebRequest();
         if (url.isNetworkError || url.isHttpError)
         {
@@ -90,7 +91,8 @@ public class Highscores : MonoBehaviour
             string[] scoreEntry = score.Split(new char[] { '|' });
             string username = scoreEntry[0];
 
-            int seconds = int.Parse(scoreEntry[1]);
+            //multiplies score with -1 so scores are positive times
+            int seconds = int.Parse(scoreEntry[1])*-1;
             
             int minutes = seconds / 60;
             seconds = seconds %60;
