@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -437,6 +437,8 @@ GameObject:
   - component: {fileID: 404569892}
   - component: {fileID: 404569894}
   - component: {fileID: 404569893}
+  - component: {fileID: 404569896}
+  - component: {fileID: 404569895}
   m_Layer: 0
   m_Name: HighscoresScores
   m_TagString: Untagged
@@ -504,6 +506,32 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 404569891}
   m_CullTransparentMesh: 0
+--- !u!114 &404569895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 404569891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ef7077703ef0a74591d9d00480e2782, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 1
+  duration: 0.6
+--- !u!225 &404569896
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 404569891}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &477007691
 GameObject:
   m_ObjectHideFlags: 0
@@ -678,6 +706,8 @@ GameObject:
   - component: {fileID: 567496704}
   - component: {fileID: 567496703}
   - component: {fileID: 567496702}
+  - component: {fileID: 567496706}
+  - component: {fileID: 567496705}
   m_Layer: 0
   m_Name: HighscoresNames
   m_TagString: Untagged
@@ -745,6 +775,32 @@ RectTransform:
   m_AnchoredPosition: {x: -212.6, y: 43}
   m_SizeDelta: {x: 360, y: 434.76373}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &567496705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 567496701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ef7077703ef0a74591d9d00480e2782, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 1
+  duration: 0.6
+--- !u!225 &567496706
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 567496701}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &789781102
 GameObject:
   m_ObjectHideFlags: 0
@@ -1293,6 +1349,8 @@ GameObject:
   - component: {fileID: 1168852322}
   - component: {fileID: 1168852324}
   - component: {fileID: 1168852323}
+  - component: {fileID: 1168852326}
+  - component: {fileID: 1168852325}
   m_Layer: 0
   m_Name: CompleteTimeText
   m_TagString: Untagged
@@ -1360,6 +1418,32 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1168852321}
   m_CullTransparentMesh: 0
+--- !u!114 &1168852325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1168852321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ef7077703ef0a74591d9d00480e2782, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 1.2
+  duration: 0.5
+--- !u!225 &1168852326
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1168852321}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1352050379
 GameObject:
   m_ObjectHideFlags: 0
@@ -1374,6 +1458,8 @@ GameObject:
   - component: {fileID: 1352050380}
   - component: {fileID: 1352050384}
   - component: {fileID: 1352050385}
+  - component: {fileID: 1352050387}
+  - component: {fileID: 1352050386}
   m_Layer: 0
   m_Name: UI
   m_TagString: Untagged
@@ -1580,6 +1666,32 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1352050386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1352050379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ef7077703ef0a74591d9d00480e2782, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 0
+  duration: 0.6
+--- !u!225 &1352050387
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1352050379}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1500578467
 GameObject:
   m_ObjectHideFlags: 0
