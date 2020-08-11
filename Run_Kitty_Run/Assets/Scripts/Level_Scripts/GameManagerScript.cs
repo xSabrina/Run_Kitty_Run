@@ -59,8 +59,6 @@ public class GameManagerScript : MonoBehaviour
         {
             CountTime();
         }
-
-
     }
 
 
@@ -74,7 +72,6 @@ public class GameManagerScript : MonoBehaviour
             seconds -= 60f;
         }
         timer = minutes.ToString("00") + ":" + seconds.ToString("00.00");
-
     }
 
 
@@ -87,8 +84,8 @@ public class GameManagerScript : MonoBehaviour
         SceneManager.LoadScene(currentLevel.levelName);
         if (currentLevel.levelName != "Level_6")
         {
-            GameObject.FindGameObjectWithTag("MainCamera").GetComponent<AudioSource>().Stop();
             mainMusic.Play();
+            GameObject.FindGameObjectWithTag("MainCamera").GetComponent<AudioSource>().Stop();
         } else
         {
             mainMusic.Stop();
