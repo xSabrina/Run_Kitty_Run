@@ -10,6 +10,7 @@ public class UIFading : MonoBehaviour
 
     void Start ()
     {
+        //Start a FadeIn Animation, eased at first, with a given delay and duration
         LeanTween.alphaCanvas(gameObject.GetComponent<CanvasGroup>(), 1f, duration).setEase(LeanTweenType.easeInQuad).setDelay(delay);
     }
 }

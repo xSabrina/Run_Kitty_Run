@@ -20,7 +20,7 @@ public class MainMenu : MonoBehaviour {
         //since MainMenu.cs sits on two gameObjects, do this only for the higher hierarchy one
         if (gameObject.name == "UI")
         {
-            //stop all playing music
+            //stop all currently playing music
             allAudioSources = FindObjectsOfType(typeof(AudioSource)) as AudioSource[];
             foreach (AudioSource audioS in allAudioSources)
             {
@@ -32,12 +32,12 @@ public class MainMenu : MonoBehaviour {
             menuMusic.Play();
         }
     }
-    //Starts Game from GameManager
-    //lastLevel should be set to last level played at the start of the game (can be saved with player prefabs)
-    public void StartGame() {
+    //Starts the game, respectively the first level
+    public void StartGame() 
+    {
         audioSource.PlayOneShot(clickSound);
-        GameManagerScript.instance.username = usernameInput.text;
-        GameManagerScript.instance.SetCurrentLevel(lastLevel);
+        GameManagerScript.instance.username = usernameInput.text; //set username
+        GameManagerScript.instance.SetCurrentLevel(lastLevel); //start level
         GameManagerScript.instance.StartLevel();
     }
 
@@ -50,7 +50,8 @@ public class MainMenu : MonoBehaviour {
     }
 
     //Quit Game
-    public void QuitGame() {
+    public void QuitGame() 
+    {
         StartCoroutine(ClickQuit());
     }
 
