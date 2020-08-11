@@ -5173,6 +5173,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: 
+  bossMusic: {fileID: 0}
   username: 
   countTime: 1
   levels: []
@@ -6370,12 +6371,12 @@ PrefabInstance:
     - target: {fileID: 2642674803438684029, guid: 4fe4f209fa35fc247a84c5e6b8666081,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 16.439789
+      value: 21.49
       objectReference: {fileID: 0}
     - target: {fileID: 2642674803438684029, guid: 4fe4f209fa35fc247a84c5e6b8666081,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 49.870422
+      value: 47.16
       objectReference: {fileID: 0}
     - target: {fileID: 2642674803438684029, guid: 4fe4f209fa35fc247a84c5e6b8666081,
         type: 3}
