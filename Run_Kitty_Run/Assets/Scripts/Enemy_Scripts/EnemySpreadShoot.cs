@@ -4,20 +4,22 @@ using UnityEngine;
 
 public class EnemySpreadShoot : MonoBehaviour
 {
-    //shooting interval
     public float shootingInterval = 4f;
-    //speed of bullet
     public float bulletSpeed;
     private Transform player;
     public GameObject bullet;
     public GameObject bulletPrefab;
-    //number of bullets and their spread magnitude
     public float spreadMagnitude;
     public int bulletNumber;
     public AnimationClip bulletAnimClip;
 
+    // Start is called before the first frame update
+    void Start()
+    {
 
-    //start Launching Bullets when player enters trigger
+    }
+
+    //Launch if player entered collider
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Player")
@@ -28,8 +30,6 @@ public class EnemySpreadShoot : MonoBehaviour
         }
 
     }
-
-    //stop launching bullets when player exits collider
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.tag == "Player")
@@ -37,6 +37,7 @@ public class EnemySpreadShoot : MonoBehaviour
             CancelInvoke();
         }
     }
+    // Update is called once per frame
 
     //calculates angle to player and schoots a spread of (bulletNBumber) bullets with (spreadMagnitude) angle difference between each bullet 
     private void LaunchBullet()
@@ -54,7 +55,6 @@ public class EnemySpreadShoot : MonoBehaviour
         }
         Invoke("PlaySound", bulletAnimClip.length);
     }
-
     void PlaySound()
     {
         GetComponent<AudioSource>().Play();
