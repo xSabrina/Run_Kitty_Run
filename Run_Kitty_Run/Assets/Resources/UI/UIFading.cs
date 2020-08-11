@@ -9,6 +9,6 @@ public class UIFading : MonoBehaviour
 
     void Start ()
     {
-        LeanTween.alphaCanvas(gameObject.GetComponent<CanvasGroup>(), 1f, 1f).setDelay(delay);
+        LeanTween.alphaCanvas(gameObject.GetComponent<CanvasGroup>(), 1f, 0.6f).setEase(LeanTweenType.easeInQuad).setDelay(delay);
     }
 }

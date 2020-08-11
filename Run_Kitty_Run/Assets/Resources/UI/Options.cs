@@ -51,7 +51,7 @@ public class Options : MonoBehaviour
         //Set selected volume
         float audioVolume;
         audioMixer.GetFloat("volume", out audioVolume);
-        audioSlider.value = audioVolume * 2f;
+        audioSlider.value = audioVolume;
     }
 
     //Close Menu
@@ -78,13 +78,13 @@ public class Options : MonoBehaviour
     public void SetVolume(float volume)
     {
         //Play sound with greater gaps between it
-        if (volumeSoundCounter > 10)
+        if (volumeSoundCounter > 20)
         {
             audioSource.PlayOneShot(clickSound);
             volumeSoundCounter = 0;
         }
         volumeSoundCounter++;
-        audioMixer.SetFloat("volume", volume * 0.5f);
+        audioMixer.SetFloat("volume", volume);
     }
 
     //Set graphics quality
