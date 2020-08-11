@@ -8,9 +8,9 @@ using UnityEngine.InputSystem;
 using System.Runtime.InteropServices.ComTypes;
 
 public class GameUI : MonoBehaviour {
+
     private const int MainMenuScene = 0;
     private int LevelNumber = 0;
-    //Game objects
     public Text TimeText;
     public Text Level;
     public GameObject InGameMenu;
@@ -18,25 +18,31 @@ public class GameUI : MonoBehaviour {
     public AudioSource audioSource;
     public AudioClip clickSound;
     PlayerInputActions inputAction;
-    
 
-    private void Start() {
+    //Start a level
+    private void Start() 
+    {
         StartLevel();
-        Debug.Log(GameManagerScript.instance.username);
     }
 
-    void Awake() {
+    void Awake() 
+    {
+        //Set ESC key for toggling the menu
         inputAction = new PlayerInputActions();
         inputAction.PlayerControls.Menu.performed += ctx => ToggleMenu();
     }
 
-    void Update() {
+    void Update() 
+    {
+        //Update the level time
         UpdateTimer();
     }
 
     //Start next level
-    private void StartLevel() {
-        GameManagerScript.instance.abilitiesEnabled = true;
+    private void StartLevel() 
+    {
+        GameManagerScript.instance.abilitiesEnabled = true; //enable the players abilities
+        //Set the level text
         if (SceneManager.GetActiveScene().name == "TutorialLevel")
         {
             Level.text = "Tutorial";
@@ -48,10 +54,12 @@ public class GameUI : MonoBehaviour {
     }
 
     //Toggle menu
-    public void ToggleMenu() {
+    public void ToggleMenu() 
+    {
         audioSource.PlayOneShot(clickSound);
-        if (InGameMenu.active) { 
-            if (OptionsMenu.active) {
+        //Enable the "hierarchical" toggling - toggling refers to options menu if open, if not to ingame menu
+        if (InGameMenu.activeInHierarchy) { 
+            if (OptionsMenu.activeInHierarchy) {
                 OptionsMenu.SetActive(false);
             }
             else
@@ -83,7 +91,8 @@ public class GameUI : MonoBehaviour {
     }
 
     //Go home but with click sound first
-    IEnumerator ClickHome() {
+    IEnumerator ClickHome() 
+    {
         audioSource.PlayOneShot(clickSound);
         Time.timeScale = 1;
         yield return new WaitForSeconds(0.3f);
@@ -92,7 +101,8 @@ public class GameUI : MonoBehaviour {
     }
 
     //Update the timer
-    private void UpdateTimer() {
+    private void UpdateTimer() 
+    {
         TimeText.text = GameManagerScript.instance.timer;
     }
 

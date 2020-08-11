@@ -26,7 +26,7 @@ public class GameEnd : MonoBehaviour
     //Show complete time
     public void ShowTime()
     {
-        //Calculate complete time
+        //Calculate complete time of all levels
         for (int i = 0; i < GameManagerScript.instance.levels.Count; i++)
         {
             completeTime += GameManagerScript.instance.levels[i].levelTime;
@@ -40,18 +40,19 @@ public class GameEnd : MonoBehaviour
     //Update highscores
     IEnumerator UpdateHighscores()
     {
-        //Add Highscore
+        //Set default username, if none is given
         if (GameManagerScript.instance.username == "")
         {
             GameManagerScript.instance.username = "DefaultUser";
         }
+        //Upload the highscores
         yield return StartCoroutine(GameManagerScript.instance.highscoresScript.UploadHighscore(GameManagerScript.instance.username, completeTime));
-        //Show Highscores
+        //Show highscores
         GameManagerScript.instance.GetHighscores();
         StartCoroutine(ShowHighscores());
     }
 
-    //Open Highscores
+    //Open highscores
     public void OpenHighscores()
     {
         StartCoroutine(UpdateHighscores());
@@ -81,6 +82,7 @@ public class GameEnd : MonoBehaviour
         highscoresScores.text = highscoresTextScores;
     }
 
+    //Back to main menu
     public void GoHome()
     {
         SceneManager.LoadScene("MainMenu");

@@ -5,48 +5,12 @@ using UnityEngine;
 public class UIFading : MonoBehaviour
 {
 
-    public CanvasGroup canvasGroup;
+    public float delay = 0f;
+    public float duration = 0.6f;
 
-    public void FadeIn(Component comp)
+    void Start ()
     {
-        StartCoroutine(FadeCanvas(canvasGroup, canvasGroup.alpha, 1));
-    }
-
-    public void FadeOut(Component comp)
-    {
-        StartCoroutine(FadeCanvas(canvasGroup, canvasGroup.alpha, 0));
-    }
-
-    IEnumerator FadeCanvas(CanvasGroup cg, float start, float end, float lerpTime = 0.5f)
-    {
-        float _timeStartedLerping = Time.time;
-        float timeSinceStarted = Time.time - _timeStartedLerping;
-        float percentageComplete = timeSinceStarted / lerpTime;
-
-        while (true)
-        {
-            timeSinceStarted = Time.time - _timeStartedLerping;
-            percentageComplete = timeSinceStarted / lerpTime;
-
-            float currentValue = Mathf.Lerp(start, end, percentageComplete);
-
-            cg.alpha = currentValue;
-
-            if (percentageComplete >= 1)
-            {
-                if (end == 0)
-                {
-                    gameObject.SetActive(false);
-                } else if (end == 1)
-                {
-                    gameObject.SetActive(true);
-                }
-                break;
-            }
-
-            yield return new WaitForEndOfFrame();
-        }
-        print("done fading");
-
+        //Start a FadeIn Animation, eased at first, with a given delay and duration
+        LeanTween.alphaCanvas(gameObject.GetComponent<CanvasGroup>(), 1f, duration).setEase(LeanTweenType.easeInQuad).setDelay(delay);
     }
 }

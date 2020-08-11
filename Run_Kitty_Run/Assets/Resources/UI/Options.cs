@@ -24,6 +24,7 @@ public class Options : MonoBehaviour
     //Open Menu
     public void OpenMenu()
     {
+        //Show menu & play opening sound
         optionsMenu.SetActive(true);
         audioSource.PlayOneShot(clickSound);
 
@@ -39,7 +40,7 @@ public class Options : MonoBehaviour
             highButton.GetComponent<Image>().sprite = buttonActive;
         }
 
-        //Show selected fullscreen
+        //Show selected fullscreen option
         if (Screen.fullScreen)
         {
             fullscreenButton.GetComponent<Image>().sprite = buttonActive;
@@ -48,10 +49,10 @@ public class Options : MonoBehaviour
             fullscreenButton.GetComponent<Image>().sprite = buttonInactive;
         }
 
-        //Set selected volume
+        //Show selected volume
         float audioVolume;
         audioMixer.GetFloat("volume", out audioVolume);
-        audioSlider.value = audioVolume * 2f;
+        audioSlider.value = audioVolume;
     }
 
     //Close Menu
@@ -66,28 +67,28 @@ public class Options : MonoBehaviour
         audioSource.PlayOneShot(clickSound);
         Time.timeScale = 1; //has to be activated shortly to play the sound
         yield return new WaitForSeconds(0.3f);
-        //Dont set time scale 0 in main menu (otherwise game will start paused)
-        Debug.Log(SceneManager.GetActiveScene().name);
+        //Dont set time scale 0 in main menu (otherwise first level will start paused)
         if (SceneManager.GetActiveScene().name != "MainMenu") {
             Time.timeScale = 0;
         }
+        //Close options menu
         optionsMenu.SetActive(false);
     }
 
     //Set volume 
     public void SetVolume(float volume)
     {
-        //Play sound with greater gaps between it
-        if (volumeSoundCounter > 10)
+        //Play a sound to give auditive feedback that volume is changed within certain steps
+        if (volumeSoundCounter > 20)
         {
             audioSource.PlayOneShot(clickSound);
             volumeSoundCounter = 0;
         }
         volumeSoundCounter++;
-        audioMixer.SetFloat("volume", volume * 0.5f);
+        audioMixer.SetFloat("volume", volume);
     }
 
-    //Set graphics quality
+    //Set graphics quality low
     public void SetQualityLow()
     {
         audioSource.PlayOneShot(clickSound);
@@ -97,6 +98,7 @@ public class Options : MonoBehaviour
         highButton.GetComponent<Image>().sprite = buttonInactive;
     }
 
+    //Set graphics quality middle
     public void SetQualityMid()
     {
         audioSource.PlayOneShot(clickSound);
@@ -106,6 +108,7 @@ public class Options : MonoBehaviour
         highButton.GetComponent<Image>().sprite = buttonInactive;
     }
 
+    //Set graphics quality high
     public void SetQualityHigh()
     {
         audioSource.PlayOneShot(clickSound);
