@@ -12,9 +12,18 @@ public class LevelEndScript : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip clickSound;
 
+    private AudioSource levelEndSound;
+
+    private AudioSource mainMusic;
+
+
+    void Start() {
+        levelEndSound =  GameObject.FindGameObjectWithTag("MainCamera").GetComponent<AudioSource>();
+        mainMusic =  GameObject.Find("GameManager").GetComponent<AudioSource>();
+    }
+
     void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log(other.name);
         if (other.tag == "Player")
         {
             if (SceneManager.GetActiveScene().name == "TutorialLevel")
@@ -25,10 +34,14 @@ public class LevelEndScript : MonoBehaviour
             {
                 Time.timeScale = 0;
                 levelEndScreen.SetActive(true);
-                levelTimeText.text = GameManagerScript.instance.timer;
-                GameManagerScript.instance.abilitiesEnabled = false;
+                if(levelEndSound != null){
+                    GameObject.Find("GameManager").GetComponent<AudioSource>().Pause();
+                    levelEndSound.Play();
+                }
             }
-        }
+            levelTimeText.text = GameManagerScript.instance.timer;
+            GameManagerScript.instance.abilitiesEnabled = false;
+            }
 
     }
 

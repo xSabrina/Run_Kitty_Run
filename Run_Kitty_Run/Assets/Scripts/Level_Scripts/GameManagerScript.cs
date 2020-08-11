@@ -51,7 +51,6 @@ public class GameManagerScript : MonoBehaviour
             CountTime();
         }
 
-
     }
 
 
@@ -69,25 +68,21 @@ public class GameManagerScript : MonoBehaviour
     }
 
 
-
-    //for restarting Level or loading anew one
-
+    //for restarting Level or loading a new one
     public void StartLevel()
     {
         minutes = 0;
         seconds = 0;
         SceneManager.LoadScene(currentLevel.levelName);
-        if (currentLevel.levelName == "Level_1")
+        if (currentLevel.levelName != "Level_6")
         {
-            Debug.Log("Starting main music..");
-            mainMusic.loop = true;
             mainMusic.Play();
-        } else if (currentLevel.levelName == "Level_6")
+        } else
         {
-            Debug.Log("Stopping main music..");
             mainMusic.Stop();
         }
     }
+
     public void RestartLevel()
     {
         SceneManager.LoadScene(currentLevel.levelName);
@@ -110,7 +105,6 @@ public class GameManagerScript : MonoBehaviour
         }
         else
         {
-
             //AddHighscore(PlayerPrefs.GetString("Username", "DefaultUser"));
             SceneManager.LoadScene("EndScreen");
             Time.timeScale = 1;
@@ -121,8 +115,8 @@ public class GameManagerScript : MonoBehaviour
     public void GetHighscores()
     {
         StartCoroutine(GetHighscoreCoroutine());
-      
     }
+
     IEnumerator GetHighscoreCoroutine()
     {
         highscoreWaiter = true;
@@ -134,6 +128,7 @@ public class GameManagerScript : MonoBehaviour
         }
         highscoreWaiter = false;
     }
+
 }
 
 
