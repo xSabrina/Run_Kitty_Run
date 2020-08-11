@@ -25,6 +25,7 @@ public class PlayerCollision : MonoBehaviour
             aimArrow.SetActive(false);
             GameManagerScript.instance.abilitiesEnabled = false;
             animator.SetTrigger("isDead");
+            GetComponent<AudioSource>().Play();
             StartCoroutine(WaitingTime(deathTime));
         }
     }
