@@ -52,14 +52,6 @@ public class MainMenu : MonoBehaviour {
     //Quit Game
     public void QuitGame() 
     {
-        StartCoroutine(ClickQuit());
-    }
-
-    //Quit game but with click sound
-    IEnumerator ClickQuit()
-    {
-        audioSource.PlayOneShot(clickSound);
-        yield return new WaitForSeconds(0.3f);
         Application.Quit();
     }
 
