@@ -85,14 +85,11 @@ public class GameManagerScript : MonoBehaviour
         minutes = 0;
         seconds = 0;
         SceneManager.LoadScene(currentLevel.levelName);
-        if (currentLevel.levelName == "Level_1")
+        if (currentLevel.levelName != "Level_6")
         {
-            Debug.Log("Starting main music..");
-            mainMusic.loop = true;
             mainMusic.Play();
-        } else if (currentLevel.levelName == "Level_6")
+        } else
         {
-            Debug.Log("Stopping main music..");
             mainMusic.Stop();
             mainMusic.clip = bossMusic;
             mainMusic.Play();
