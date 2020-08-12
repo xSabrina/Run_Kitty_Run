@@ -8,7 +8,6 @@ public class ProjectileAbility : Ability
     public float projectileForce = 100f;
     public float projectileRange = 5f;
     public GameObject projectilePrefab;
-    //public Rigidbody2D projectile;
 
     private GameObject player;
     private Animator animator;

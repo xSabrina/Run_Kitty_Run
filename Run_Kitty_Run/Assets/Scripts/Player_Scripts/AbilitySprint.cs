@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
-using System.Collections.Generic;
 
+// ability unfinished and not used at the moment
 [CreateAssetMenu(menuName = "Abilities/AbilitySprint")]
 public class AbilitySprint : Ability
 {

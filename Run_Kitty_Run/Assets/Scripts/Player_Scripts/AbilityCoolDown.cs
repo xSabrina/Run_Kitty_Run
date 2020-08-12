@@ -1,7 +1,5 @@
 ﻿using UnityEngine;
-using System.Collections;
 using UnityEngine.UI;
-using System.Reflection;
 
 
 public class AbilityCoolDown : MonoBehaviour
@@ -37,10 +35,6 @@ public class AbilityCoolDown : MonoBehaviour
     public void Initialize(Ability selectedAbility, GameObject firePointHolder)
     {
         ability = selectedAbility;
-        //myButtonImage = GetComponent<Image>();
-        //abilitySource = GetComponent<AudioSource>();
-        //myButtonImage.sprite = ability.aSprite;
-        //darkMask.sprite = ability.aSprite;
         coolDownDuration = ability.aBaseCoolDown;
         ability.Initialize(firePointHolder);
         AbilityReady();
@@ -58,7 +52,6 @@ public class AbilityCoolDown : MonoBehaviour
             else
             {
                 CoolDown();
-                Debug.Log(coolDownTimeLeft);
             }
         }
     }
@@ -75,7 +68,6 @@ public class AbilityCoolDown : MonoBehaviour
             else
             {
                 CoolDown();
-                Debug.Log(coolDownTimeLeft);
             }
         }
     }
@@ -89,8 +81,6 @@ public class AbilityCoolDown : MonoBehaviour
     private void CoolDown()
     {
         coolDownTimeLeft -= Time.deltaTime;
-        //float roundedCd = Mathf.Round(coolDownTimeLeft);
-        //coolDownTextDisplay.text = coolDownTimeLeft.ToString("F1");
         cooldownOverlay.fillAmount = coolDownTimeLeft/coolDownDuration;
 
     }
@@ -99,11 +89,8 @@ public class AbilityCoolDown : MonoBehaviour
     {
         nextReadyTime = coolDownDuration + Time.time;
         coolDownTimeLeft = coolDownDuration;
-        //darkMask.enabled = true;
         coolDownTextDisplay.enabled = true;
-
-        //abilitySource.clip = ability.aSound;
-        //abilitySource.Play();
+        
         ability.TriggerAbility();
     }
 

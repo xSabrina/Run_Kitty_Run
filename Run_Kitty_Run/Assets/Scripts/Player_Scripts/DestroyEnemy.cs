@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class DestroyEnemy : MonoBehaviour
@@ -14,13 +12,8 @@ public class DestroyEnemy : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.transform.tag == "Border")
-        {
-            //Destroy(gameObject);
-        }
         if (collision.transform.tag == "Enemy" && !collision.isTrigger)
         {
-            Debug.Log(collision.transform.name);
             Destroy(collision.gameObject);
             Instantiate(death, collision.transform.position, collision.transform.rotation);
         }
