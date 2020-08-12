@@ -3,14 +3,11 @@ using System.Collections;
 using UnityEngine.UI;
 using System.Reflection;
 
-
 public class AbilityCoolDown : MonoBehaviour
 {
-
     public string abilityButtonAxisName = "Fire1";
     public Text coolDownTextDisplay;
     public Image cooldownOverlay;
-
     [SerializeField] private Ability ability;
     private GameObject player;
     private Image myButtonImage;
@@ -18,9 +15,7 @@ public class AbilityCoolDown : MonoBehaviour
     private float coolDownDuration;
     private float nextReadyTime;
     private float coolDownTimeLeft;
-
     PlayerInputActions inputAction;
-
 
     void Start()
     {
@@ -92,7 +87,6 @@ public class AbilityCoolDown : MonoBehaviour
         //float roundedCd = Mathf.Round(coolDownTimeLeft);
         //coolDownTextDisplay.text = coolDownTimeLeft.ToString("F1");
         cooldownOverlay.fillAmount = coolDownTimeLeft/coolDownDuration;
-
     }
 
     private void ButtonTriggered()

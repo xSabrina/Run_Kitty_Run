@@ -9,11 +9,9 @@ public class ProjectileAbility : Ability
     public float projectileRange = 5f;
     public GameObject projectilePrefab;
     //public Rigidbody2D projectile;
-
     private GameObject player;
     private Animator animator;
     private AudioSource audioSource;
-
     private ProjectileShootTriggerable launcher;
 
     public override void Initialize(GameObject obj)
@@ -82,4 +80,5 @@ public class ProjectileAbility : Ability
         animator.SetBool("isWalkingDown", false);
         animator.SetBool("isWalkingLeft", false);
     }
+    
 }

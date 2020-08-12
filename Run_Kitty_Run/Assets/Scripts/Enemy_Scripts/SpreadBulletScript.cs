@@ -1,15 +1,14 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class SpreadBulletScript : MonoBehaviour
 {
     public float lifeTime = 5f;
     public Rigidbody2D rb;
-    public Animation animation;
+    public new Animation animation;
     public AnimationClip shootClip;
     public AnimationClip destroyClip;
     private float speed;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -44,4 +43,5 @@ public class SpreadBulletScript : MonoBehaviour
     {
         Destroy(gameObject, 0.03f);
     }
+
 }
