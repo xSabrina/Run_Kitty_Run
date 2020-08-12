@@ -79,13 +79,17 @@ public class GameManagerScript : MonoBehaviour
         seconds = 0;
         SceneManager.LoadScene(currentLevel.levelName);
 
+        //If changing from main menu to a level, stop main menu music to avoid overlaying with level background music
+        if(GameObject.Find("UI").GetComponent<AudioSource>() != null){
+            GameObject.Find("UI").GetComponent<AudioSource>().Stop();
+        }
+
         //Play background music; if the last level (level 6) has started change background music
         if (currentLevel.levelName != "Level_6")
         {
             mainMusic.Play();
         } else
         {
-            mainMusic.Stop();
             mainMusic.clip = bossMusic;
             mainMusic.Play();
         }
