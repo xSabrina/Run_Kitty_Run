@@ -4,11 +4,9 @@ using UnityEngine;
 public class PlayerCollision : MonoBehaviour
 {
     public GameObject aimArrow;
-
     private Animator animator;
-
     private float deathTime = 1.3F;
-
+    
     private void Start()
     {
         animator = GetComponent<Animator>();
@@ -19,9 +17,9 @@ public class PlayerCollision : MonoBehaviour
         //Handle enemy collision
         if (collision.gameObject.tag == "Enemy")
         {
+            //Disable movement, collider, abilities and aimArrow on death; aimArrow does not need to be activated again
             GetComponent<PlayerMovement>().enabled = false;
             GetComponent<Collider2D>().enabled = false;
-            // disable aimArrow on death. Does not need to be activated again
             aimArrow.SetActive(false);
             GameManagerScript.instance.abilitiesEnabled = false;
             animator.SetTrigger("isDead");
