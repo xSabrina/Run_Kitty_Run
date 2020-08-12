@@ -1051,7 +1051,6 @@ GameObject:
   - component: {fileID: 8891570903344581416}
   - component: {fileID: 5465386371878928500}
   - component: {fileID: 1911828496732496209}
-  - component: {fileID: 8291103763700149901}
   m_Layer: 0
   m_Name: Ability2
   m_TagString: Untagged
@@ -1119,22 +1118,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &8291103763700149901
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8288791039269493526}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81516659ee2bfeb448b9a32170b75168, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  abilityButtonAxisName: Fire2
-  coolDownTextDisplay: {fileID: 5526938465338902135}
-  cooldownOverlay: {fileID: 8533351745268882774}
-  ability: {fileID: 11400000, guid: aa8a7946d7b780042983272fddb6a856, type: 2}
 --- !u!1 &8410422916870354332
 GameObject:
   m_ObjectHideFlags: 0
@@ -1220,7 +1203,6 @@ GameObject:
   - component: {fileID: 7656919210089415557}
   - component: {fileID: 6587404678208953084}
   - component: {fileID: 4675180013054595649}
-  - component: {fileID: 1699340865607453063}
   m_Layer: 0
   m_Name: Ability1
   m_TagString: Untagged
@@ -1288,19 +1270,3 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &1699340865607453063
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8653264213821583606}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81516659ee2bfeb448b9a32170b75168, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  abilityButtonAxisName: Fire1
-  coolDownTextDisplay: {fileID: 6003718741081265651}
-  cooldownOverlay: {fileID: 8532783276898625867}
-  ability: {fileID: 11400000, guid: 5deafca6f537ec340ba3ce013c32a18a, type: 2}
