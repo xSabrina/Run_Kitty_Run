@@ -1,18 +1,14 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.Reflection;
-using UnityEngine;
-using UnityEngine.InputSystem;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class PlayerAbilities : MonoBehaviour
 {
     public static PlayerAbilities instance;
 
-    // contains all available abilities
+    //contains all available abilities
     [SerializeField] public Ability[] allAbilities;
 
-    // fields to display the cooldown in the UI
+    //fields to display the cooldown in the UI
     //private Text ab1coolDownTextDisplay;
     //private Text ab2coolDownTextDisplay;
     private Image ab1coolDownOverlay;
@@ -151,4 +147,5 @@ public class PlayerAbilities : MonoBehaviour
     {
         inputAction.Disable();
     }
+    
 }

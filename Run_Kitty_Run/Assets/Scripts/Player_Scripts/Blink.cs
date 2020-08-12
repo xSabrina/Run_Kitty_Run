@@ -3,10 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 
 [CreateAssetMenu(menuName = "Abilities/Blink")]
+
 public class Blink : Ability
 {
     public float aRange = 0f;
-
     private SelfCastTriggerable launcher;
     private ContactFilter2D filter = new ContactFilter2D();
     private List<RaycastHit2D> res = new List<RaycastHit2D>();
@@ -14,7 +14,6 @@ public class Blink : Ability
     private CapsuleCollider2D playerCollider;
     private Animator animator;
     private AudioSource audioSource;
-
     private float blinkDuration = 0.35F;
 
     public override void Initialize(GameObject obj)

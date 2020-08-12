@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using System.Collections;
-using System.Collections.Generic;
 
 [CreateAssetMenu(menuName = "Abilities/AbilitySprint")]
 public class AbilitySprint : Ability
@@ -8,9 +7,7 @@ public class AbilitySprint : Ability
     public float sprintSpeed = 0f;
     public float duration = 0f;
     public AudioClip abilitySound2;
-
     private float originalSpeed = 0f;
-
     private SelfCastTriggerable launcher;
     private PlayerMovement playerMovement;
     private AudioSource audioSource;
@@ -41,4 +38,5 @@ public class AbilitySprint : Ability
         playerMovement.speed = originalSpeed;
         audioSource.PlayOneShot(abilitySound2, 0.05f);
     }
+    
 }
