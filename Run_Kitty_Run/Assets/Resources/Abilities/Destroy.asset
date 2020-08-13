@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   aName: Destroy
   abilitySound: {fileID: 8300000, guid: 8ec6cb4b7e77a844680f2559e89315f1, type: 3}
-  aBaseCoolDown: 10
+  aBaseCoolDown: 8
   castTime: 0.2
   castPoint: 0.1
   projectileForce: 1000
-  projectileRange: 20
+  projectileRange: 25
   projectilePrefab: {fileID: 6265724735968440382, guid: 8af59f2695e90dc41aa97d90616bb68c,
     type: 3}
