@@ -32,5 +32,5 @@ public class FirePointRotation : MonoBehaviour
     private void UpdateAngle()
     {
         transform.rotation = Quaternion.Euler(0, 0, angle);
-    } 
+    }
 }

@@ -35,4 +35,5 @@ public class ProjectileShootTriggerable : MonoBehaviour
         //Add force to the instantiated bullet, pushing it forward away from the bulletSpawn location, using projectile force for how hard to push it away
         rbBullet.AddForce(spawnPoint.transform.up * projectileForce);
     }
+    
 }

@@ -4,10 +4,10 @@ using System.Collections.Generic;
 using System;
 
 [CreateAssetMenu(menuName = "Abilities/Blink")]
+
 public class Blink : Ability
 {
     public float aRange = 0f;
-
     private SelfCastTriggerable launcher;
     private ContactFilter2D filter = new ContactFilter2D();
     private List<RaycastHit2D> res = new List<RaycastHit2D>();
@@ -50,7 +50,7 @@ public class Blink : Ability
         bool triggered = false;
 
         // check for borders in blink direction
-        int hitint = Physics2D.Raycast(launcher.spawnPoint.position, launcher.spawnPoint.transform.up, filter.NoFilter(), res, aRange); 
+        int hitint = Physics2D.Raycast(launcher.spawnPoint.position, launcher.spawnPoint.transform.up, filter.NoFilter(), res, aRange);
         foreach (RaycastHit2D hit in res)
         {
             if(hit.collider.tag == "Border")

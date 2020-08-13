@@ -5,7 +5,7 @@ public class PlayerAbilities : MonoBehaviour
 {
     public static PlayerAbilities instance;
 
-    // contains all available abilities
+    //contains all available abilities
     [SerializeField] public Ability[] allAbilities;
 
     // fields to display the cooldown in the UI
@@ -41,7 +41,7 @@ public class PlayerAbilities : MonoBehaviour
     {
         PlayerAbilities.instance = this;
         Initialize();
-    }    
+    }
 
     public void Initialize()
     {
@@ -95,7 +95,7 @@ public class PlayerAbilities : MonoBehaviour
             }
         }
     }
-    
+
     void Update()
     {
         // check if abilities are ready
@@ -134,4 +134,5 @@ public class PlayerAbilities : MonoBehaviour
     {
         inputAction.Disable();
     }
+
 }

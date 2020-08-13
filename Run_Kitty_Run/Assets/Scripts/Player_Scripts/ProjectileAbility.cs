@@ -12,7 +12,6 @@ public class ProjectileAbility : Ability
     private GameObject player;
     private Animator animator;
     private AudioSource audioSource;
-
     private ProjectileShootTriggerable launcher;
 
     public override void Initialize(GameObject obj)
@@ -57,7 +56,7 @@ public class ProjectileAbility : Ability
         {
             animator.SetTrigger("isShootingLeft");
         }
-        
+
         PlayerAbilities.instance.StartCoroutine(WaitingTime(castTime));
     }
 
@@ -81,4 +80,5 @@ public class ProjectileAbility : Ability
         animator.SetBool("isWalkingDown", false);
         animator.SetBool("isWalkingLeft", false);
     }
+
 }

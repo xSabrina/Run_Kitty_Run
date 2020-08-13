@@ -1,9 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using System.Timers;
 
 public class LevelEndScript : MonoBehaviour
 {
@@ -11,11 +8,15 @@ public class LevelEndScript : MonoBehaviour
     public Text levelTimeText;
     public AudioSource audioSource;
     public AudioClip clickSound;
+    private AudioSource levelEndSound;
 
-    //shows endlevel ui, sets leveltime text, and disables time and abilities when player reaches the trigger
+    void Start() {
+        levelEndSound =  GameObject.FindGameObjectWithTag("MainCamera").GetComponent<AudioSource>();
+    }
+
+    //Show endlevel ui, sets leveltime text, and disables time and abilities when player reaches the trigger
     void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log(other.name);
         if (other.tag == "Player")
         {
             if (SceneManager.GetActiveScene().name == "TutorialLevel")
@@ -26,6 +27,12 @@ public class LevelEndScript : MonoBehaviour
             {
                 Time.timeScale = 0;
                 levelEndScreen.SetActive(true);
+
+                //Pause background music and play level end sound
+                if(levelEndSound != null){
+                    GameObject.Find("GameManager").GetComponent<AudioSource>().Pause();
+                    levelEndSound.Play();
+                }
                 levelTimeText.text = GameManagerScript.instance.timer;
                 GameManagerScript.instance.abilitiesEnabled = false;
             }
@@ -38,4 +45,5 @@ public class LevelEndScript : MonoBehaviour
         audioSource.PlayOneShot(clickSound);
         GameManagerScript.instance.EndLevel();
     }
+
 }
