@@ -46,7 +46,10 @@ public class GameUI : MonoBehaviour {
         if (SceneManager.GetActiveScene().name == "TutorialLevel")
         {
             Level.text = "Tutorial";
-        } else
+        } else if (GameManagerScript.instance.currentLevel.levelName == "Level_6")
+        {
+            Level.text = "Final!";
+        } else 
         {
             LevelNumber = GameManagerScript.instance.currentLevel.levelNr;
             Level.text = "Level " + LevelNumber.ToString();

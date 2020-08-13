@@ -87,10 +87,12 @@ public class GameManagerScript : MonoBehaviour
         //Play background music; if the last level (level 6) has started change background music
         if (currentLevel.levelName != "Level_6")
         {
+            mainMusic.volume = 0.02f;
             mainMusic.Play();
         } else
         {
             mainMusic.clip = bossMusic;
+            mainMusic.volume = 0.05f;
             mainMusic.Play();
         }
     }
