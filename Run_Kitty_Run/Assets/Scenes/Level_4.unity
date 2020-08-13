@@ -9369,7 +9369,7 @@ PrefabInstance:
     - target: {fileID: 3993578416938362566, guid: 8afeb839be064514595e773a953e1a90,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.1744056
+      value: -0.17440513
       objectReference: {fileID: 0}
     - target: {fileID: 3993578416938362566, guid: 8afeb839be064514595e773a953e1a90,
         type: 3}
@@ -16586,7 +16586,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1958335374}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.1744056, y: 1.1643423, z: -10}
+  m_LocalPosition: {x: -0.17440513, y: 1.1643423, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -16666,7 +16666,8 @@ AudioSource:
   m_GameObject: {fileID: 1958335374}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 7041304670724034b8c203e8673a054a,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: 3abd16e35a54fa64d89f43421f63f458, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
