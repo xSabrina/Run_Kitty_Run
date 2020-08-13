@@ -8,7 +8,7 @@ public class ProjectileAbility : Ability
     public float projectileForce = 100f;
     public float projectileRange = 5f;
     public GameObject projectilePrefab;
-    //public Rigidbody2D projectile;
+
     private GameObject player;
     private Animator animator;
     private AudioSource audioSource;
@@ -56,7 +56,7 @@ public class ProjectileAbility : Ability
         {
             animator.SetTrigger("isShootingLeft");
         }
-        
+
         PlayerAbilities.instance.StartCoroutine(WaitingTime(castTime));
     }
 
@@ -80,5 +80,5 @@ public class ProjectileAbility : Ability
         animator.SetBool("isWalkingDown", false);
         animator.SetBool("isWalkingLeft", false);
     }
-    
+
 }

@@ -8,9 +8,7 @@ public class PlayerAbilities : MonoBehaviour
     //contains all available abilities
     [SerializeField] public Ability[] allAbilities;
 
-    //fields to display the cooldown in the UI
-    //private Text ab1coolDownTextDisplay;
-    //private Text ab2coolDownTextDisplay;
+    // fields to display the cooldown in the UI
     private Image ab1coolDownOverlay;
     private Image ab2coolDownOverlay;
 
@@ -43,7 +41,7 @@ public class PlayerAbilities : MonoBehaviour
     {
         PlayerAbilities.instance = this;
         Initialize();
-    }    
+    }
 
     public void Initialize()
     {
@@ -60,13 +58,8 @@ public class PlayerAbilities : MonoBehaviour
         ab2coolDownDuration = selectedAbility2.aBaseCoolDown;
 
         // find the object in the UI to display ability cooldown
-        //ab1coolDownTextDisplay = GameObject.Find("UI/Canvas/Ability1/Text").GetComponent<Text>();
-        //ab2coolDownTextDisplay = GameObject.Find("UI/Canvas/Ability2/Text").GetComponent<Text>();
         ab1coolDownOverlay = GameObject.Find("UI/Canvas/Ability1/CooldownOverlay").GetComponent<Image>();
         ab2coolDownOverlay = GameObject.Find("UI/Canvas/Ability2/CooldownOverlay").GetComponent<Image>();
-
-        //ab1coolDownTextDisplay.enabled = false;
-        //ab2coolDownTextDisplay.enabled = false;
     }
 
     void TriggerAbility1 ()
@@ -77,12 +70,11 @@ public class PlayerAbilities : MonoBehaviour
             {
                 ab1nextReadyTime = ab1coolDownDuration + Time.time;
                 ab1coolDownTimeLeft = ab1coolDownDuration;
-                //ab1coolDownTextDisplay.enabled = true;
                 Debug.Log("TriggerAbility1: " + selectedAbility1.name);
                 selectedAbility1.TriggerAbility();
             } else
             {
-                Debug.Log(ab1coolDownTimeLeft);
+                Debug.Log(selectedAbility1.name + " cooldown left: " + ab1coolDownTimeLeft);
             }
         }
     }
@@ -95,16 +87,15 @@ public class PlayerAbilities : MonoBehaviour
             {
                 ab2nextReadyTime = ab2coolDownDuration + Time.time;
                 ab2coolDownTimeLeft = ab2coolDownDuration;
-                //ab2coolDownTextDisplay.enabled = true;
                 Debug.Log("TriggerAbility2: " + selectedAbility2.name);
                 selectedAbility2.TriggerAbility();
             } else
             {
-                Debug.Log(ab2coolDownTimeLeft);
+                Debug.Log(selectedAbility2.name + " cooldown left: " + ab2coolDownTimeLeft);
             }
         }
     }
-    
+
     void Update()
     {
         // check if abilities are ready
@@ -113,27 +104,23 @@ public class PlayerAbilities : MonoBehaviour
 
         if (ab1Ready)
         {
-            //ab1coolDownTextDisplay.enabled = false;
             ab1coolDownOverlay.fillAmount = 0;
         }
         else
         {
             ab1coolDownTimeLeft -= Time.deltaTime;
             float ab1roundedCd = Mathf.Round(ab1coolDownTimeLeft);
-            //ab1coolDownTextDisplay.text = ab1coolDownTimeLeft.ToString("F1");
             ab1coolDownOverlay.fillAmount = ab1coolDownTimeLeft / ab1coolDownDuration;
         }
 
         if (ab2Ready)
         {
-            //ab2coolDownTextDisplay.enabled = false;
             ab2coolDownOverlay.fillAmount = 0;
         }
         else
         {
             ab2coolDownTimeLeft -= Time.deltaTime;
             float ab2roundedCd = Mathf.Round(ab2coolDownTimeLeft);
-            //ab2coolDownTextDisplay.text = ab2coolDownTimeLeft.ToString("F1");
             ab2coolDownOverlay.fillAmount = ab2coolDownTimeLeft / ab2coolDownDuration;
         }
     }
@@ -147,5 +134,5 @@ public class PlayerAbilities : MonoBehaviour
     {
         inputAction.Disable();
     }
-    
+
 }
