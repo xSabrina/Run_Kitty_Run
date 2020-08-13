@@ -10,7 +10,9 @@ public class PlayerAbilities : MonoBehaviour
 
     // fields to display the cooldown in the UI
     private Image ab1coolDownOverlay;
+    private Image ab1element;
     private Image ab2coolDownOverlay;
+    private Image ab2element;
 
     // fields to manage the cooldown of ability 1
     private float ab1coolDownDuration;
@@ -57,6 +59,10 @@ public class PlayerAbilities : MonoBehaviour
         ab1coolDownDuration = selectedAbility1.aBaseCoolDown;
         ab2coolDownDuration = selectedAbility2.aBaseCoolDown;
 
+        // find ability UI elements
+        ab1element = GameObject.Find("UI/Canvas/Ability1").GetComponent<Image>();
+        ab2element = GameObject.Find("UI/Canvas/Ability2").GetComponent<Image>();
+
         // find the object in the UI to display ability cooldown
         ab1coolDownOverlay = GameObject.Find("UI/Canvas/Ability1/CooldownOverlay").GetComponent<Image>();
         ab2coolDownOverlay = GameObject.Find("UI/Canvas/Ability2/CooldownOverlay").GetComponent<Image>();
@@ -101,13 +107,19 @@ public class PlayerAbilities : MonoBehaviour
         // check if abilities are ready
         ab1Ready = (Time.time > ab1nextReadyTime);
         ab2Ready = (Time.time > ab2nextReadyTime);
+        // get color for transparency check
+        var tempColor = ab1element.color;
 
         if (ab1Ready)
         {
+            tempColor.a = 1f;
+            ab1element.color = tempColor;
             ab1coolDownOverlay.fillAmount = 0;
         }
         else
         {
+            tempColor.a = 0.15f;
+            ab1element.color = tempColor;
             ab1coolDownTimeLeft -= Time.deltaTime;
             float ab1roundedCd = Mathf.Round(ab1coolDownTimeLeft);
             ab1coolDownOverlay.fillAmount = ab1coolDownTimeLeft / ab1coolDownDuration;
@@ -115,10 +127,14 @@ public class PlayerAbilities : MonoBehaviour
 
         if (ab2Ready)
         {
+            tempColor.a = 1f;
+            ab2element.color = tempColor;
             ab2coolDownOverlay.fillAmount = 0;
         }
         else
         {
+            tempColor.a = 0.15f;
+            ab2element.color = tempColor;
             ab2coolDownTimeLeft -= Time.deltaTime;
             float ab2roundedCd = Mathf.Round(ab2coolDownTimeLeft);
             ab2coolDownOverlay.fillAmount = ab2coolDownTimeLeft / ab2coolDownDuration;
