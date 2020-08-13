@@ -1222,6 +1222,11 @@ PrefabInstance:
       propertyPath: InGameMenu
       value: 
       objectReference: {fileID: 1907287183}
+    - target: {fileID: 7800655166115865187, guid: 307a4be94ca1a5549835aecb318b1775,
+        type: 3}
+      propertyPath: OptionsMenu
+      value: 
+      objectReference: {fileID: 626994090}
     - target: {fileID: 7800655166115865188, guid: 307a4be94ca1a5549835aecb318b1775,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1734,12 +1739,18 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 626994088}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 626994090}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 28fdbe045a8fdf64582f7e72ea31b24b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &626994090 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1327592778056600678, guid: 2034ab5e2c30f624eaedb8329964416e,
+    type: 3}
+  m_PrefabInstance: {fileID: 626994088}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &640073482
 PrefabInstance:
   m_ObjectHideFlags: 0
