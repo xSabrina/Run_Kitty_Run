@@ -48,6 +48,7 @@ MonoBehaviour:
   timer: 
   bossMusic: {fileID: 8300000, guid: c73f228340771bc48b7e0d2fd41c9f69, type: 3}
   tutorialMusic: {fileID: 8300000, guid: b45f575c6a07017459ebeda63fc60df9, type: 3}
+  levelMusic: {fileID: 8300000, guid: 1feef6df27abb6e4b917b7fa0039430a, type: 3}
   username: 
   countTime: 1
   levels:
@@ -87,7 +88,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 24300002, guid: 7041304670724034b8c203e8673a054a,
     type: 2}
   m_audioClip: {fileID: 8300000, guid: aa2069f7e095ec2429e2fcc3f41d53c6, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 0.02
   m_Pitch: 1
   Loop: 1

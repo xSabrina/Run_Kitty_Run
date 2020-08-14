@@ -46,7 +46,7 @@ public class GameEnd : MonoBehaviour
         //Set default username, if none is given
         if (GameManagerScript.instance.username == "")
         {
-            GameManagerScript.instance.username = "owned";
+            GameManagerScript.instance.username = "DefaultUser";
         }
         //Upload the highscores
         yield return StartCoroutine(GameManagerScript.instance.highscoresScript.UploadHighscore(GameManagerScript.instance.username, completeTime));
