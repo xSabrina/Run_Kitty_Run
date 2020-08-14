@@ -11,12 +11,15 @@ public class GameEnd : MonoBehaviour
     public Text timeText;
     public Text highscoresNames;
     public Text highscoresScores;
+    public Text yourScore;
     public GameObject highscoresUI;
     private string highscoresTextNames;
     private string highscoresTextScores;
     private int completeTime;
     private int completeMinutes = 0;
     private int completeSeconds = 0;
+    private bool inTopFive = false;
+    private int playerRank;
 
     void Awake()
     {
@@ -43,7 +46,7 @@ public class GameEnd : MonoBehaviour
         //Set default username, if none is given
         if (GameManagerScript.instance.username == "")
         {
-            GameManagerScript.instance.username = "DefaultUser";
+            GameManagerScript.instance.username = "owned";
         }
         //Upload the highscores
         yield return StartCoroutine(GameManagerScript.instance.highscoresScript.UploadHighscore(GameManagerScript.instance.username, completeTime));
@@ -73,13 +76,34 @@ public class GameEnd : MonoBehaviour
         for (int i = GameManagerScript.instance.highscores.Length - 1; i >= 0; i--)
         {
             //Limit to TOP 5
-            if ((GameManagerScript.instance.highscores.Length - i) < 6 ) {
+            if ((GameManagerScript.instance.highscores.Length - i) < 6 ) 
+            {
                 highscoresTextNames += GameManagerScript.instance.highscores[i].userName + "\n";
                 highscoresTextScores += GameManagerScript.instance.highscores[i].score + "\n";
+                //Is player in TOP 5?
+                if (GameManagerScript.instance.highscores[i].userName == GameManagerScript.instance.username) 
+                {
+                    inTopFive = true;
+                }
             }
         }
         highscoresNames.text = highscoresTextNames;
         highscoresScores.text = highscoresTextScores;
+
+        //Show own score & rank (if not in TOP 5)
+        if (!inTopFive)
+        {
+            //Determine player's rank
+            for (int i = GameManagerScript.instance.highscores.Length - 1; i >= 0; i--)
+            {
+                if (GameManagerScript.instance.highscores[i].userName == GameManagerScript.instance.username)
+                {
+                    playerRank = GameManagerScript.instance.highscores.Length - i;
+                }
+            }
+            //Show text
+            yourScore.text = "Your score: " + timeText.text + " (Rank " + playerRank.ToString() + ")";
+        }
     }
 
     //Back to main menu
