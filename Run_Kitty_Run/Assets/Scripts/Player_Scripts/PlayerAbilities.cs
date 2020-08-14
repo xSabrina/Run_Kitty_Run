@@ -1,22 +1,20 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.Reflection;
-using UnityEngine;
-using UnityEngine.InputSystem;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class PlayerAbilities : MonoBehaviour
 {
     public static PlayerAbilities instance;
 
-    // contains all available abilities
+    //contains all available abilities
     [SerializeField] public Ability[] allAbilities;
 
     // fields to display the cooldown in the UI
-    //private Text ab1coolDownTextDisplay;
-    //private Text ab2coolDownTextDisplay;
     private Image ab1coolDownOverlay;
+    private Image ab1element;
+    private Image ab1icon;
     private Image ab2coolDownOverlay;
+    private Image ab2element;
+    private Image ab2icon;
 
     // fields to manage the cooldown of ability 1
     private float ab1coolDownDuration;
@@ -47,7 +45,7 @@ public class PlayerAbilities : MonoBehaviour
     {
         PlayerAbilities.instance = this;
         Initialize();
-    }    
+    }
 
     public void Initialize()
     {
@@ -63,14 +61,15 @@ public class PlayerAbilities : MonoBehaviour
         ab1coolDownDuration = selectedAbility1.aBaseCoolDown;
         ab2coolDownDuration = selectedAbility2.aBaseCoolDown;
 
+        // find ability UI elements & icons
+        ab1element = GameObject.Find("UI/Canvas/Ability1").GetComponent<Image>();
+        ab2element = GameObject.Find("UI/Canvas/Ability2").GetComponent<Image>();
+        ab1icon = GameObject.Find("UI/Canvas/Ability1/Icon").GetComponent<Image>();
+        ab2icon = GameObject.Find("UI/Canvas/Ability2/Icon").GetComponent<Image>();
+
         // find the object in the UI to display ability cooldown
-        //ab1coolDownTextDisplay = GameObject.Find("UI/Canvas/Ability1/Text").GetComponent<Text>();
-        //ab2coolDownTextDisplay = GameObject.Find("UI/Canvas/Ability2/Text").GetComponent<Text>();
         ab1coolDownOverlay = GameObject.Find("UI/Canvas/Ability1/CooldownOverlay").GetComponent<Image>();
         ab2coolDownOverlay = GameObject.Find("UI/Canvas/Ability2/CooldownOverlay").GetComponent<Image>();
-
-        //ab1coolDownTextDisplay.enabled = false;
-        //ab2coolDownTextDisplay.enabled = false;
     }
 
     void TriggerAbility1 ()
@@ -81,12 +80,11 @@ public class PlayerAbilities : MonoBehaviour
             {
                 ab1nextReadyTime = ab1coolDownDuration + Time.time;
                 ab1coolDownTimeLeft = ab1coolDownDuration;
-                //ab1coolDownTextDisplay.enabled = true;
                 Debug.Log("TriggerAbility1: " + selectedAbility1.name);
                 selectedAbility1.TriggerAbility();
             } else
             {
-                Debug.Log(ab1coolDownTimeLeft);
+                Debug.Log(selectedAbility1.name + " cooldown left: " + ab1coolDownTimeLeft);
             }
         }
     }
@@ -99,45 +97,54 @@ public class PlayerAbilities : MonoBehaviour
             {
                 ab2nextReadyTime = ab2coolDownDuration + Time.time;
                 ab2coolDownTimeLeft = ab2coolDownDuration;
-                //ab2coolDownTextDisplay.enabled = true;
                 Debug.Log("TriggerAbility2: " + selectedAbility2.name);
                 selectedAbility2.TriggerAbility();
             } else
             {
-                Debug.Log(ab2coolDownTimeLeft);
+                Debug.Log(selectedAbility2.name + " cooldown left: " + ab2coolDownTimeLeft);
             }
         }
     }
-    
+
     void Update()
     {
         // check if abilities are ready
         ab1Ready = (Time.time > ab1nextReadyTime);
         ab2Ready = (Time.time > ab2nextReadyTime);
+        // get color for transparency check
+        var tempColor = ab1element.color;
 
         if (ab1Ready)
         {
-            //ab1coolDownTextDisplay.enabled = false;
+            tempColor.a = 1f;
+            ab1element.color = tempColor;
+            ab1icon.color = tempColor;
             ab1coolDownOverlay.fillAmount = 0;
         }
         else
         {
+            tempColor.a = 0.15f;
+            ab1element.color = tempColor;
+            ab1icon.color = tempColor;
             ab1coolDownTimeLeft -= Time.deltaTime;
             float ab1roundedCd = Mathf.Round(ab1coolDownTimeLeft);
-            //ab1coolDownTextDisplay.text = ab1coolDownTimeLeft.ToString("F1");
             ab1coolDownOverlay.fillAmount = ab1coolDownTimeLeft / ab1coolDownDuration;
         }
 
         if (ab2Ready)
         {
-            //ab2coolDownTextDisplay.enabled = false;
+            tempColor.a = 1f;
+            ab2element.color = tempColor;
+            ab2icon.color = tempColor;
             ab2coolDownOverlay.fillAmount = 0;
         }
         else
         {
+            tempColor.a = 0.15f;
+            ab2element.color = tempColor;
+            ab2icon.color = tempColor;
             ab2coolDownTimeLeft -= Time.deltaTime;
             float ab2roundedCd = Mathf.Round(ab2coolDownTimeLeft);
-            //ab2coolDownTextDisplay.text = ab2coolDownTimeLeft.ToString("F1");
             ab2coolDownOverlay.fillAmount = ab2coolDownTimeLeft / ab2coolDownDuration;
         }
     }
@@ -151,4 +158,5 @@ public class PlayerAbilities : MonoBehaviour
     {
         inputAction.Disable();
     }
+
 }

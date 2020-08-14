@@ -28,7 +28,25 @@ public class Flashlight : MonoBehaviour
         
         if(angle == 0)
         {
-            transform.rotation = Quaternion.Euler(0, 0, -90);
+            string dir = GetComponentInParent<EnemyRotation>().dir;
+            switch (dir)
+            {
+                case "up":
+                    transform.rotation = Quaternion.Euler(0, 0, 0);
+                    break;
+
+                case "right":
+                    transform.rotation = Quaternion.Euler(0, 0, -90);
+                    break;
+
+                case "down":
+                    transform.rotation = Quaternion.Euler(0, 0, 180);
+                    break;
+
+                case "left":
+                    transform.rotation = Quaternion.Euler(0, 0, 90);
+                    break;
+            }
         }
         else if ((angle >= -45 && angle <= 45))
         {

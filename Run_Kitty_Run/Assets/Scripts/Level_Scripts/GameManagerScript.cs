@@ -12,16 +12,16 @@ public class GameManagerScript : MonoBehaviour
     private int minutes;
     public AudioClip bossMusic;
     private AudioSource mainMusic;
-    //string for username used for highscore
+    //String for username used for highscore
     public string username;
-    //bool that defines if timer is running or not
+    //Bool that defines if timer is running or not
     public bool countTime = true;
     public static GameManagerScript instance = null;
     //List of levelobjects
     public List<Level> levels = new List<Level>();
     //Current level the player is in used for loading the correct scene
     public Level currentLevel;
-    //variables that define which abilities are being used and if they are currently usable
+    //Variables that define which abilities are being used and if they are currently usable
     public bool abilitiesEnabled = true;
     public int selectedAbility1 = 0;
     public int selectedAbility2 = 1;
@@ -30,17 +30,17 @@ public class GameManagerScript : MonoBehaviour
     public Highscore[] highscores;
     public Highscores highscoresScript;
 
-    // Use this for initialization
+    //Use this for initialization
     void Awake()
     {
-        //get main music
+        //Get main music
         mainMusic = gameObject.GetComponent<AudioSource>();
-        //determines if highscores script needs to beassigned
+        //Determines if highscores script needs to beassigned
         if (highscoresScript == null)
         {
             gameObject.GetComponent<Highscores>();
         }
-        //dont destroy on load for gamemanager singleton
+        //Do not destroy on load for gamemanager singleton
         if (instance)
         {
             DestroyImmediate(gameObject);
@@ -52,19 +52,15 @@ public class GameManagerScript : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (countTime)
         {
             CountTime();
         }
-
-
     }
 
-
-    //counts Time in minutes, second and milliseconds, should be called in Update function
+    //Count time in minutes, second and milliseconds
     private void CountTime()
     {
         seconds += Time.deltaTime;
@@ -74,48 +70,50 @@ public class GameManagerScript : MonoBehaviour
             seconds -= 60f;
         }
         timer = minutes.ToString("00") + ":" + seconds.ToString("00.00");
-
     }
 
-
-
-    //for restarting Level or loading a new one
+    //Restart level or loading a new one
     public void StartLevel()
     {
         minutes = 0;
         seconds = 0;
         SceneManager.LoadScene(currentLevel.levelName);
-        if (currentLevel.levelName == "Level_1")
+
+        //If changing from main menu to a level, stop main menu music to avoid overlaying with level background music
+        if(GameObject.Find("UI").GetComponent<AudioSource>() != null){
+            GameObject.Find("UI").GetComponent<AudioSource>().Stop();
+        }
+
+        //Play background music; if the last level (level 6) has started change background music
+        if (currentLevel.levelName != "Level_6")
         {
-            Debug.Log("Starting main music..");
-            mainMusic.loop = true;
+            mainMusic.volume = 0.02f;
             mainMusic.Play();
-        } else if (currentLevel.levelName == "Level_6")
+        } else
         {
-            Debug.Log("Stopping main music..");
-            mainMusic.Stop();
             mainMusic.clip = bossMusic;
+            mainMusic.volume = 0.05f;
             mainMusic.Play();
         }
     }
 
-    //function used to start or restart the current level
+    //Start or restart the current level
     public void RestartLevel()
     {
         SceneManager.LoadScene(currentLevel.levelName);
     }
 
-    //sets current level object through levels list
+    //Set current level object through levels list
     public void SetCurrentLevel(int i)
     {
         currentLevel = levels[i];
     }
 
-    //Fuction for finishing a level, should be triggered through EndLevelPrefab
+    //Finish a level, triggered through EndLevelPrefab
     public void EndLevel()
     {
         currentLevel.levelTime = minutes * 60 + (int)seconds;
-        //checks if there is a next level, otherwise starts end screen
+        //Check if there is a next level, otherwise starts end screen
         if (currentLevel.levelNr < levels.Count)
         {
             currentLevel = levels[currentLevel.levelNr];
@@ -128,17 +126,14 @@ public class GameManagerScript : MonoBehaviour
             SceneManager.LoadScene("EndScreen");
             Time.timeScale = 1;
         }
-
     }
    
-
     public void GetHighscores()
     {
         StartCoroutine(GetHighscoreCoroutine());
-      
     }
 
-    //gets highscores through Highscores script
+    //Get highscores through Highscores script
     IEnumerator GetHighscoreCoroutine()
     {
         highscoreWaiter = true;
@@ -150,6 +145,7 @@ public class GameManagerScript : MonoBehaviour
         }
         highscoreWaiter = false;
     }
+
 }
 
 

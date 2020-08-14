@@ -11,6 +11,11 @@ public class MainMenu : MonoBehaviour {
     private AudioSource menuMusic;
     public InputField usernameInput;
     public GameObject usernameUI;
+    public GameObject highscoreTable;
+    public Text highscoresNames;
+    public Text highscoresScores;
+    private string highscoresTextNames;
+    private string highscoresTextScores;
     public AudioSource audioSource;
     public AudioClip clickSound;
     public Level tutorialLevel;
@@ -30,6 +35,9 @@ public class MainMenu : MonoBehaviour {
             menuMusic = gameObject.GetComponent<AudioSource>();
             menuMusic.loop = true;
             menuMusic.Play();
+            //read highscores
+            GameManagerScript.instance.GetHighscores();
+            StartCoroutine(ShowHighscores());
         }
     }
     //Starts the game, respectively the first level
@@ -67,5 +75,43 @@ public class MainMenu : MonoBehaviour {
     {
         audioSource.PlayOneShot(clickSound);
         usernameUI.SetActive(false);
+    }
+
+    //Open highscore table
+    public void OpenHighscores()
+    {
+        audioSource.PlayOneShot(clickSound);
+        highscoreTable.SetActive(true);
+    }
+
+    //Close highscore table 
+    public void CloseHighscores()
+    {
+        audioSource.PlayOneShot(clickSound);
+        highscoreTable.SetActive(false);
+    }
+
+    //Show highscores
+    IEnumerator ShowHighscores()
+    {
+        //Wait for highscores Coroutine
+        while (GameManagerScript.instance.highscoreWaiter)
+        {
+            yield return new WaitForSeconds(0.1f);
+        }
+
+        highscoresTextNames = "NAME\n";
+        highscoresTextScores = "SCORE\n";
+        for (int i = GameManagerScript.instance.highscores.Length - 1; i >= 0; i--)
+        {
+            //Limit to TOP 5
+            if ((GameManagerScript.instance.highscores.Length - i) < 6)
+            {
+                highscoresTextNames += GameManagerScript.instance.highscores[i].userName + "\n";
+                highscoresTextScores += GameManagerScript.instance.highscores[i].score + "\n";
+            }
+        }
+        highscoresNames.text = highscoresTextNames;
+        highscoresScores.text = highscoresTextScores;
     }
 }

@@ -381,6 +381,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 4446361425297181311}
   angle: 0
+  spriteUp: {fileID: 21300000, guid: 22e2e266842ee4be99cc17a825471e49, type: 3}
+  spriteSide: {fileID: 21300000, guid: bdcdc3843a6a8425d81b0583faf6e314, type: 3}
+  spriteDown: {fileID: 21300000, guid: 78d03ce1d36c540d5a183e4b042d3afb, type: 3}
 --- !u!114 &4446361425297181297
 MonoBehaviour:
   m_ObjectHideFlags: 0
