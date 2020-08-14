@@ -12,6 +12,7 @@ public class GameManagerScript : MonoBehaviour
     private int minutes;
     public AudioClip bossMusic;
     private AudioSource mainMusic;
+    public AudioClip tutorialMusic;
     //String for username used for highscore
     public string username;
     //Bool that defines if timer is running or not
@@ -85,11 +86,17 @@ public class GameManagerScript : MonoBehaviour
         }
 
         //Play background music; if the last level (level 6) has started change background music
-        if (currentLevel.levelName != "Level_6")
+        if (currentLevel.levelName == "TutorialLevel")
+        {
+            mainMusic.clip = tutorialMusic;
+            mainMusic.Play();
+        }
+        else if (currentLevel.levelName != "Level_6")
         {
             mainMusic.volume = 0.02f;
             mainMusic.Play();
-        } else
+        }
+        else
         {
             mainMusic.clip = bossMusic;
             mainMusic.volume = 0.05f;
