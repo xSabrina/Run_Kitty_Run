@@ -47,6 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer: 
   bossMusic: {fileID: 8300000, guid: c73f228340771bc48b7e0d2fd41c9f69, type: 3}
+  tutorialMusic: {fileID: 8300000, guid: b45f575c6a07017459ebeda63fc60df9, type: 3}
   username: 
   countTime: 1
   levels:

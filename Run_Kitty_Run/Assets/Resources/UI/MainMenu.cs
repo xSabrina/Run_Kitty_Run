@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.Threading;
 
 public class MainMenu : MonoBehaviour {
     
@@ -35,9 +36,6 @@ public class MainMenu : MonoBehaviour {
             menuMusic = gameObject.GetComponent<AudioSource>();
             menuMusic.loop = true;
             menuMusic.Play();
-            //read highscores
-            GameManagerScript.instance.GetHighscores();
-            StartCoroutine(ShowHighscores());
         }
     }
     //Starts the game, respectively the first level
@@ -54,7 +52,7 @@ public class MainMenu : MonoBehaviour {
     {
         audioSource.PlayOneShot(clickSound);
         GameManagerScript.instance.currentLevel = tutorialLevel;
-        SceneManager.LoadScene("TutorialLevel");
+        GameManagerScript.instance.StartLevel();
     }
 
     //Quit Game
@@ -82,6 +80,9 @@ public class MainMenu : MonoBehaviour {
     {
         audioSource.PlayOneShot(clickSound);
         highscoreTable.SetActive(true);
+        //read highscores
+        GameManagerScript.instance.GetHighscores();
+        StartCoroutine(ShowHighscores());
     }
 
     //Close highscore table 
